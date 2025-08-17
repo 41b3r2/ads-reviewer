@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Database Systems - Comprehensive Reviewer</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1in;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 11pt;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 24pt;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            color: #7f8c8d;
+            font-size: 14pt;
+            margin: 5px 0;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 16pt;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 14pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        h4 {
+            color: #2c3e50;
+            font-size: 12pt;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .topic-icon {
+            display: inline-block;
+            width: 20px;
+            font-size: 14pt;
+            margin-right: 10px;
+        }
+        
+        code {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 2px 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            border-radius: 3px;
+        }
+        
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            line-height: 1.4;
+            overflow-x: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        
+        .example-box {
+            background-color: #e8f6f3;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            page-break-inside: avoid;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        
+        .important-note {
+            background-color: #fef9e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .key-points {
+            background-color: #ebf3fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .no-break {
+            page-break-inside: avoid;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 10pt;
+            color: #7f8c8d;
+            border-top: 1px solid #bdc3c7;
+            padding-top: 15px;
+        }
+        
+        @media print {
+            body { font-size: 10pt; }
+            .header h1 { font-size: 20pt; }
+            h2 { font-size: 14pt; }
+            h3 { font-size: 12pt; }
+            pre { font-size: 8pt; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ADVANCED DATABASE SYSTEMS</h1>
+        <div class="subtitle">Comprehensive Reviewer for Midterm Examination</div>
+        <div class="subtitle">Complete Guide with Examples and Practice Materials</div>
+    </div>
+
+    <h2><span class="topic-icon">📚</span>METHODOLOGY - CONCEPTUAL</h2>
+
+    <h3>What is Database Methodology?</h3>
+    <p>A systematic approach to database development that ensures proper planning, design, implementation, and maintenance of database systems.</p>
+
+    <div class="key-points">
+        <h4>Key Phases:</h4>
+        <ol>
+            <li><strong>Requirements Analysis</strong> - Identify user needs and business requirements, document functional and non-functional requirements</li>
+            <li><strong>Conceptual Design</strong> - Create Entity-Relationship (ER) models, define entities, attributes, and relationships</li>
+            <li><strong>Logical Design</strong> - Convert ER model to relational schema, apply normalization rules</li>
+            <li><strong>Physical Design</strong> - Implement actual database structure, optimize for performance</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">Example Scenario: University Student Management System</div>
+        <ul>
+            <li><strong>Requirement:</strong> Track students, courses, enrollments, and grades</li>
+            <li><strong>Entities:</strong> Student, Course, Instructor, Enrollment</li>
+            <li><strong>Attributes:</strong> StudentID, Name, CourseCode, Credits, Grade</li>
+            <li><strong>Relationships:</strong> Student enrolls in Course, Instructor teaches Course</li>
+        </ul>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🗃️</span>DATABASE DESIGN - LOGICAL</h2>
+
+    <h3>Logical Database Design Process</h3>
+
+    <h4>1. Entity-Relationship Modeling</h4>
+    <p>Transform business requirements into ER diagrams.</p>
+
+    <div class="example-box">
+        <div class="example-title">Example: E-commerce System</div>
+        <pre>
+Entities:
+- Customer (CustomerID, Name, Email, Phone)
+- Product (ProductID, Name, Price, Category)
+- Order (OrderID, OrderDate, TotalAmount)
+- OrderItem (Quantity, UnitPrice)
+
+Relationships:
+- Customer PLACES Order (1:M)
+- Order CONTAINS Product (M:N through OrderItem)
+        </pre>
+    </div>
+
+    <h4>2. Normalization Process</h4>
+    <p>Eliminate data redundancy and ensure data integrity.</p>
+
+    <div class="key-points">
+        <h4>First Normal Form (1NF)</h4>
+        <p>Eliminate repeating groups - Each cell contains atomic values</p>
+        
+        <table>
+            <tr><th colspan="2">Before 1NF</th></tr>
+            <tr><th>StudentID</th><th>Courses</th></tr>
+            <tr><td>001</td><td>Math, Science, English</td></tr>
+        </table>
+        
+        <table style="margin-top: 10px;">
+            <tr><th colspan="2">After 1NF</th></tr>
+            <tr><th>StudentID</th><th>Course</th></tr>
+            <tr><td>001</td><td>Math</td></tr>
+            <tr><td>001</td><td>Science</td></tr>
+            <tr><td>001</td><td>English</td></tr>
+        </table>
+    </div>
+
+    <div class="important-note">
+        <h4>Normalization Rules:</h4>
+        <ul>
+            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF + Eliminate partial dependencies</li>
+            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF + Eliminate transitive dependencies</li>
+        </ul>
+    </div>
+
+    <h4>Logical Schema Example:</h4>
+    <pre>
+-- Students table
+CREATE TABLE Students (
+    StudentID VARCHAR(10) PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    DepartmentID VARCHAR(5)
+);
+
+-- Courses table
+CREATE TABLE Courses (
+    CourseID VARCHAR(10) PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT,
+    DepartmentID VARCHAR(5)
+);
+
+-- Enrollments table (junction table)
+CREATE TABLE Enrollments (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID VARCHAR(10),
+    CourseID VARCHAR(10),
+    Grade CHAR(2),
+    EnrollmentDate DATE,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🏗️</span>DATABASE DESIGN FOR RELATIONAL MODEL</h2>
+
+    <h3>Relational Model Principles</h3>
+
+    <div class="key-points">
+        <h4>Core Concepts:</h4>
+        <ol>
+            <li><strong>Tables (Relations):</strong> Data stored in two-dimensional tables, each row represents a record (tuple), each column represents an attribute</li>
+            <li><strong>Keys:</strong>
+                <ul>
+                    <li><strong>Primary Key:</strong> Uniquely identifies each record</li>
+                    <li><strong>Foreign Key:</strong> Links tables together</li>
+                    <li><strong>Composite Key:</strong> Combination of multiple attributes</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h4>Example: Library Management System</h4>
+    <pre>
+-- Books Table
+CREATE TABLE Books (
+    ISBN VARCHAR(13) PRIMARY KEY,
+    Title VARCHAR(200) NOT NULL,
+    Author VARCHAR(100),
+    Publisher VARCHAR(100),
+    PublicationYear INT,
+    Genre VARCHAR(50),
+    AvailableCopies INT DEFAULT 0
+);
+
+-- Members Table
+CREATE TABLE Members (
+    MemberID VARCHAR(10) PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Phone VARCHAR(15),
+    MembershipDate DATE,
+    MembershipType ENUM('Student', 'Faculty', 'Public')
+);
+
+-- Borrowings Table
+CREATE TABLE Borrowings (
+    BorrowingID INT AUTO_INCREMENT PRIMARY KEY,
+    MemberID VARCHAR(10),
+    ISBN VARCHAR(13),
+    BorrowDate DATE NOT NULL,
+    DueDate DATE NOT NULL,
+    ReturnDate DATE,
+    Fine DECIMAL(10,2) DEFAULT 0.00,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (ISBN) REFERENCES Books(ISBN)
+);
+    </pre>
+
+    <h4>Integrity Constraints Example:</h4>
+    <pre>
+-- Entity Integrity
+ALTER TABLE Books ADD CONSTRAINT chk_year 
+CHECK (PublicationYear >= 1900 AND PublicationYear <= YEAR(CURDATE()));
+
+-- Referential Integrity
+ALTER TABLE Borrowings ADD CONSTRAINT fk_member
+FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
+ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- Domain Integrity
+ALTER TABLE Members ADD CONSTRAINT chk_email
+CHECK (Email LIKE '%_@_%');
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🔧</span>PHYSICAL DATABASE DESIGN</h2>
+
+    <h3>Storage Structures and Index Design</h3>
+
+    <div class="key-points">
+        <h4>Storage Structures:</h4>
+        <ul>
+            <li><strong>Heap Files:</strong> Unordered collection of records</li>
+            <li><strong>Sorted Files:</strong> Records sorted by key attribute</li>
+            <li><strong>Hash Files:</strong> Records distributed using hash function</li>
+        </ul>
+    </div>
+
+    <h4>Index Design Examples:</h4>
+    <pre>
+-- Primary Index (automatically created with PRIMARY KEY)
+-- Secondary Index for frequent queries
+CREATE INDEX idx_books_author ON Books(Author);
+CREATE INDEX idx_books_genre ON Books(Genre);
+CREATE INDEX idx_borrowings_date ON Borrowings(BorrowDate);
+
+-- Composite Index for multi-attribute queries
+CREATE INDEX idx_member_type_date ON Members(MembershipType, MembershipDate);
+    </pre>
+
+    <h4>Partitioning Example:</h4>
+    <pre>
+-- Horizontal Partitioning by year
+CREATE TABLE Borrowings_2023 (
+    CHECK (YEAR(BorrowDate) = 2023)
+) INHERITS (Borrowings);
+
+CREATE TABLE Borrowings_2024 (
+    CHECK (YEAR(BorrowDate) = 2024)
+) INHERITS (Borrowings);
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">📊</span>MONITORING AND TUNING</h2>
+
+    <h3>Performance Monitoring</h3>
+
+    <h4>1. Query Performance Analysis</h4>
+    <pre>
+-- Enable query profiling
+SET profiling = 1;
+
+-- Sample query
+SELECT b.Title, m.FirstName, m.LastName, br.BorrowDate
+FROM Books b
+JOIN Borrowings br ON b.ISBN = br.ISBN
+JOIN Members m ON br.MemberID = m.MemberID
+WHERE br.BorrowDate >= '2024-01-01';
+
+-- View query profile
+SHOW PROFILES;
+SHOW PROFILE FOR QUERY 1;
+    </pre>
+
+    <h4>2. Index Usage Analysis</h4>
+    <pre>
+-- Check if indexes are being used
+EXPLAIN SELECT * FROM Books WHERE Author = 'Stephen King';
+
+-- Sample output interpretation:
+-- type: ref (good - using index)
+-- possible_keys: idx_books_author
+-- key: idx_books_author
+-- rows: 5 (estimated rows to examine)
+    </pre>
+
+    <h3>Tuning Strategies</h3>
+
+    <h4>Query Optimization Examples:</h4>
+    <pre>
+-- Bad query (avoid SELECT *)
+SELECT * FROM Books WHERE Author LIKE '%King%';
+
+-- Optimized query
+SELECT ISBN, Title, Author FROM Books 
+WHERE Author = 'Stephen King';
+
+-- Using indexes effectively
+SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
+FROM Books b
+LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
+WHERE b.Genre = 'Fiction'
+GROUP BY b.ISBN, b.Title
+HAVING COUNT(br.BorrowingID) > 5;
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🔒</span>SECURITY AND ADMINISTRATION</h2>
+
+    <h3>User Management</h3>
+    <pre>
+-- Create database users
+CREATE USER 'librarian'@'localhost' IDENTIFIED BY 'secure_password';
+CREATE USER 'member'@'%' IDENTIFIED BY 'member_password';
+
+-- Grant specific privileges
+GRANT SELECT, INSERT, UPDATE ON library.Books TO 'librarian'@'localhost';
+GRANT SELECT ON library.Books TO 'member'@'%';
+GRANT INSERT ON library.Borrowings TO 'member'@'%';
+
+-- Revoke privileges
+REVOKE INSERT ON library.Borrowings FROM 'member'@'%';
+    </pre>
+
+    <h3>Data Encryption</h3>
+    <pre>
+-- Encrypt sensitive data
+CREATE TABLE Members_Secure (
+    MemberID VARCHAR(10) PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARBINARY(255), -- Encrypted email
+    Phone VARBINARY(255), -- Encrypted phone
+    SSN VARBINARY(255)     -- Encrypted SSN
+);
+
+-- Insert encrypted data
+INSERT INTO Members_Secure VALUES (
+    'M001',
+    'John',
+    'Doe',
+    AES_ENCRYPT('john.doe@email.com', 'encryption_key'),
+    AES_ENCRYPT('123-456-7890', 'encryption_key'),
+    AES_ENCRYPT('123-45-6789', 'encryption_key')
+);
+    </pre>
+
+    <h3>Backup and Recovery</h3>
+    <pre>
+# Full database backup
+mysqldump -u root -p --single-transaction library > library_backup.sql
+
+# Restore database
+mysql -u root -p library < library_backup.sql
+
+# Point-in-time recovery using binary logs
+mysqlbinlog --start-datetime="2024-01-01 12:00:00" \
+           --stop-datetime="2024-01-01 15:30:00" \
+           mysql-bin.000001 | mysql -u root -p
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">📈</span>TRANSACTION MANAGEMENT</h2>
+
+    <h3>ACID Properties</h3>
+
+    <h4>1. Atomicity Example</h4>
+    <pre>
+START TRANSACTION;
+
+-- Transfer a book from one member to another
+UPDATE Borrowings 
+SET MemberID = 'M002', BorrowDate = CURDATE()
+WHERE BorrowingID = 123;
+
+UPDATE Books 
+SET AvailableCopies = AvailableCopies - 1
+WHERE ISBN = '978-0123456789';
+
+-- If any error occurs, rollback entire transaction
+-- ROLLBACK;
+
+-- If everything succeeds, commit
+COMMIT;
+    </pre>
+
+    <h4>2. Consistency Example</h4>
+    <pre>
+-- Ensure data consistency with constraints
+ALTER TABLE Borrowings ADD CONSTRAINT chk_return_date
+CHECK (ReturnDate IS NULL OR ReturnDate >= BorrowDate);
+
+ALTER TABLE Books ADD CONSTRAINT chk_available_copies
+CHECK (AvailableCopies >= 0);
+    </pre>
+
+    <h4>3. Isolation Levels</h4>
+    <pre>
+-- Set transaction isolation level
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+-- Example of isolation in action
+-- Session 1:
+START TRANSACTION;
+SELECT AvailableCopies FROM Books WHERE ISBN = '978-0123456789';
+-- Shows 5 copies
+
+-- Session 2 (concurrent):
+START TRANSACTION;
+UPDATE Books SET AvailableCopies = 3 WHERE ISBN = '978-0123456789';
+COMMIT;
+
+-- Session 1 continues:
+SELECT AvailableCopies FROM Books WHERE ISBN = '978-0123456789';
+-- Result depends on isolation level
+COMMIT;
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🔍</span>QUERY PROCESSING</h2>
+
+    <h3>Query Execution Process</h3>
+
+    <h4>Query Parsing and Optimization</h4>
+    <pre>
+-- Original query
+SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
+FROM Books b
+LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
+WHERE b.Genre = 'Fiction'
+  AND b.PublicationYear >= 2020
+GROUP BY b.ISBN, b.Title
+HAVING COUNT(br.BorrowingID) > 3
+ORDER BY BorrowCount DESC;
+
+-- Query execution plan
+EXPLAIN FORMAT=JSON 
+SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
+FROM Books b
+LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
+WHERE b.Genre = 'Fiction'
+  AND b.PublicationYear >= 2020
+GROUP BY b.ISBN, b.Title
+HAVING COUNT(br.BorrowingID) > 3
+ORDER BY BorrowCount DESC;
+    </pre>
+
+    <h4>Join Optimization</h4>
+    <pre>
+-- Nested Loop Join (small tables)
+SELECT b.Title, br.BorrowDate
+FROM Books b
+JOIN Borrowings br ON b.ISBN = br.ISBN
+WHERE b.Genre = 'Fiction';
+
+-- Hash Join (large tables)
+SELECT b.Title, br.BorrowDate
+FROM Books b
+JOIN Borrowings br ON b.ISBN = br.ISBN;
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🎯</span>MIDTERM FOCUS AREAS</h2>
+
+    <h3>Object DBMS</h3>
+
+    <h4>Object-Oriented Concepts in Databases</h4>
+    <pre>
+-- User-Defined Types (PostgreSQL example)
+CREATE TYPE Address AS (
+    street VARCHAR(100),
+    city VARCHAR(50),
+    state VARCHAR(20),
+    zip_code VARCHAR(10)
+);
+
+CREATE TYPE Person AS (
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    birth_date DATE,
+    address Address
+);
+
+-- Table using object types
+CREATE TABLE Employees (
+    emp_id SERIAL PRIMARY KEY,
+    person_info Person,
+    hire_date DATE,
+    salary DECIMAL(10,2)
+);
+    </pre>
+
+    <div class="important-note">
+        <h4>Object-Oriented DBMS Standards:</h4>
+        <ul>
+            <li><strong>ODMG (Object Data Management Group):</strong> Standard for object databases</li>
+            <li><strong>OQL (Object Query Language):</strong> SQL-like language for object databases</li>
+            <li><strong>ODL (Object Definition Language):</strong> For defining object schemas</li>
+        </ul>
+    </div>
+
+    <h3>The Web and DBMS</h3>
+
+    <h4>Web Technology Integration</h4>
+    <pre>
+// Node.js example connecting to database
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'webapp',
+    password: 'webapp_password',
+    database: 'library'
+});
+
+// API endpoint for book search
+app.get('/api/books/search', (req, res) => {
+    const { author, genre } = req.query;
+    
+    let query = 'SELECT * FROM Books WHERE 1=1';
+    let params = [];
+    
+    if (author) {
+        query += ' AND Author LIKE ?';
+        params.push(`%${author}%`);
+    }
+    
+    if (genre) {
+        query += ' AND Genre = ?';
+        params.push(genre);
+    }
+    
+    connection.execute(query, params, (err, results) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json(results);
+        }
+    });
+});
+    </pre>
+
+    <h4>Semi-structured Data (XML)</h4>
+    <pre>
+&lt;!-- books.xml --&gt;
+&lt;library&gt;
+    &lt;book isbn="978-0123456789"&gt;
+        &lt;title&gt;Database Systems Concepts&lt;/title&gt;
+        &lt;authors&gt;
+            &lt;author&gt;Abraham Silberschatz&lt;/author&gt;
+            &lt;author&gt;Henry F. Korth&lt;/author&gt;
+        &lt;/authors&gt;
+        &lt;publisher&gt;McGraw-Hill&lt;/publisher&gt;
+        &lt;year&gt;2020&lt;/year&gt;
+        &lt;genre&gt;Computer Science&lt;/genre&gt;
+    &lt;/book&gt;
+&lt;/library&gt;
+    </pre>
+
+    <pre>
+-- Store XML in database (MySQL example)
+CREATE TABLE BookXML (
+    id INT PRIMARY KEY,
+    book_data XML
+);
+
+-- Query XML data
+SELECT 
+    ExtractValue(book_data, '//book/@isbn') as ISBN,
+    ExtractValue(book_data, '//title') as Title
+FROM BookXML
+WHERE ExtractValue(book_data, '//genre') = 'Computer Science';
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">📊</span>BUSINESS INTELLIGENCE</h2>
+
+    <h3>Data Warehousing Concepts</h3>
+
+    <h4>Fact and Dimension Tables</h4>
+    <pre>
+-- Fact table (measures/metrics)
+CREATE TABLE BorrowingFacts (
+    fact_id INT PRIMARY KEY,
+    book_key INT,
+    member_key INT,
+    date_key INT,
+    borrow_count INT,
+    return_days INT,
+    fine_amount DECIMAL(10,2),
+    FOREIGN KEY (book_key) REFERENCES BookDimension(book_key),
+    FOREIGN KEY (member_key) REFERENCES MemberDimension(member_key),
+    FOREIGN KEY (date_key) REFERENCES DateDimension(date_key)
+);
+
+-- Dimension tables (attributes for analysis)
+CREATE TABLE BookDimension (
+    book_key INT PRIMARY KEY,
+    isbn VARCHAR(13),
+    title VARCHAR(200),
+    author VARCHAR(100),
+    genre VARCHAR(50),
+    publication_year INT
+);
+
+CREATE TABLE DateDimension (
+    date_key INT PRIMARY KEY,
+    full_date DATE,
+    year INT,
+    quarter INT,
+    month INT,
+    day_of_week VARCHAR(10)
+);
+    </pre>
+
+    <h3>OLAP Operations</h3>
+
+    <h4>Roll-up, Drill-down, and Slice Operations</h4>
+    <pre>
+-- Roll-up (summarize by higher level)
+SELECT d.year, b.genre, COUNT(*) as total_borrowings
+FROM BorrowingFacts f
+JOIN DateDimension d ON f.date_key = d.date_key
+JOIN BookDimension b ON f.book_key = b.book_key
+GROUP BY d.year, b.genre;
+
+-- Drill-down (detailed breakdown)
+SELECT d.year, d.month, b.author, COUNT(*) as borrowings
+FROM BorrowingFacts f
+JOIN DateDimension d ON f.date_key = d.date_key
+JOIN BookDimension b ON f.book_key = b.book_key
+WHERE d.year = 2024
+GROUP BY d.year, d.month, b.author;
+
+-- Slice (filter one dimension)
+SELECT b.title, COUNT(*) as borrowings
+FROM BorrowingFacts f
+JOIN BookDimension b ON f.book_key = b.book_key
+JOIN DateDimension d ON f.date_key = d.date_key
+WHERE d.year = 2024
+GROUP BY b.title;
+    </pre>
+
+    <h3>Data Mining Example</h3>
+    <pre>
+-- Association Rules: Books frequently borrowed together
+SELECT 
+    b1.title as Book1,
+    b2.title as Book2,
+    COUNT(*) as frequency
+FROM Borrowings br1
+JOIN Borrowings br2 ON br1.MemberID = br2.MemberID 
+    AND br1.BorrowingID < br2.BorrowingID
+JOIN Books b1 ON br1.ISBN = b1.ISBN
+JOIN Books b2 ON br2.ISBN = b2.ISBN
+WHERE ABS(DATEDIFF(br1.BorrowDate, br2.BorrowDate)) <= 30
+GROUP BY b1.title, b2.title
+HAVING COUNT(*) >= 5
+ORDER BY frequency DESC;
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">📝</span>SAMPLE EXAM QUESTIONS</h2>
+
+    <div class="key-points">
+        <h3>Conceptual Questions</h3>
+        <ol>
+            <li>Explain the difference between logical and physical database design.</li>
+            <li>What are the advantages of normalization? Provide an example of 2NF violation.</li>
+            <li>Compare ACID properties with BASE properties in distributed systems.</li>
+            <li>Describe the role of query optimizer in database management systems.</li>
+            <li>Explain the concept of data warehousing and its benefits for business intelligence.</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <h3>Practical Questions</h3>
+        <ol>
+            <li>Design a database schema for an online bookstore with proper normalization.</li>
+            <li>Write SQL queries to demonstrate different isolation levels.</li>
+            <li>Create indexes to optimize a given slow-performing query.</li>
+            <li>Implement security measures for a multi-user database system.</li>
+            <li>Design a star schema for analyzing student performance data.</li>
+        </ol>
+    </div>
+
+    <div class="important-note">
+        <h3>Advanced Topics</h3>
+        <ol>
+            <li>Explain how object-relational mapping (ORM) bridges OOP and relational databases.</li>
+            <li>Design a star schema for analyzing student performance data.</li>
+            <li>Discuss security considerations for web-based database applications.</li>
+            <li>Compare different storage structures and their performance characteristics.</li>
+            <li>Explain the role of metadata in data warehousing systems.</li>
+        </ol>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🚀</span>TIPS FOR SUCCESS</h2>
+
+    <div class="key-points">
+        <h3>Study Strategies</h3>
+        <ol>
+            <li><strong>Practice SQL regularly</strong> - Write queries daily to build muscle memory</li>
+            <li><strong>Understand concepts, don't memorize</strong> - Focus on why, not just what</li>
+            <li><strong>Draw ER diagrams</strong> - Visual representation helps understanding</li>
+            <li><strong>Analyze real-world examples</strong> - Apply concepts to actual scenarios</li>
+            <li><strong>Stay updated</strong> - Database technology evolves rapidly</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <h3>Exam Preparation Checklist</h3>
+        <ul>
+            <li>✓ Understand ER modeling and can draw diagrams</li>
+            <li>✓ Master normalization (1NF, 2NF, 3NF) with examples</li>
+            <li>✓ Know how to write complex SQL queries with joins</li>
+            <li>✓ Understand transaction management and ACID properties</li>
+            <li>✓ Familiar with indexing strategies and performance tuning</li>
+            <li>✓ Know security concepts and user management</li>
+            <li>✓ Understand OLAP operations and data warehousing</li>
+            <li>✓ Familiar with object-oriented database concepts</li>
+        </ul>
+    </div>
+
+    <div class="important-note">
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+            <li><strong>Poor normalization:</strong> Don't leave tables in 1NF when they should be in 3NF</li>
+            <li><strong>Missing foreign keys:</strong> Always establish proper relationships between tables</li>
+            <li><strong>Inefficient queries:</strong> Avoid SELECT * and use appropriate WHERE clauses</li>
+            <li><strong>Ignoring indexes:</strong> Create indexes for frequently queried columns</li>
+            <li><strong>Security oversights:</strong> Always implement proper user privileges and data encryption</li>
+        </ul>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">📋</span>QUICK REFERENCE GUIDE</h2>
+
+    <h3>SQL Command Summary</h3>
+    
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Command</th>
+            <th>Purpose</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td rowspan="4">DDL</td>
+            <td>CREATE TABLE</td>
+            <td>Create new table</td>
+            <td>CREATE TABLE Students(...)</td>
+        </tr>
+        <tr>
+            <td>ALTER TABLE</td>
+            <td>Modify table structure</td>
+            <td>ALTER TABLE Students ADD COLUMN...</td>
+        </tr>
+        <tr>
+            <td>DROP TABLE</td>
+            <td>Delete table</td>
+            <td>DROP TABLE Students</td>
+        </tr>
+        <tr>
+            <td>CREATE INDEX</td>
+            <td>Create index</td>
+            <td>CREATE INDEX idx_name ON table(col)</td>
+        </tr>
+        <tr>
+            <td rowspan="4">DML</td>
+            <td>SELECT</td>
+            <td>Query data</td>
+            <td>SELECT * FROM Students WHERE...</td>
+        </tr>
+        <tr>
+            <td>INSERT</td>
+            <td>Add new records</td>
+            <td>INSERT INTO Students VALUES(...)</td>
+        </tr>
+        <tr>
+            <td>UPDATE</td>
+            <td>Modify existing records</td>
+            <td>UPDATE Students SET ... WHERE...</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>Remove records</td>
+            <td>DELETE FROM Students WHERE...</td>
+        </tr>
+        <tr>
+            <td rowspan="3">DCL</td>
+            <td>GRANT</td>
+            <td>Give privileges</td>
+            <td>GRANT SELECT ON table TO user</td>
+        </tr>
+        <tr>
+            <td>REVOKE</td>
+            <td>Remove privileges</td>
+            <td>REVOKE SELECT ON table FROM user</td>
+        </tr>
+        <tr>
+            <td>CREATE USER</td>
+            <td>Create database user</td>
+            <td>CREATE USER 'name'@'host'...</td>
+        </tr>
+    </table>
+
+    <h3>Normalization Quick Reference</h3>
+    
+    <table>
+        <tr>
+            <th>Normal Form</th>
+            <th>Requirements</th>
+            <th>Eliminates</th>
+        </tr>
+        <tr>
+            <td>1NF</td>
+            <td>Atomic values, no repeating groups</td>
+            <td>Multi-valued attributes</td>
+        </tr>
+        <tr>
+            <td>2NF</td>
+            <td>1NF + No partial dependencies</td>
+            <td>Partial functional dependencies</td>
+        </tr>
+        <tr>
+            <td>3NF</td>
+            <td>2NF + No transitive dependencies</td>
+            <td>Transitive functional dependencies</td>
+        </tr>
+        <tr>
+            <td>BCNF</td>
+            <td>3NF + Every determinant is a candidate key</td>
+            <td>Remaining anomalies in 3NF</td>
+        </tr>
+    </table>
+
+    <h3>Transaction Isolation Levels</h3>
+    
+    <table>
+        <tr>
+            <th>Isolation Level</th>
+            <th>Dirty Read</th>
+            <th>Non-repeatable Read</th>
+            <th>Phantom Read</th>
+        </tr>
+        <tr>
+            <td>READ UNCOMMITTED</td>
+            <td>Possible</td>
+            <td>Possible</td>
+            <td>Possible</td>
+        </tr>
+        <tr>
+            <td>READ COMMITTED</td>
+            <td>Prevented</td>
+            <td>Possible</td>
+            <td>Possible</td>
+        </tr>
+        <tr>
+            <td>REPEATABLE READ</td>
+            <td>Prevented</td>
+            <td>Prevented</td>
+            <td>Possible</td>
+        </tr>
+        <tr>
+            <td>SERIALIZABLE</td>
+            <td>Prevented</td>
+            <td>Prevented</td>
+            <td>Prevented</td>
+        </tr>
+    </table>
+
+    <h2 class="page-break"><span class="topic-icon">🎓</span>PRACTICE EXERCISES</h2>
+
+    <div class="example-box">
+        <h3>Exercise 1: Database Design</h3>
+        <p><strong>Scenario:</strong> Design a database for a hospital management system.</p>
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Track patients, doctors, appointments, and medical records</li>
+            <li>Patients can have multiple appointments with different doctors</li>
+            <li>Each appointment can have multiple medical records</li>
+            <li>Doctors specialize in different departments</li>
+        </ul>
+        <p><strong>Tasks:</strong></p>
+        <ol>
+            <li>Create an ER diagram</li>
+            <li>Convert to relational schema</li>
+            <li>Apply normalization rules</li>
+            <li>Write SQL CREATE statements</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <h3>Exercise 2: Query Optimization</h3>
+        <p><strong>Given this slow query:</strong></p>
+        <pre>
+SELECT *
+FROM Orders o, Customers c, Products p, OrderItems oi
+WHERE o.customer_id = c.customer_id
+  AND oi.order_id = o.order_id
+  AND oi.product_id = p.product_id
+  AND o.order_date LIKE '2024%'
+  AND p.category = 'Electronics';
+        </pre>
+        <p><strong>Tasks:</strong></p>
+        <ol>
+            <li>Rewrite using proper JOIN syntax</li>
+            <li>Optimize the WHERE clause</li>
+            <li>Suggest appropriate indexes</li>
+            <li>Eliminate unnecessary columns from SELECT</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <h3>Exercise 3: Transaction Management</h3>
+        <p><strong>Scenario:</strong> Implement a money transfer between bank accounts.</p>
+        <pre>
+-- Account table
+CREATE TABLE Accounts (
+    account_id VARCHAR(10) PRIMARY KEY,
+    account_holder VARCHAR(100),
+    balance DECIMAL(10,2)
+);
+        </pre>
+        <p><strong>Tasks:</strong></p>
+        <ol>
+            <li>Write a transaction to transfer $500 from Account A to Account B</li>
+            <li>Handle error cases with appropriate rollback</li>
+            <li>Ensure ACID properties are maintained</li>
+            <li>Add appropriate constraints to prevent negative balances</li>
+        </ol>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">💡</span>FINAL REMINDERS</h2>
+
+    <div class="key-points">
+        <h3>Day Before Exam</h3>
+        <ul>
+            <li>Review key concepts and definitions</li>
+            <li>Practice drawing ER diagrams quickly</li>
+            <li>Review SQL syntax and common functions</li>
+            <li>Go through normalization examples</li>
+            <li>Review transaction concepts and ACID properties</li>
+            <li>Get adequate rest - your brain needs to be sharp!</li>
+        </ul>
+    </div>
+
+    <div class="important-note">
+        <h3>During the Exam</h3>
+        <ul>
+            <li>Read questions carefully - understand what's being asked</li>
+            <li>Plan your ER diagrams before drawing</li>
+            <li>Show your work for normalization problems</li>
+            <li>Write clear, syntactically correct SQL</li>
+            <li>Manage your time - don't spend too long on one question</li>
+            <li>Review your answers if time permits</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <h3>Remember the Fundamentals</h3>
+        <p><strong>Database design is both an art and a science.</strong> The key to success is understanding the underlying principles and being able to apply them to real-world scenarios. Focus on:</p>
+        <ul>
+            <li><strong>Why</strong> we normalize databases</li>
+            <li><strong>How</strong> relationships between entities work</li>
+            <li><strong>When</strong> to use different types of indexes</li>
+            <li><strong>What</strong> makes a good database design</li>
+        </ul>
+        <p>Practice with real projects and scenarios - this will help you understand not just the syntax, but the reasoning behind database design decisions.</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Good luck with your Advanced Database Systems midterm examination!</strong></p>
+        <p><em>Remember: Understanding concepts is more important than memorizing syntax.</em></p>
+        <p>© 2024 Advanced Database Systems Comprehensive Reviewer</p>
+    </div>
+
+    <script>
+        // Add print functionality
+        window.onload = function() {
+            // Auto-expand all sections for PDF generation
+            console.log('Advanced Database Systems Reviewer loaded successfully');
+        }
+        
+        // Print-specific styling
+        window.print = function() {
+            window.print();
+        }
+    </script>

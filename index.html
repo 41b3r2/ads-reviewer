@@ -3,156 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Database Systems - Comprehensive Reviewer</title>
+    <title>Advanced Database Systems - Enhanced Comprehensive Reviewer</title>
     <style>
         @page {
             size: A4;
-            margin: 1in;
+            margin: 0.8in;
         }
         
         body {
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 8.5in;
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            max-width: 12in;
             margin: 0 auto;
-            padding: 0;
-            font-size: 11pt;
+            padding: 10px;
+            font-size: 14pt;
+            background-color: #fafafa;
         }
         
         .header {
             text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            border-bottom: 4px solid #2c3e50;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px 10px 0 0;
             page-break-after: avoid;
         }
         
         .header h1 {
-            color: #2c3e50;
-            font-size: 24pt;
+            font-size: 32pt;
             margin: 0;
             font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .header .subtitle {
-            color: #7f8c8d;
-            font-size: 14pt;
-            margin: 5px 0;
+            font-size: 16pt;
+            margin: 10px 0;
             font-style: italic;
+            opacity: 0.9;
         }
         
         h2 {
             color: #2c3e50;
-            font-size: 16pt;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            font-size: 20pt;
+            border-bottom: 3px solid #3498db;
+            padding: 15px 0 10px 0;
+            margin: 35px 0 25px 0;
+            background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+            padding-left: 15px;
+            border-radius: 5px;
             page-break-after: avoid;
         }
         
         h3 {
             color: #34495e;
-            font-size: 14pt;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 17pt;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
             page-break-after: avoid;
         }
         
         h4 {
             color: #2c3e50;
-            font-size: 12pt;
-            margin-top: 15px;
-            margin-bottom: 8px;
+            font-size: 15pt;
+            margin: 20px 0 12px 0;
             font-weight: bold;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
         }
         
         .topic-icon {
             display: inline-block;
-            width: 20px;
-            font-size: 14pt;
-            margin-right: 10px;
+            width: 30px;
+            font-size: 18pt;
+            margin-right: 15px;
         }
         
         code {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 2px 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 10pt;
-            border-radius: 3px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border: 1px solid #34495e;
+            padding: 4px 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12pt;
+            border-radius: 4px;
+            font-weight: bold;
         }
         
         pre {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 15px;
-            font-family: 'Courier New', monospace;
-            font-size: 9pt;
-            line-height: 1.4;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
+            border: 2px solid #34495e;
+            padding: 20px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12pt;
+            line-height: 1.5;
             overflow-x: auto;
-            border-radius: 5px;
-            margin: 10px 0;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             page-break-inside: avoid;
         }
         
         .example-box {
-            background-color: #e8f6f3;
-            border-left: 4px solid #27ae60;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 5px 5px 0;
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            border-left: 6px solid #27ae60;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             page-break-inside: avoid;
         }
         
         .example-title {
             font-weight: bold;
             color: #27ae60;
-            margin-bottom: 10px;
+            font-size: 14pt;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 5px;
         }
         
         .important-note {
-            background-color: #fef9e7;
-            border-left: 4px solid #f39c12;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 5px 5px 0;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 6px solid #f39c12;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         .key-points {
-            background-color: #ebf3fd;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 5px 5px 0;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 6px solid #3498db;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .danger-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 6px solid #e74c3c;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         ul, ol {
-            margin: 10px 0;
-            padding-left: 25px;
+            margin: 15px 0;
+            padding-left: 30px;
         }
         
         li {
-            margin: 5px 0;
+            margin: 8px 0;
+            line-height: 1.6;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 10pt;
+            margin: 20px 0;
+            font-size: 12pt;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
         
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
         }
         
         th {
-            background-color: #f2f2f2;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e3f2fd;
         }
         
         .page-break {
@@ -164,974 +208,2416 @@
         }
         
         .footer {
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: center;
-            font-size: 10pt;
+            font-size: 11pt;
             color: #7f8c8d;
-            border-top: 1px solid #bdc3c7;
-            padding-top: 15px;
+            border-top: 2px solid #bdc3c7;
+            padding-top: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .sql-comment {
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .sql-keyword {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .sql-string {
+            color: #e74c3c;
+        }
+        
+        .diagram-box {
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         @media print {
-            body { font-size: 10pt; }
-            .header h1 { font-size: 20pt; }
-            h2 { font-size: 14pt; }
-            h3 { font-size: 12pt; }
-            pre { font-size: 8pt; }
+            body { 
+                font-size: 11pt; 
+                background-color: white;
+            }
+            .header h1 { font-size: 24pt; }
+            h2 { font-size: 16pt; }
+            h3 { font-size: 14pt; }
+            pre { font-size: 10pt; }
+        }
+        
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 12pt;
+            }
+            
+            .header h1 {
+                font-size: 24pt;
+            }
+            
+            h2 {
+                font-size: 16pt;
+            }
+            
+            pre {
+                font-size: 10pt;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>ADVANCED DATABASE SYSTEMS</h1>
-        <div class="subtitle">Comprehensive Reviewer for Midterm Examination</div>
-        <div class="subtitle">Complete Guide with Examples and Practice Materials</div>
+        <div class="subtitle">Enhanced Comprehensive Reviewer for Midterm Examination</div>
+        <div class="subtitle">Complete Guide with Detailed Examples and Practice Materials</div>
     </div>
 
     <h2><span class="topic-icon">📚</span>METHODOLOGY - CONCEPTUAL</h2>
 
-    <h3>What is Database Methodology?</h3>
-    <p>A systematic approach to database development that ensures proper planning, design, implementation, and maintenance of database systems.</p>
+    <h3>Database Development Methodology Overview</h3>
+    <p>A systematic approach that guides the entire database development lifecycle, ensuring robust, scalable, and maintainable database systems.</p>
 
     <div class="key-points">
-        <h4>Key Phases:</h4>
+        <h4>Complete Database Development Phases:</h4>
         <ol>
-            <li><strong>Requirements Analysis</strong> - Identify user needs and business requirements, document functional and non-functional requirements</li>
-            <li><strong>Conceptual Design</strong> - Create Entity-Relationship (ER) models, define entities, attributes, and relationships</li>
-            <li><strong>Logical Design</strong> - Convert ER model to relational schema, apply normalization rules</li>
-            <li><strong>Physical Design</strong> - Implement actual database structure, optimize for performance</li>
-        </ol>
-    </div>
-
-    <div class="example-box">
-        <div class="example-title">Example Scenario: University Student Management System</div>
-        <ul>
-            <li><strong>Requirement:</strong> Track students, courses, enrollments, and grades</li>
-            <li><strong>Entities:</strong> Student, Course, Instructor, Enrollment</li>
-            <li><strong>Attributes:</strong> StudentID, Name, CourseCode, Credits, Grade</li>
-            <li><strong>Relationships:</strong> Student enrolls in Course, Instructor teaches Course</li>
-        </ul>
-    </div>
-
-    <h2 class="page-break"><span class="topic-icon">🗃️</span>DATABASE DESIGN - LOGICAL</h2>
-
-    <h3>Logical Database Design Process</h3>
-
-    <h4>1. Entity-Relationship Modeling</h4>
-    <p>Transform business requirements into ER diagrams.</p>
-
-    <div class="example-box">
-        <div class="example-title">Example: E-commerce System</div>
-        <pre>
-Entities:
-- Customer (CustomerID, Name, Email, Phone)
-- Product (ProductID, Name, Price, Category)
-- Order (OrderID, OrderDate, TotalAmount)
-- OrderItem (Quantity, UnitPrice)
-
-Relationships:
-- Customer PLACES Order (1:M)
-- Order CONTAINS Product (M:N through OrderItem)
-        </pre>
-    </div>
-
-    <h4>2. Normalization Process</h4>
-    <p>Eliminate data redundancy and ensure data integrity.</p>
-
-    <div class="key-points">
-        <h4>First Normal Form (1NF)</h4>
-        <p>Eliminate repeating groups - Each cell contains atomic values</p>
-        
-        <table>
-            <tr><th colspan="2">Before 1NF</th></tr>
-            <tr><th>StudentID</th><th>Courses</th></tr>
-            <tr><td>001</td><td>Math, Science, English</td></tr>
-        </table>
-        
-        <table style="margin-top: 10px;">
-            <tr><th colspan="2">After 1NF</th></tr>
-            <tr><th>StudentID</th><th>Course</th></tr>
-            <tr><td>001</td><td>Math</td></tr>
-            <tr><td>001</td><td>Science</td></tr>
-            <tr><td>001</td><td>English</td></tr>
-        </table>
-    </div>
-
-    <div class="important-note">
-        <h4>Normalization Rules:</h4>
-        <ul>
-            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF + Eliminate partial dependencies</li>
-            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF + Eliminate transitive dependencies</li>
-        </ul>
-    </div>
-
-    <h4>Logical Schema Example:</h4>
-    <pre>
--- Students table
-CREATE TABLE Students (
-    StudentID VARCHAR(10) PRIMARY KEY,
-    FirstName VARCHAR(50),
-    LastName VARCHAR(50),
-    Email VARCHAR(100),
-    DepartmentID VARCHAR(5)
-);
-
--- Courses table
-CREATE TABLE Courses (
-    CourseID VARCHAR(10) PRIMARY KEY,
-    CourseName VARCHAR(100),
-    Credits INT,
-    DepartmentID VARCHAR(5)
-);
-
--- Enrollments table (junction table)
-CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY,
-    StudentID VARCHAR(10),
-    CourseID VARCHAR(10),
-    Grade CHAR(2),
-    EnrollmentDate DATE,
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
-);
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">🏗️</span>DATABASE DESIGN FOR RELATIONAL MODEL</h2>
-
-    <h3>Relational Model Principles</h3>
-
-    <div class="key-points">
-        <h4>Core Concepts:</h4>
-        <ol>
-            <li><strong>Tables (Relations):</strong> Data stored in two-dimensional tables, each row represents a record (tuple), each column represents an attribute</li>
-            <li><strong>Keys:</strong>
+            <li><strong>Planning and Feasibility Study</strong>
                 <ul>
-                    <li><strong>Primary Key:</strong> Uniquely identifies each record</li>
-                    <li><strong>Foreign Key:</strong> Links tables together</li>
-                    <li><strong>Composite Key:</strong> Combination of multiple attributes</li>
+                    <li>Assess project viability and resource requirements</li>
+                    <li>Define project scope and objectives</li>
+                    <li>Identify stakeholders and their roles</li>
+                </ul>
+            </li>
+            <li><strong>Requirements Analysis and Specification</strong>
+                <ul>
+                    <li>Gather functional requirements (what the system should do)</li>
+                    <li>Define non-functional requirements (performance, security, scalability)</li>
+                    <li>Document business rules and constraints</li>
+                </ul>
+            </li>
+            <li><strong>Conceptual Database Design</strong>
+                <ul>
+                    <li>Create Entity-Relationship (ER) models</li>
+                    <li>Define entities, attributes, and relationships</li>
+                    <li>Identify cardinalities and participation constraints</li>
+                </ul>
+            </li>
+            <li><strong>Logical Database Design</strong>
+                <ul>
+                    <li>Convert ER model to relational schema</li>
+                    <li>Apply normalization techniques</li>
+                    <li>Define referential integrity constraints</li>
+                </ul>
+            </li>
+            <li><strong>Physical Database Design</strong>
+                <ul>
+                    <li>Choose storage structures and access methods</li>
+                    <li>Design indexes for query optimization</li>
+                    <li>Implement partitioning strategies</li>
+                </ul>
+            </li>
+            <li><strong>Implementation and Testing</strong>
+                <ul>
+                    <li>Create database objects and load data</li>
+                    <li>Develop and test database applications</li>
+                    <li>Perform system integration testing</li>
+                </ul>
+            </li>
+            <li><strong>Deployment and Maintenance</strong>
+                <ul>
+                    <li>Deploy system to production environment</li>
+                    <li>Monitor performance and optimize as needed</li>
+                    <li>Implement backup and recovery procedures</li>
                 </ul>
             </li>
         </ol>
     </div>
 
-    <h4>Example: Library Management System</h4>
+    <div class="example-box">
+        <div class="example-title">Detailed Example: E-Learning Platform Development</div>
+        
+        <h4>Phase 1: Requirements Analysis</h4>
+        <p><strong>Functional Requirements:</strong></p>
+        <ul>
+            <li>Students can enroll in multiple courses</li>
+            <li>Instructors can create and manage course content</li>
+            <li>System tracks student progress and grades</li>
+            <li>Support for discussion forums and assignments</li>
+        </ul>
+        
+        <p><strong>Non-Functional Requirements:</strong></p>
+        <ul>
+            <li>Support 10,000 concurrent users</li>
+            <li>99.9% system availability</li>
+            <li>Response time < 2 seconds for queries</li>
+            <li>Data encryption for sensitive information</li>
+        </ul>
+        
+        <h4>Phase 2: Conceptual Design</h4>
+        <pre>
+<span class="sql-comment">-- Main Entities Identified:</span>
+Student (StudentID, FirstName, LastName, Email, DateOfBirth, Major)
+Course (CourseID, Title, Description, Credits, Department)
+Instructor (InstructorID, FirstName, LastName, Email, Department)
+Enrollment (EnrollmentDate, Grade, Status)
+Assignment (AssignmentID, Title, Description, DueDate, MaxPoints)
+Submission (SubmissionID, SubmissionDate, Content, Score)
+
+<span class="sql-comment">-- Relationships:</span>
+Student ENROLLS_IN Course (M:N)
+Instructor TEACHES Course (1:M)
+Student SUBMITS Assignment (M:N through Submission)
+Course CONTAINS Assignment (1:M)
+        </pre>
+    </div>
+
+    <div class="important-note">
+        <h4>Critical Success Factors:</h4>
+        <ul>
+            <li><strong>Stakeholder Involvement:</strong> Regular communication with users throughout development</li>
+            <li><strong>Iterative Development:</strong> Build and test incrementally rather than big-bang approach</li>
+            <li><strong>Documentation:</strong> Maintain comprehensive documentation at each phase</li>
+            <li><strong>Quality Assurance:</strong> Implement testing at every stage, not just at the end</li>
+        </ul>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🗃️</span>DATABASE DESIGN - LOGICAL</h2>
+
+    <h3>Comprehensive Logical Design Process</h3>
+
+    <h4>1. Enhanced Entity-Relationship Modeling</h4>
+    <p>Transform complex business requirements into detailed ER diagrams with advanced concepts.</p>
+
+    <div class="example-box">
+        <div class="example-title">Advanced Example: Hospital Management System</div>
+        <pre>
+<span class="sql-comment">-- Enhanced ER Model with Specialization</span>
+
+<span class="sql-keyword">ENTITIES:</span>
+Person (PersonID, FirstName, LastName, DateOfBirth, Gender, Phone)
+  └── Patient (PatientID, MedicalRecord, InsuranceInfo, EmergencyContact)
+  └── Employee (EmployeeID, HireDate, Salary, Department)
+      └── Doctor (LicenseNumber, Specialization, YearsExperience)
+      └── Nurse (CertificationLevel, Shift)
+      └── Administrator (AccessLevel, ResponsibilityArea)
+
+Room (RoomNumber, RoomType, Capacity, Equipment, Status)
+  └── PatientRoom (BedCount, PrivacyLevel)
+  └── OperationRoom (SurgeryCapability, SterileLevel)
+  └── OfficeRoom (Department, Occupant)
+
+Appointment (AppointmentID, DateTime, Duration, Status, Notes)
+Treatment (TreatmentID, TreatmentType, StartDate, EndDate, Cost)
+Prescription (PrescriptionID, Medication, Dosage, Frequency, Duration)
+
+<span class="sql-comment">-- Complex Relationships:</span>
+Patient SCHEDULES Appointment WITH Doctor (M:N:1)
+Doctor PRESCRIBES Prescription TO Patient (1:M:1)
+Patient RECEIVES Treatment FROM Doctor IN Room (M:N:1:1)
+Nurse ASSISTS Doctor DURING Treatment (M:N:N)
+        </pre>
+        
+        <div class="diagram-box">
+            <h4>ER Diagram Representation</h4>
+            <p><strong>Legend:</strong></p>
+            <p>□ = Entity | ◊ = Relationship | ○ = Attribute | ⬢ = Weak Entity</p>
+            <pre style="background: white; color: #2c3e50; font-size: 10pt;">
+Person ──┐
+         ├── Patient ──── SCHEDULES ──── Appointment ──── WITH ──── Doctor
+         └── Employee ──┐                    │                        │
+                        ├── Doctor ────────────                       │
+                        ├── Nurse                                     │
+                        └── Administrator                             │
+                                                                     │
+Room ────── IN ────── Treatment ────── RECEIVES ──────────────────────
+            </pre>
+        </div>
+    </div>
+
+    <h4>2. Advanced Normalization with Real Examples</h4>
+
+    <div class="key-points">
+        <h4>Complete Normalization Process</h4>
+        
+        <h5>Unnormalized Form (UNF) Example:</h5>
+        <table>
+            <tr>
+                <th>PatientID</th>
+                <th>PatientName</th>
+                <th>DoctorInfo</th>
+                <th>AppointmentDates</th>
+                <th>Medications</th>
+            </tr>
+            <tr>
+                <td>P001</td>
+                <td>John Smith</td>
+                <td>Dr. Johnson, Cardiology, License123</td>
+                <td>2024-01-15, 2024-02-20, 2024-03-10</td>
+                <td>Aspirin 81mg, Lisinopril 10mg</td>
+            </tr>
+            <tr>
+                <td>P002</td>
+                <td>Mary Johnson</td>
+                <td>Dr. Wilson, Neurology, License456</td>
+                <td>2024-01-18, 2024-02-25</td>
+                <td>Ibuprofen 200mg</td>
+            </tr>
+        </table>
+        
+        <h5>First Normal Form (1NF) - Atomic Values:</h5>
+        <table>
+            <tr>
+                <th>PatientID</th>
+                <th>PatientName</th>
+                <th>DoctorName</th>
+                <th>DoctorSpecialty</th>
+                <th>AppointmentDate</th>
+                <th>Medication</th>
+                <th>Dosage</th>
+            </tr>
+            <tr>
+                <td>P001</td>
+                <td>John Smith</td>
+                <td>Dr. Johnson</td>
+                <td>Cardiology</td>
+                <td>2024-01-15</td>
+                <td>Aspirin</td>
+                <td>81mg</td>
+            </tr>
+            <tr>
+                <td>P001</td>
+                <td>John Smith</td>
+                <td>Dr. Johnson</td>
+                <td>Cardiology</td>
+                <td>2024-01-15</td>
+                <td>Lisinopril</td>
+                <td>10mg</td>
+            </tr>
+            <tr>
+                <td>P001</td>
+                <td>John Smith</td>
+                <td>Dr. Johnson</td>
+                <td>Cardiology</td>
+                <td>2024-02-20</td>
+                <td>Aspirin</td>
+                <td>81mg</td>
+            </tr>
+        </table>
+        
+        <h5>Second Normal Form (2NF) - Remove Partial Dependencies:</h5>
+        <p><strong>Patients Table:</strong></p>
+        <table>
+            <tr><th>PatientID</th><th>PatientName</th></tr>
+            <tr><td>P001</td><td>John Smith</td></tr>
+            <tr><td>P002</td><td>Mary Johnson</td></tr>
+        </table>
+        
+        <p><strong>Doctors Table:</strong></p>
+        <table>
+            <tr><th>DoctorID</th><th>DoctorName</th><th>Specialty</th></tr>
+            <tr><td>D001</td><td>Dr. Johnson</td><td>Cardiology</td></tr>
+            <tr><td>D002</td><td>Dr. Wilson</td><td>Neurology</td></tr>
+        </table>
+        
+        <p><strong>Appointments Table:</strong></p>
+        <table>
+            <tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>AppointmentDate</th></tr>
+            <tr><td>A001</td><td>P001</td><td>D001</td><td>2024-01-15</td></tr>
+            <tr><td>A002</td><td>P001</td><td>D001</td><td>2024-02-20</td></tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">Complete Normalization Example with SQL Implementation</div>
+        <pre>
+<span class="sql-comment">-- Third Normal Form (3NF) Implementation</span>
+<span class="sql-comment">-- Remove transitive dependencies</span>
+
+<span class="sql-keyword">CREATE TABLE</span> Departments (
+    DepartmentID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">PRIMARY KEY</span>,
+    DepartmentName <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL</span>,
+    Location <span class="sql-keyword">VARCHAR</span>(100),
+    Budget <span class="sql-keyword">DECIMAL</span>(12,2)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Doctors (
+    DoctorID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">PRIMARY KEY</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    LastName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    LicenseNumber <span class="sql-keyword">VARCHAR</span>(20) <span class="sql-keyword">UNIQUE NOT NULL</span>,
+    YearsExperience <span class="sql-keyword">INT</span> <span class="sql-keyword">CHECK</span>(YearsExperience >= 0),
+    Specialization <span class="sql-keyword">VARCHAR</span>(50),
+    DepartmentID <span class="sql-keyword">VARCHAR</span>(10),
+    <span class="sql-keyword">FOREIGN KEY</span> (DepartmentID) <span class="sql-keyword">REFERENCES</span> Departments(DepartmentID)
+        <span class="sql-keyword">ON DELETE SET NULL ON UPDATE CASCADE</span>
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Patients (
+    PatientID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">PRIMARY KEY</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    LastName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    DateOfBirth <span class="sql-keyword">DATE NOT NULL</span>,
+    Gender <span class="sql-keyword">ENUM</span>(<span class="sql-string">'M'</span>, <span class="sql-string">'F'</span>, <span class="sql-string">'Other'</span>),
+    Phone <span class="sql-keyword">VARCHAR</span>(15),
+    Email <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">UNIQUE</span>,
+    Address <span class="sql-keyword">TEXT</span>,
+    InsuranceNumber <span class="sql-keyword">VARCHAR</span>(20),
+    EmergencyContact <span class="sql-keyword">VARCHAR</span>(100),
+    EmergencyPhone <span class="sql-keyword">VARCHAR</span>(15)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Appointments (
+    AppointmentID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    PatientID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">NOT NULL</span>,
+    DoctorID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">NOT NULL</span>,
+    AppointmentDateTime <span class="sql-keyword">DATETIME NOT NULL</span>,
+    Duration <span class="sql-keyword">INT DEFAULT</span> 30, <span class="sql-comment">-- minutes</span>
+    AppointmentType <span class="sql-keyword">VARCHAR</span>(50),
+    Status <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Scheduled'</span>, <span class="sql-string">'Completed'</span>, <span class="sql-string">'Cancelled'</span>, <span class="sql-string">'No-Show'</span>)
+        <span class="sql-keyword">DEFAULT</span> <span class="sql-string">'Scheduled'</span>,
+    Notes <span class="sql-keyword">TEXT</span>,
+    CreatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (PatientID) <span class="sql-keyword">REFERENCES</span> Patients(PatientID)
+        <span class="sql-keyword">ON DELETE CASCADE ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (DoctorID) <span class="sql-keyword">REFERENCES</span> Doctors(DoctorID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">INDEX</span> idx_appointment_datetime (AppointmentDateTime),
+    <span class="sql-keyword">INDEX</span> idx_patient_appointments (PatientID, AppointmentDateTime)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Medications (
+    MedicationID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">PRIMARY KEY</span>,
+    MedicationName <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL</span>,
+    GenericName <span class="sql-keyword">VARCHAR</span>(100),
+    Manufacturer <span class="sql-keyword">VARCHAR</span>(100),
+    Category <span class="sql-keyword">VARCHAR</span>(50),
+    UnitPrice <span class="sql-keyword">DECIMAL</span>(8,2),
+    StockQuantity <span class="sql-keyword">INT DEFAULT</span> 0
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Prescriptions (
+    PrescriptionID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    AppointmentID <span class="sql-keyword">INT NOT NULL</span>,
+    MedicationID <span class="sql-keyword">VARCHAR</span>(10) <span class="sql-keyword">NOT NULL</span>,
+    Dosage <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    Frequency <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    Duration <span class="sql-keyword">VARCHAR</span>(50),
+    Instructions <span class="sql-keyword">TEXT</span>,
+    Quantity <span class="sql-keyword">INT</span>,
+    PrescribedDate <span class="sql-keyword">DATE DEFAULT</span> (CURDATE()),
+    <span class="sql-keyword">FOREIGN KEY</span> (AppointmentID) <span class="sql-keyword">REFERENCES</span> Appointments(AppointmentID)
+        <span class="sql-keyword">ON DELETE CASCADE ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (MedicationID) <span class="sql-keyword">REFERENCES</span> Medications(MedicationID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>
+);
+
+<span class="sql-comment">-- Sample Data Insertion</span>
+<span class="sql-keyword">INSERT INTO</span> Departments <span class="sql-keyword">VALUES</span>
+(<span class="sql-string">'CARD001'</span>, <span class="sql-string">'Cardiology'</span>, <span class="sql-string">'Building A - Floor 3'</span>, 2500000.00),
+(<span class="sql-string">'NEURO001'</span>, <span class="sql-string">'Neurology'</span>, <span class="sql-string">'Building B - Floor 2'</span>, 3000000.00),
+(<span class="sql-string">'PEDIA001'</span>, <span class="sql-string">'Pediatrics'</span>, <span class="sql-string">'Building C - Floor 1'</span>, 1800000.00);
+
+<span class="sql-keyword">INSERT INTO</span> Doctors <span class="sql-keyword">VALUES</span>
+(<span class="sql-string">'D001'</span>, <span class="sql-string">'Michael'</span>, <span class="sql-string">'Johnson'</span>, <span class="sql-string">'LIC123456'</span>, 15, <span class="sql-string">'Interventional Cardiology'</span>, <span class="sql-string">'CARD001'</span>),
+(<span class="sql-string">'D002'</span>, <span class="sql-string">'Sarah'</span>, <span class="sql-string">'Wilson'</span>, <span class="sql-string">'LIC789012'</span>, 12, <span class="sql-string">'Neurological Surgery'</span>, <span class="sql-string">'NEURO001'</span>),
+(<span class="sql-string">'D003'</span>, <span class="sql-string">'David'</span>, <span class="sql-string">'Chen'</span>, <span class="sql-string">'LIC345678'</span>, 8, <span class="sql-string">'Pediatric Cardiology'</span>, <span class="sql-string">'PEDIA001'</span>);
+
+<span class="sql-keyword">INSERT INTO</span> Patients <span class="sql-keyword">VALUES</span>
+(<span class="sql-string">'P001'</span>, <span class="sql-string">'John'</span>, <span class="sql-string">'Smith'</span>, <span class="sql-string">'1985-03-15'</span>, <span class="sql-string">'M'</span>, <span class="sql-string">'555-0123'</span>, 
+ <span class="sql-string">'john.smith@email.com'</span>, <span class="sql-string">'123 Main St, City, State'</span>, <span class="sql-string">'INS001234'</span>, <span class="sql-string">'Jane Smith'</span>, <span class="sql-string">'555-0124'</span>),
+(<span class="sql-string">'P002'</span>, <span class="sql-string">'Mary'</span>, <span class="sql-string">'Johnson'</span>, <span class="sql-string">'1978-07-22'</span>, <span class="sql-string">'F'</span>, <span class="sql-string">'555-0125'</span>, 
+ <span class="sql-string">'mary.johnson@email.com'</span>, <span class="sql-string">'456 Oak Ave, City, State'</span>, <span class="sql-string">'INS005678'</span>, <span class="sql-string">'Robert Johnson'</span>, <span class="sql-string">'555-0126'</span>);
+        </pre>
+    </div>
+
+    <div class="important-note">
+        <h4>Normalization Benefits and Trade-offs</h4>
+        <p><strong>Benefits:</strong></p>
+        <ul>
+            <li><strong>Eliminates Data Redundancy:</strong> Reduces storage space and update anomalies</li>
+            <li><strong>Improves Data Integrity:</strong> Ensures consistency across related tables</li>
+            <li><strong>Facilitates Maintenance:</strong> Changes need to be made in fewer places</li>
+            <li><strong>Enforces Business Rules:</strong> Constraints ensure data validity</li>
+        </ul>
+        
+        <p><strong>Trade-offs:</strong></p>
+        <ul>
+            <li><strong>Query Complexity:</strong> More joins required for comprehensive data retrieval</li>
+            <li><strong>Performance Impact:</strong> Multiple table access can slow down queries</li>
+            <li><strong>Storage Overhead:</strong> Additional keys and indexes consume space</li>
+        </ul>
+        
+        <p><strong>When to Denormalize:</strong></p>
+        <ul>
+            <li>Read-heavy applications with infrequent updates</li>
+            <li>Data warehousing and reporting systems</li>
+            <li>Performance-critical applications</li>
+            <li>Systems with well-defined, stable data patterns</li>
+        </ul>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🏗️</span>DATABASE DESIGN FOR RELATIONAL MODEL</h2>
+
+    <h3>Advanced Relational Model Implementation</h3>
+
+    <div class="key-points">
+        <h4>Enhanced Relational Model Concepts:</h4>
+        <ol>
+            <li><strong>Advanced Key Concepts:</strong>
+                <ul>
+                    <li><strong>Super Key:</strong> Any combination of attributes that uniquely identifies rows</li>
+                    <li><strong>Candidate Key:</strong> Minimal super key (no redundant attributes)</li>
+                    <li><strong>Primary Key:</strong> Chosen candidate key for entity identification</li>
+                    <li><strong>Alternate Key:</strong> Candidate keys not chosen as primary key</li>
+                    <li><strong>Composite Key:</strong> Primary key consisting of multiple attributes</li>
+                    <li><strong>Surrogate Key:</strong> Artificial key with no business meaning</li>
+                </ul>
+            </li>
+            <li><strong>Referential Integrity Actions:</strong>
+                <ul>
+                    <li><strong>CASCADE:</strong> Changes propagate to child tables</li>
+                    <li><strong>RESTRICT:</strong> Prevents changes if child records exist</li>
+                    <li><strong>SET NULL:</strong> Sets foreign key to null when parent is deleted</li>
+                    <li><strong>SET DEFAULT:</strong> Sets foreign key to default value</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">Comprehensive Example: Advanced E-Commerce System</div>
+        <pre>
+<span class="sql-comment">-- Advanced Relational Schema with Complex Business Rules</span>
+
+<span class="sql-keyword">CREATE TABLE</span> Categories (
+    CategoryID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    CategoryName <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL UNIQUE</span>,
+    ParentCategoryID <span class="sql-keyword">INT</span>,
+    Description <span class="sql-keyword">TEXT</span>,
+    IsActive <span class="sql-keyword">BOOLEAN DEFAULT TRUE</span>,
+    CreatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    UpdatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (ParentCategoryID) <span class="sql-keyword">REFERENCES</span> Categories(CategoryID)
+        <span class="sql-keyword">ON DELETE SET NULL ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">INDEX</span> idx_category_parent (ParentCategoryID),
+    <span class="sql-keyword">INDEX</span> idx_category_active (IsActive)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Suppliers (
+    SupplierID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    CompanyName <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL</span>,
+    ContactName <span class="sql-keyword">VARCHAR</span>(50),
+    Email <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">UNIQUE</span>,
+    Phone <span class="sql-keyword">VARCHAR</span>(20),
+    Address <span class="sql-keyword">TEXT</span>,
+    City <span class="sql-keyword">VARCHAR</span>(50),
+    Country <span class="sql-keyword">VARCHAR</span>(50),
+    PostalCode <span class="sql-keyword">VARCHAR</span>(20),
+    Rating <span class="sql-keyword">DECIMAL</span>(3,2) <span class="sql-keyword">CHECK</span>(Rating >= 0 AND Rating <= 5),
+    IsApproved <span class="sql-keyword">BOOLEAN DEFAULT FALSE</span>,
+    RegistrationDate <span class="sql-keyword">DATE DEFAULT</span> (CURDATE())
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Products (
+    ProductID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    ProductName <span class="sql-keyword">VARCHAR</span>(200) <span class="sql-keyword">NOT NULL</span>,
+    SKU <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">UNIQUE NOT NULL</span>,
+    CategoryID <span class="sql-keyword">INT NOT NULL</span>,
+    SupplierID <span class="sql-keyword">INT NOT NULL</span>,
+    Description <span class="sql-keyword">TEXT</span>,
+    UnitPrice <span class="sql-keyword">DECIMAL</span>(10,2) <span class="sql-keyword">NOT NULL CHECK</span>(UnitPrice >= 0),
+    CostPrice <span class="sql-keyword">DECIMAL</span>(10,2) <span class="sql-keyword">CHECK</span>(CostPrice >= 0),
+    UnitsInStock <span class="sql-keyword">INT DEFAULT</span> 0 <span class="sql-keyword">CHECK</span>(UnitsInStock >= 0),
+    ReorderLevel <span class="sql-keyword">INT DEFAULT</span> 10,
+    Weight <span class="sql-keyword">DECIMAL</span>(8,3),
+    Dimensions <span class="sql-keyword">VARCHAR</span>(50), <span class="sql-comment">-- L x W x H format</span>
+    IsDiscontinued <span class="sql-keyword">BOOLEAN DEFAULT FALSE</span>,
+    DateAdded <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    LastUpdated <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (CategoryID) <span class="sql-keyword">REFERENCES</span> Categories(CategoryID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (SupplierID) <span class="sql-keyword">REFERENCES</span> Suppliers(SupplierID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">INDEX</span> idx_product_category (CategoryID),
+    <span class="sql-keyword">INDEX</span> idx_product_supplier (SupplierID),
+    <span class="sql-keyword">INDEX</span> idx_product_price (UnitPrice),
+    <span class="sql-keyword">INDEX</span> idx_product_stock (UnitsInStock),
+    <span class="sql-keyword">FULLTEXT INDEX</span> idx_product_search (ProductName, Description)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Customers (
+    CustomerID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    CustomerNumber <span class="sql-keyword">VARCHAR</span>(20) <span class="sql-keyword">UNIQUE NOT NULL</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    LastName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    Email <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">UNIQUE NOT NULL</span>,
+    Phone <span class="sql-keyword">VARCHAR</span>(20),
+    DateOfBirth <span class="sql-keyword">DATE</span>,
+    Gender <span class="sql-keyword">ENUM</span>(<span class="sql-string">'M'</span>, <span class="sql-string">'F'</span>, <span class="sql-string">'Other'</span>, <span class="sql-string">'Prefer not to say'</span>),
+    CustomerType <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Individual'</span>, <span class="sql-string">'Business'</span>) <span class="sql-keyword">DEFAULT</span> <span class="sql-string">'Individual'</span>,
+    CreditLimit <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">DEFAULT</span> 0,
+    CurrentCredit <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">DEFAULT</span> 0,
+    RegistrationDate <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    LastLoginDate <span class="sql-keyword">TIMESTAMP NULL</span>,
+    IsActive <span class="sql-keyword">BOOLEAN DEFAULT TRUE</span>,
+    <span class="sql-keyword">INDEX</span> idx_customer_email (Email),
+    <span class="sql-keyword">INDEX</span> idx_customer_type (CustomerType),
+    <span class="sql-keyword">INDEX</span> idx_customer_registration (RegistrationDate)
+);
+
+<span class="sql-comment">-- Customer Addresses (One-to-Many)</span>
+<span class="sql-keyword">CREATE TABLE</span> CustomerAddresses (
+    AddressID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    CustomerID <span class="sql-keyword">INT NOT NULL</span>,
+    AddressType <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Billing'</span>, <span class="sql-string">'Shipping'</span>, <span class="sql-string">'Both'</span>) <span class="sql-keyword">NOT NULL</span>,
+    Street <span class="sql-keyword">VARCHAR</span>(200) <span class="sql-keyword">NOT NULL</span>,
+    City <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL</span>,
+    State <span class="sql-keyword">VARCHAR</span>(50),
+    Country <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    PostalCode <span class="sql-keyword">VARCHAR</span>(20),
+    IsDefault <span class="sql-keyword">BOOLEAN DEFAULT FALSE</span>,
+    CreatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (CustomerID) <span class="sql-keyword">REFERENCES</span> Customers(CustomerID)
+        <span class="sql-keyword">ON DELETE CASCADE ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">INDEX</span> idx_address_customer (CustomerID),
+    <span class="sql-keyword">UNIQUE INDEX</span> idx_default_address (CustomerID, AddressType, IsDefault)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Orders (
+    OrderID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    OrderNumber <span class="sql-keyword">VARCHAR</span>(20) <span class="sql-keyword">UNIQUE NOT NULL</span>,
+    CustomerID <span class="sql-keyword">INT NOT NULL</span>,
+    OrderDate <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    RequiredDate <span class="sql-keyword">DATE</span>,
+    ShippedDate <span class="sql-keyword">DATE</span>,
+    OrderStatus <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Pending'</span>, <span class="sql-string">'Processing'</span>, <span class="sql-string">'Shipped'</span>, <span class="sql-string">'Delivered'</span>, <span class="sql-string">'Cancelled'</span>)
+        <span class="sql-keyword">DEFAULT</span> <span class="sql-string">'Pending'</span>,
+    PaymentStatus <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Pending'</span>, <span class="sql-string">'Paid'</span>, <span class="sql-string">'Partial'</span>, <span class="sql-string">'Refunded'</span>, <span class="sql-string">'Failed'</span>)
+        <span class="sql-keyword">DEFAULT</span> <span class="sql-string">'Pending'</span>,
+    ShippingAddressID <span class="sql-keyword">INT</span>,
+    BillingAddressID <span class="sql-keyword">INT</span>,
+    SubTotal <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">NOT NULL DEFAULT</span> 0,
+    TaxAmount <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">DEFAULT</span> 0,
+    ShippingCost <span class="sql-keyword">DECIMAL</span>(8,2) <span class="sql-keyword">DEFAULT</span> 0,
+    DiscountAmount <span class="sql-keyword">DECIMAL</span>(10,2) <span class="sql-keyword">DEFAULT</span> 0,
+    TotalAmount <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">NOT NULL</span>,
+    Notes <span class="sql-keyword">TEXT</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (CustomerID) <span class="sql-keyword">REFERENCES</span> Customers(CustomerID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (ShippingAddressID) <span class="sql-keyword">REFERENCES</span> CustomerAddresses(AddressID)
+        <span class="sql-keyword">ON DELETE SET NULL ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (BillingAddressID) <span class="sql-keyword">REFERENCES</span> CustomerAddresses(AddressID)
+        <span class="sql-keyword">ON DELETE SET NULL ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">INDEX</span> idx_order_customer (CustomerID),
+    <span class="sql-keyword">INDEX</span> idx_order_date (OrderDate),
+    <span class="sql-keyword">INDEX</span> idx_order_status (OrderStatus),
+    <span class="sql-keyword">INDEX</span> idx_order_total (TotalAmount)
+);
+
+<span class="sql-keyword">CREATE TABLE</span> OrderItems (
+    OrderItemID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    OrderID <span class="sql-keyword">INT NOT NULL</span>,
+    ProductID <span class="sql-keyword">INT NOT NULL</span>,
+    Quantity <span class="sql-keyword">INT NOT NULL CHECK</span>(Quantity > 0),
+    UnitPrice <span class="sql-keyword">DECIMAL</span>(10,2) <span class="sql-keyword">NOT NULL CHECK</span>(UnitPrice >= 0),
+    Discount <span class="sql-keyword">DECIMAL</span>(5,4) <span class="sql-keyword">DEFAULT</span> 0 <span class="sql-keyword">CHECK</span>(Discount >= 0 AND Discount <= 1),
+    LineTotal <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">GENERATED ALWAYS AS</span> 
+        (Quantity * UnitPrice * (1 - Discount)) <span class="sql-keyword">STORED</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (OrderID) <span class="sql-keyword">REFERENCES</span> Orders(OrderID)
+        <span class="sql-keyword">ON DELETE CASCADE ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">FOREIGN KEY</span> (ProductID) <span class="sql-keyword">REFERENCES</span> Products(ProductID)
+        <span class="sql-keyword">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="sql-keyword">UNIQUE INDEX</span> idx_order_product (OrderID, ProductID),
+    <span class="sql-keyword">INDEX</span> idx_orderitem_product (ProductID)
+);
+
+<span class="sql-comment">-- Advanced Triggers for Business Logic</span>
+<span class="sql-keyword">DELIMITER</span> $
+
+<span class="sql-keyword">CREATE TRIGGER</span> trg_order_total_calculation
+<span class="sql-keyword">AFTER INSERT ON</span> OrderItems
+<span class="sql-keyword">FOR EACH ROW</span>
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">UPDATE</span> Orders 
+    <span class="sql-keyword">SET</span> SubTotal = (
+        <span class="sql-keyword">SELECT</span> <span class="sql-keyword">SUM</span>(LineTotal) 
+        <span class="sql-keyword">FROM</span> OrderItems 
+        <span class="sql-keyword">WHERE</span> ProductID = 1 <span class="sql-keyword">AND</span> Version = 3; <span class="sql-comment">-- Only update if version matches</span>
+
+<span class="sql-comment">-- Pessimistic locking</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Products 
+<span class="sql-keyword">WHERE</span> ProductID = 1 
+<span class="sql-keyword">FOR UPDATE</span>; <span class="sql-comment">-- Exclusive lock</span>
+
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Products 
+<span class="sql-keyword">WHERE</span> CategoryID = 1 
+<span class="sql-keyword">FOR SHARE</span>; <span class="sql-comment">-- Shared lock</span>
+
+<span class="sql-comment">-- Named locks for application-level coordination</span>
+<span class="sql-keyword">SELECT</span> <span class="sql-keyword">GET_LOCK</span>(<span class="sql-string">'product_update_1'</span>, 10) <span class="sql-keyword">AS</span> lock_status; <span class="sql-comment">-- Wait 10 seconds max</span>
+<span class="sql-comment">-- Perform critical operation</span>
+<span class="sql-keyword">SELECT</span> <span class="sql-keyword">RELEASE_LOCK</span>(<span class="sql-string">'product_update_1'</span>) <span class="sql-keyword">AS</span> release_status;
+        </pre>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🔍</span>ADVANCED QUERY PROCESSING</h2>
+
+    <h3>Query Optimization and Execution Plans</h3>
+
+    <div class="example-box">
+        <div class="example-title">Comprehensive Query Analysis and Optimization</div>
+        <pre>
+<span class="sql-comment">-- 1. Complex Query Execution Plan Analysis</span>
+<span class="sql-keyword">EXPLAIN FORMAT</span>=<span class="sql-keyword">JSON</span>
+<span class="sql-keyword">SELECT</span> 
+    c.FirstName,
+    c.LastName,
+    <span class="sql-keyword">COUNT</span>(o.OrderID) <span class="sql-keyword">AS</span> TotalOrders,
+    <span class="sql-keyword">SUM</span>(o.TotalAmount) <span class="sql-keyword">AS</span> TotalSpent,
+    <span class="sql-keyword">AVG</span>(o.TotalAmount) <span class="sql-keyword">AS</span> AvgOrderValue,
+    <span class="sql-keyword">MAX</span>(o.OrderDate) <span class="sql-keyword">AS</span> LastOrderDate,
+    (   <span class="sql-keyword">SELECT</span> <span class="sql-keyword">GROUP_CONCAT</span>(p.ProductName <span class="sql-keyword">ORDER BY</span> oi.Quantity <span class="sql-keyword">DESC</span> <span class="sql-keyword">LIMIT</span> 3)
+        <span class="sql-keyword">FROM</span> OrderItems oi
+        <span class="sql-keyword">JOIN</span> Products p <span class="sql-keyword">ON</span> oi.ProductID = p.ProductID
+        <span class="sql-keyword">WHERE</span> oi.OrderID <span class="sql-keyword">IN</span> (
+            <span class="sql-keyword">SELECT</span> OrderID <span class="sql-keyword">FROM</span> Orders 
+            <span class="sql-keyword">WHERE</span> CustomerID = c.CustomerID
+        )
+    ) <span class="sql-keyword">AS</span> TopProducts
+<span class="sql-keyword">FROM</span> Customers c
+<span class="sql-keyword">LEFT JOIN</span> Orders o <span class="sql-keyword">ON</span> c.CustomerID = o.CustomerID
+<span class="sql-keyword">WHERE</span> c.RegistrationDate >= <span class="sql-string">'2024-01-01'</span>
+    <span class="sql-keyword">AND</span> c.IsActive = <span class="sql-keyword">TRUE</span>
+<span class="sql-keyword">GROUP BY</span> c.CustomerID, c.FirstName, c.LastName
+<span class="sql-keyword">HAVING</span> <span class="sql-keyword">COUNT</span>(o.OrderID) > 0
+<span class="sql-keyword">ORDER BY</span> TotalSpent <span class="sql-keyword">DESC</span>
+<span class="sql-keyword">LIMIT</span> 50;
+
+<span class="sql-comment">-- 2. Optimized version of the above query</span>
+<span class="sql-keyword">WITH</span> CustomerOrderStats <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> 
+        c.CustomerID,
+        c.FirstName,
+        c.LastName,
+        <span class="sql-keyword">COUNT</span>(o.OrderID) <span class="sql-keyword">AS</span> TotalOrders,
+        <span class="sql-keyword">SUM</span>(o.TotalAmount) <span class="sql-keyword">AS</span> TotalSpent,
+        <span class="sql-keyword">AVG</span>(o.TotalAmount) <span class="sql-keyword">AS</span> AvgOrderValue,
+        <span class="sql-keyword">MAX</span>(o.OrderDate) <span class="sql-keyword">AS</span> LastOrderDate
+    <span class="sql-keyword">FROM</span> Customers c
+    <span class="sql-keyword">INNER JOIN</span> Orders o <span class="sql-keyword">ON</span> c.CustomerID = o.CustomerID
+    <span class="sql-keyword">WHERE</span> c.RegistrationDate >= <span class="sql-string">'2024-01-01'</span>
+        <span class="sql-keyword">AND</span> c.IsActive = <span class="sql-keyword">TRUE</span>
+    <span class="sql-keyword">GROUP BY</span> c.CustomerID, c.FirstName, c.LastName
+),
+TopProductsPerCustomer <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> 
+        o.CustomerID,
+        <span class="sql-keyword">GROUP_CONCAT</span>(
+            p.ProductName 
+            <span class="sql-keyword">ORDER BY</span> <span class="sql-keyword">SUM</span>(oi.Quantity) <span class="sql-keyword">DESC</span> 
+            <span class="sql-keyword">LIMIT</span> 3
+        ) <span class="sql-keyword">AS</span> TopProducts
+    <span class="sql-keyword">FROM</span> Orders o
+    <span class="sql-keyword">JOIN</span> OrderItems oi <span class="sql-keyword">ON</span> o.OrderID = oi.OrderID
+    <span class="sql-keyword">JOIN</span> Products p <span class="sql-keyword">ON</span> oi.ProductID = p.ProductID
+    <span class="sql-keyword">WHERE</span> o.CustomerID <span class="sql-keyword">IN</span> (<span class="sql-keyword">SELECT</span> CustomerID <span class="sql-keyword">FROM</span> CustomerOrderStats)
+    <span class="sql-keyword">GROUP BY</span> o.CustomerID, p.ProductID
+)
+<span class="sql-keyword">SELECT</span> 
+    cos.*,
+    tpc.TopProducts
+<span class="sql-keyword">FROM</span> CustomerOrderStats cos
+<span class="sql-keyword">LEFT JOIN</span> TopProductsPerCustomer tpc <span class="sql-keyword">ON</span> cos.CustomerID = tpc.CustomerID
+<span class="sql-keyword">ORDER BY</span> cos.TotalSpent <span class="sql-keyword">DESC</span>
+<span class="sql-keyword">LIMIT</span> 50;
+
+<span class="sql-comment">-- 3. Index Optimization Analysis</span>
+<span class="sql-comment">-- Create composite indexes for the above query</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_customers_active_reg 
+<span class="sql-keyword">ON</span> Customers(IsActive, RegistrationDate, CustomerID);
+
+<span class="sql-keyword">CREATE INDEX</span> idx_orders_customer_date 
+<span class="sql-keyword">ON</span> Orders(CustomerID, OrderDate, TotalAmount);
+
+<span class="sql-keyword">CREATE INDEX</span> idx_orderitems_order_product_qty 
+<span class="sql-keyword">ON</span> OrderItems(OrderID, ProductID, Quantity);
+
+<span class="sql-comment">-- 4. Join Algorithm Examples</span>
+
+<span class="sql-comment">-- Force Nested Loop Join (good for small datasets)</span>
+<span class="sql-keyword">SELECT</span> <span class="sql-comment">/*+ USE_NL(c, o) */</span>
+    c.FirstName, c.LastName, o.OrderDate, o.TotalAmount
+<span class="sql-keyword">FROM</span> Customers c
+<span class="sql-keyword">JOIN</span> Orders o <span class="sql-keyword">ON</span> c.CustomerID = o.CustomerID
+<span class="sql-keyword">WHERE</span> c.CustomerID <span class="sql-keyword">BETWEEN</span> 1 <span class="sql-keyword">AND</span> 10;
+
+<span class="sql-comment">-- Hash Join (good for large datasets with equality conditions)</span>
+<span class="sql-keyword">SELECT</span> <span class="sql-comment">/*+ USE_HASH(c, o) */</span>
+    c.CustomerType, 
+    <span class="sql-keyword">COUNT</span>(*) <span class="sql-keyword">AS</span> OrderCount,
+    <span class="sql-keyword">AVG</span>(o.TotalAmount) <span class="sql-keyword">AS</span> AvgAmount
+<span class="sql-keyword">FROM</span> Customers c
+<span class="sql-keyword">JOIN</span> Orders o <span class="sql-keyword">ON</span> c.CustomerID = o.CustomerID
+<span class="sql-keyword">GROUP BY</span> c.CustomerType;
+
+<span class="sql-comment">-- 5. Subquery Optimization</span>
+
+<span class="sql-comment">-- BEFORE: Correlated subquery (inefficient)</span>
+<span class="sql-keyword">SELECT</span> 
+    ProductID, ProductName, UnitPrice
+<span class="sql-keyword">FROM</span> Products p1
+<span class="sql-keyword">WHERE</span> UnitPrice > (
+    <span class="sql-keyword">SELECT</span> <span class="sql-keyword">AVG</span>(UnitPrice)
+    <span class="sql-keyword">FROM</span> Products p2
+    <span class="sql-keyword">WHERE</span> p2.CategoryID = p1.CategoryID
+);
+
+<span class="sql-comment">-- AFTER: Window function (more efficient)</span>
+<span class="sql-keyword">SELECT</span> 
+    ProductID, ProductName, UnitPrice
+<span class="sql-keyword">FROM</span> (
+    <span class="sql-keyword">SELECT</span> 
+        ProductID,
+        ProductName,
+        UnitPrice,
+        CategoryID,
+        <span class="sql-keyword">AVG</span>(UnitPrice) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">PARTITION BY</span> CategoryID) <span class="sql-keyword">AS</span> AvgCategoryPrice
+    <span class="sql-keyword">FROM</span> Products
+) ranked_products
+<span class="sql-keyword">WHERE</span> UnitPrice > AvgCategoryPrice;
+
+<span class="sql-comment">-- 6. Complex Analytical Queries</span>
+
+<span class="sql-comment">-- Revenue Trend Analysis with Period-over-Period Comparison</span>
+<span class="sql-keyword">WITH</span> MonthlyRevenue <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> 
+        <span class="sql-keyword">YEAR</span>(OrderDate) <span class="sql-keyword">AS</span> Year,
+        <span class="sql-keyword">MONTH</span>(OrderDate) <span class="sql-keyword">AS</span> Month,
+        <span class="sql-keyword">SUM</span>(TotalAmount) <span class="sql-keyword">AS</span> Revenue,
+        <span class="sql-keyword">COUNT</span>(DISTINCT CustomerID) <span class="sql-keyword">AS</span> UniqueCustomers,
+        <span class="sql-keyword">COUNT</span>(*) <span class="sql-keyword">AS</span> OrderCount
+    <span class="sql-keyword">FROM</span> Orders
+    <span class="sql-keyword">WHERE</span> OrderStatus = <span class="sql-string">'Completed'</span>
+    <span class="sql-keyword">GROUP BY</span> <span class="sql-keyword">YEAR</span>(OrderDate), <span class="sql-keyword">MONTH</span>(OrderDate)
+),
+RevenueWithTrends <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> *,
+        <span class="sql-comment">-- Previous month comparison</span>
+        <span class="sql-keyword">LAG</span>(Revenue, 1) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">ORDER BY</span> Year, Month) <span class="sql-keyword">AS</span> PrevMonthRevenue,
+        <span class="sql-comment">-- Year-over-year comparison</span>
+        <span class="sql-keyword">LAG</span>(Revenue, 12) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">ORDER BY</span> Year, Month) <span class="sql-keyword">AS</span> PrevYearRevenue,
+        <span class="sql-comment">-- 3-month moving average</span>
+        <span class="sql-keyword">AVG</span>(Revenue) <span class="sql-keyword">OVER</span> (
+            <span class="sql-keyword">ORDER BY</span> Year, Month 
+            <span class="sql-keyword">ROWS BETWEEN</span> 2 <span class="sql-keyword">PRECEDING AND CURRENT ROW</span>
+        ) <span class="sql-keyword">AS</span> MovingAvg3Month,
+        <span class="sql-comment">-- Revenue rank within year</span>
+        <span class="sql-keyword">RANK</span>() <span class="sql-keyword">OVER</span> (
+            <span class="sql-keyword">PARTITION BY</span> Year 
+            <span class="sql-keyword">ORDER BY</span> Revenue <span class="sql-keyword">DESC</span>
+        ) <span class="sql-keyword">AS</span> MonthRankInYear
+    <span class="sql-keyword">FROM</span> MonthlyRevenue
+)
+<span class="sql-keyword">SELECT</span> 
+    <span class="sql-keyword">CONCAT</span>(Year, <span class="sql-string">'-'</span>, <span class="sql-keyword">LPAD</span>(Month, 2, <span class="sql-string">'0'</span>)) <span class="sql-keyword">AS</span> YearMonth,
+    <span class="sql-keyword">FORMAT</span>(Revenue, 2) <span class="sql-keyword">AS</span> Revenue,
+    UniqueCustomers,
+    OrderCount,
+    <span class="sql-keyword">ROUND</span>(
+        <span class="sql-keyword">CASE</span> 
+            <span class="sql-keyword">WHEN</span> PrevMonthRevenue > 0 <span class="sql-keyword">THEN</span>
+                ((Revenue - PrevMonthRevenue) / PrevMonthRevenue) * 100
+            <span class="sql-keyword">ELSE</span> <span class="sql-keyword">NULL</span>
+        <span class="sql-keyword">END</span>, 2
+    ) <span class="sql-keyword">AS</span> <span class="sql-string">'MoM Growth %'</span>,
+    <span class="sql-keyword">ROUND</span>(
+        <span class="sql-keyword">CASE</span> 
+            <span class="sql-keyword">WHEN</span> PrevYearRevenue > 0 <span class="sql-keyword">THEN</span>
+                ((Revenue - PrevYearRevenue) / PrevYearRevenue) * 100
+            <span class="sql-keyword">ELSE</span> <span class="sql-keyword">NULL</span>
+        <span class="sql-keyword">END</span>, 2
+    ) <span class="sql-keyword">AS</span> <span class="sql-string">'YoY Growth %'</span>,
+    <span class="sql-keyword">FORMAT</span>(MovingAvg3Month, 2) <span class="sql-keyword">AS</span> <span class="sql-string">'3-Month Avg'</span>,
+    MonthRankInYear
+<span class="sql-keyword">FROM</span> RevenueWithTrends
+<span class="sql-keyword">ORDER BY</span> Year <span class="sql-keyword">DESC</span>, Month <span class="sql-keyword">DESC</span>;
+
+<span class="sql-comment">-- 7. Query Performance Monitoring</span>
+<span class="sql-keyword">CREATE OR REPLACE VIEW</span> SlowQueryAnalysis <span class="sql-keyword">AS</span>
+<span class="sql-keyword">SELECT</span> 
+    <span class="sql-keyword">LEFT</span>(sql_text, 100) <span class="sql-keyword">AS</span> QuerySample,
+    exec_count <span class="sql-keyword">AS</span> ExecutionCount,
+    <span class="sql-keyword">ROUND</span>(avg_timer_wait/1000000000, 3) <span class="sql-keyword">AS</span> AvgExecTimeSec,
+    <span class="sql-keyword">ROUND</span>(max_timer_wait/1000000000, 3) <span class="sql-keyword">AS</span> MaxExecTimeSec,
+    <span class="sql-keyword">ROUND</span>(sum_timer_wait/1000000000, 3) <span class="sql-keyword">AS</span> TotalExecTimeSec,
+    avg_rows_examined <span class="sql-keyword">AS</span> AvgRowsExamined,
+    avg_rows_sent <span class="sql-keyword">AS</span> AvgRowsSent,
+    <span class="sql-keyword">ROUND</span>(avg_rows_examined/avg_rows_sent, 2) <span class="sql-keyword">AS</span> ExamineToSendRatio,
+    first_seen,
+    last_seen
+<span class="sql-keyword">FROM</span> performance_schema.events_statements_summary_by_digest
+<span class="sql-keyword">WHERE</span> avg_timer_wait/1000000000 > 0.1  <span class="sql-comment">-- Queries taking more than 0.1 seconds</span>
+    <span class="sql-keyword">AND</span> exec_count > 10  <span class="sql-comment">-- Executed more than 10 times</span>
+<span class="sql-keyword">ORDER BY</span> avg_timer_wait <span class="sql-keyword">DESC</span>;
+
+<span class="sql-comment">-- Query to find missing indexes</span>
+<span class="sql-keyword">SELECT</span> 
+    object_schema <span class="sql-keyword">AS</span> DatabaseName,
+    object_name <span class="sql-keyword">AS</span> TableName,
+    <span class="sql-keyword">SUM</span>(count_read) <span class="sql-keyword">AS</span> TotalReads,
+    <span class="sql-keyword">SUM</span>(count_write) <span class="sql-keyword">AS</span> TotalWrites,
+    <span class="sql-keyword">SUM</span>(sum_timer_read)/1000000000 <span class="sql-keyword">AS</span> TotalReadTimeSec
+<span class="sql-keyword">FROM</span> performance_schema.table_io_waits_summary_by_table
+<span class="sql-keyword">WHERE</span> object_schema <span class="sql-keyword">NOT IN</span> (<span class="sql-string">'mysql'</span>, <span class="sql-string">'information_schema'</span>, <span class="sql-string">'performance_schema'</span>)
+    <span class="sql-keyword">AND</span> sum_timer_read > 0
+<span class="sql-keyword">GROUP BY</span> object_schema, object_name
+<span class="sql-keyword">ORDER BY</span> TotalReadTimeSec <span class="sql-keyword">DESC</span>;
+        </pre>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🎯</span>OBJECT-ORIENTED DATABASE SYSTEMS</h2>
+
+    <h3>Advanced Object-Relational Mapping and Object Database Concepts</h3>
+
+    <div class="key-points">
+        <h4>Object-Oriented Database Features:</h4>
+        <ol>
+            <li><strong>Object Identity:</strong> Each object has a unique identifier independent of its attribute values</li>
+            <li><strong>Complex Objects:</strong> Objects can contain other objects (composition) or reference them</li>
+            <li><strong>Encapsulation:</strong> Objects hide internal structure and provide methods for access</li>
+            <li><strong>Inheritance:</strong> Objects can inherit properties and methods from parent classes</li>
+            <li><strong>Polymorphism:</strong> Same method name can behave differently for different object types</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">Object-Relational Database Implementation (PostgreSQL)</div>
+        <pre>
+<span class="sql-comment">-- 1. User-Defined Types (UDTs)</span>
+
+<span class="sql-comment">-- Create composite types</span>
+<span class="sql-keyword">CREATE TYPE</span> Address <span class="sql-keyword">AS</span> (
+    street <span class="sql-keyword">VARCHAR</span>(200),
+    city <span class="sql-keyword">VARCHAR</span>(100),
+    state <span class="sql-keyword">VARCHAR</span>(50),
+    postal_code <span class="sql-keyword">VARCHAR</span>(20),
+    country <span class="sql-keyword">VARCHAR</span>(50)
+);
+
+<span class="sql-keyword">CREATE TYPE</span> ContactInfo <span class="sql-keyword">AS</span> (
+    email <span class="sql-keyword">VARCHAR</span>(100),
+    phone <span class="sql-keyword">VARCHAR</span>(20),
+    mobile <span class="sql-keyword">VARCHAR</span>(20),
+    fax <span class="sql-keyword">VARCHAR</span>(20)
+);
+
+<span class="sql-keyword">CREATE TYPE</span> Money <span class="sql-keyword">AS</span> (
+    amount <span class="sql-keyword">DECIMAL</span>(15,2),
+    currency <span class="sql-keyword">CHAR</span>(3) <span class="sql-comment">-- ISO currency code</span>
+);
+
+<span class="sql-comment">-- 2. Object Tables Using UDTs</span>
+<span class="sql-keyword">CREATE TABLE</span> Person (
+    person_id <span class="sql-keyword">SERIAL PRIMARY KEY</span>,
+    first_name <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    last_name <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    birth_date <span class="sql-keyword">DATE</span>,
+    addresses Address[], <span class="sql-comment">-- Array of address objects</span>
+    contact ContactInfo,
+    created_at <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);
+
+<span class="sql-keyword">CREATE TABLE</span> Company (
+    company_id <span class="sql-keyword">SERIAL PRIMARY KEY</span>,
+    company_name <span class="sql-keyword">VARCHAR</span>(200) <span class="sql-keyword">NOT NULL</span>,
+    headquarters Address,
+    contact ContactInfo,
+    annual_revenue Money,
+    founded_year <span class="sql-keyword">INTEGER</span>,
+    employees <span class="sql-keyword">INTEGER</span>[]
+);
+
+<span class="sql-comment">-- 3. Inheritance Implementation</span>
+<span class="sql-comment">-- Base table</span>
+<span class="sql-keyword">CREATE TABLE</span> Employee (
+    employee_id <span class="sql-keyword">SERIAL PRIMARY KEY</span>,
+    person_info Person, <span class="sql-comment">-- Composition</span>
+    employee_number <span class="sql-keyword">VARCHAR</span>(20) <span class="sql-keyword">UNIQUE</span>,
+    hire_date <span class="sql-keyword">DATE NOT NULL</span>,
+    salary Money,
+    department_id <span class="sql-keyword">INTEGER</span>,
+    manager_id <span class="sql-keyword">INTEGER REFERENCES</span> Employee(employee_id)
+);
+
+<span class="sql-comment">-- Specialized employee types</span>
+<span class="sql-keyword">CREATE TABLE</span> Developer (
+    programming_languages <span class="sql-keyword">TEXT</span>[],
+    certifications <span class="sql-keyword">TEXT</span>[],
+    years_experience <span class="sql-keyword">INTEGER</span>
+) <span class="sql-keyword">INHERITS</span> (Employee);
+
+<span class="sql-keyword">CREATE TABLE</span> Manager (
+    team_size <span class="sql-keyword">INTEGER</span>,
+    budget Money,
+    management_level <span class="sql-keyword">VARCHAR</span>(20)
+) <span class="sql-keyword">INHERITS</span> (Employee);
+
+<span class="sql-keyword">CREATE TABLE</span> Sales_Rep (
+    territory <span class="sql-keyword">VARCHAR</span>(100),
+    commission_rate <span class="sql-keyword">DECIMAL</span>(5,4),
+    sales_target Money,
+    clients <span class="sql-keyword">INTEGER</span>[]
+) <span class="sql-keyword">INHERITS</span> (Employee);
+
+<span class="sql-comment">-- 4. Complex Data Insertion</span>
+<span class="sql-keyword">INSERT INTO</span> Person (first_name, last_name, birth_date, addresses, contact)
+<span class="sql-keyword">VALUES</span> (
+    <span class="sql-string">'John'</span>, 
+    <span class="sql-string">'Smith'</span>, 
+    <span class="sql-string">'1985-05-15'</span>,
+    <span class="sql-keyword">ARRAY</span>[
+        <span class="sql-keyword">ROW</span>(<span class="sql-string">'123 Main St'</span>, <span class="sql-string">'New York'</span>, <span class="sql-string">'NY'</span>, <span class="sql-string">'10001'</span>, <span class="sql-string">'USA'</span>)::<span class="sql-keyword">Address</span>,
+        <span class="sql-keyword">ROW</span>(<span class="sql-string">'456 Oak Ave'</span>, <span class="sql-string">'Boston'</span>, <span class="sql-string">'MA'</span>, <span class="sql-string">'02101'</span>, <span class="sql-string">'USA'</span>)::<span class="sql-keyword">Address</span>
+    ],
+    <span class="sql-keyword">ROW</span>(<span class="sql-string">'john.smith@email.com'</span>, <span class="sql-string">'555-0123'</span>, <span class="sql-string">'555-0124'</span>, <span class="sql-string">NULL</span>)::<span class="sql-keyword">ContactInfo</span>
+);
+
+<span class="sql-keyword">INSERT INTO</span> Developer (
+    person_info, employee_number, hire_date, salary, department_id,
+    programming_languages, certifications, years_experience
+) <span class="sql-keyword">VALUES</span> (
+    <span class="sql-keyword">ROW</span>(1, <span class="sql-string">'John'</span>, <span class="sql-string">'Smith'</span>, <span class="sql-string">'1985-05-15'</span>, <span class="sql-keyword">NULL</span>, <span class="sql-keyword">NULL</span>, <span class="sql-keyword">CURRENT_TIMESTAMP</span>)::<span class="sql-keyword">Person</span>,
+    <span class="sql-string">'EMP001'</span>,
+    <span class="sql-string">'2020-03-01'</span>,
+    <span class="sql-keyword">ROW</span>(75000.00, <span class="sql-string">'USD'</span>)::<span class="sql-keyword">Money</span>,
+    101,
+    <span class="sql-keyword">ARRAY</span>[<span class="sql-string">'Python'</span>, <span class="sql-string">'Java'</span>, <span class="sql-string">'JavaScript'</span>, <span class="sql-string">'SQL'</span>],
+    <span class="sql-keyword">ARRAY</span>[<span class="sql-string">'AWS Certified Developer'</span>, <span class="sql-string">'Oracle Certified Professional'</span>],
+    8
+);
+
+<span class="sql-comment">-- 5. Complex Object Queries</span>
+
+<span class="sql-comment">-- Query nested objects</span>
+<span class="sql-keyword">SELECT</span> 
+    first_name,
+    last_name,
+    (addresses[1]).street <span class="sql-keyword">AS</span> primary_street,
+    (addresses[1]).city <span class="sql-keyword">AS</span> primary_city,
+    (contact).email,
+    (contact).phone
+<span class="sql-keyword">FROM</span> Person
+<span class="sql-keyword">WHERE</span> (addresses[1]).city = <span class="sql-string">'New York'</span>;
+
+<span class="sql-comment">-- Query with array operations</span>
+<span class="sql-keyword">SELECT</span> 
+    employee_number,
+    (person_info).first_name,
+    (person_info).last_name,
+    programming_languages,
+    array_length(programming_languages, 1) <span class="sql-keyword">AS</span> num_languages,
+    years_experience
+<span class="sql-keyword">FROM</span> Developer
+<span class="sql-keyword">WHERE</span> <span class="sql-string">'Python'</span> = <span class="sql-keyword">ANY</span>(programming_languages)
+    <span class="sql-keyword">AND</span> years_experience > 5;
+
+<span class="sql-comment">-- Polymorphic queries (all employee types)</span>
+<span class="sql-keyword">SELECT</span> 
+    employee_number,
+    hire_date,
+    (salary).amount <span class="sql-keyword">AS</span> salary_amount,
+    (salary).currency,
+    <span class="sql-string">'Developer'</span> <span class="sql-keyword">AS</span> employee_type
+<span class="sql-keyword">FROM</span> Developer
+<span class="sql-keyword">UNION OrderID = <span class="sql-keyword">NEW</span>.OrderID
+    ),
+    TotalAmount = SubTotal + TaxAmount + ShippingCost - DiscountAmount
+    <span class="sql-keyword">WHERE</span> OrderID = <span class="sql-keyword">NEW</span>.OrderID;
+<span class="sql-keyword">END</span>$
+
+<span class="sql-keyword">CREATE TRIGGER</span> trg_update_stock
+<span class="sql-keyword">AFTER INSERT ON</span> OrderItems
+<span class="sql-keyword">FOR EACH ROW</span>
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">UPDATE</span> Products 
+    <span class="sql-keyword">SET</span> UnitsInStock = UnitsInStock - <span class="sql-keyword">NEW</span>.Quantity
+    <span class="sql-keyword">WHERE</span> ProductID = <span class="sql-keyword">NEW</span>.ProductID;
+    
+    <span class="sql-comment">-- Check if reorder is needed</span>
+    <span class="sql-keyword">IF</span> (
+        <span class="sql-keyword">SELECT</span> UnitsInStock 
+        <span class="sql-keyword">FROM</span> Products 
+        <span class="sql-keyword">WHERE</span> ProductID = <span class="sql-keyword">NEW</span>.ProductID
+    ) <= (
+        <span class="sql-keyword">SELECT</span> ReorderLevel 
+        <span class="sql-keyword">FROM</span> Products 
+        <span class="sql-keyword">WHERE</span> ProductID = <span class="sql-keyword">NEW</span>.ProductID
+    ) <span class="sql-keyword">THEN</span>
+        <span class="sql-keyword">INSERT INTO</span> ReorderAlerts (ProductID, AlertDate, AlertType)
+        <span class="sql-keyword">VALUES</span> (<span class="sql-keyword">NEW</span>.ProductID, <span class="sql-keyword">NOW</span>(), <span class="sql-string">'Low Stock'</span>);
+    <span class="sql-keyword">END IF</span>;
+<span class="sql-keyword">END</span>$
+
+<span class="sql-keyword">DELIMITER</span> ;
+        </pre>
+    </div>
+
+    <h4>Advanced Constraint Examples</h4>
     <pre>
--- Books Table
-CREATE TABLE Books (
-    ISBN VARCHAR(13) PRIMARY KEY,
-    Title VARCHAR(200) NOT NULL,
-    Author VARCHAR(100),
-    Publisher VARCHAR(100),
-    PublicationYear INT,
-    Genre VARCHAR(50),
-    AvailableCopies INT DEFAULT 0
+<span class="sql-comment">-- Complex Check Constraints</span>
+<span class="sql-keyword">ALTER TABLE</span> Orders 
+<span class="sql-keyword">ADD CONSTRAINT</span> chk_required_date 
+<span class="sql-keyword">CHECK</span> (RequiredDate IS NULL OR RequiredDate >= <span class="sql-keyword">DATE</span>(OrderDate));
+
+<span class="sql-keyword">ALTER TABLE</span> Orders 
+<span class="sql-keyword">ADD CONSTRAINT</span> chk_shipped_date 
+<span class="sql-keyword">CHECK</span> (ShippedDate IS NULL OR ShippedDate >= <span class="sql-keyword">DATE</span>(OrderDate));
+
+<span class="sql-keyword">ALTER TABLE</span> Orders 
+<span class="sql-keyword">ADD CONSTRAINT</span> chk_total_consistency 
+<span class="sql-keyword">CHECK</span> (TotalAmount = SubTotal + TaxAmount + ShippingCost - DiscountAmount);
+
+<span class="sql-comment">-- Conditional Constraints</span>
+<span class="sql-keyword">ALTER TABLE</span> Orders 
+<span class="sql-keyword">ADD CONSTRAINT</span> chk_payment_shipped 
+<span class="sql-keyword">CHECK</span> (
+    (OrderStatus != <span class="sql-string">'Shipped'</span> AND OrderStatus != <span class="sql-string">'Delivered'</span>) 
+    OR PaymentStatus = <span class="sql-string">'Paid'</span>
 );
 
--- Members Table
-CREATE TABLE Members (
-    MemberID VARCHAR(10) PRIMARY KEY,
-    FirstName VARCHAR(50) NOT NULL,
-    LastName VARCHAR(50) NOT NULL,
-    Email VARCHAR(100) UNIQUE,
-    Phone VARCHAR(15),
-    MembershipDate DATE,
-    MembershipType ENUM('Student', 'Faculty', 'Public')
-);
+<span class="sql-comment">-- Advanced Indexes for Performance</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_customer_orders_date 
+<span class="sql-keyword">ON</span> Orders(CustomerID, OrderDate <span class="sql-keyword">DESC</span>);
 
--- Borrowings Table
-CREATE TABLE Borrowings (
-    BorrowingID INT AUTO_INCREMENT PRIMARY KEY,
-    MemberID VARCHAR(10),
-    ISBN VARCHAR(13),
-    BorrowDate DATE NOT NULL,
-    DueDate DATE NOT NULL,
-    ReturnDate DATE,
-    Fine DECIMAL(10,2) DEFAULT 0.00,
-    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
-    FOREIGN KEY (ISBN) REFERENCES Books(ISBN)
-);
-    </pre>
+<span class="sql-keyword">CREATE INDEX</span> idx_product_category_price 
+<span class="sql-keyword">ON</span> Products(CategoryID, UnitPrice, IsDiscontinued);
 
-    <h4>Integrity Constraints Example:</h4>
-    <pre>
--- Entity Integrity
-ALTER TABLE Books ADD CONSTRAINT chk_year 
-CHECK (PublicationYear >= 1900 AND PublicationYear <= YEAR(CURDATE()));
-
--- Referential Integrity
-ALTER TABLE Borrowings ADD CONSTRAINT fk_member
-FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
-ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- Domain Integrity
-ALTER TABLE Members ADD CONSTRAINT chk_email
-CHECK (Email LIKE '%_@_%');
+<span class="sql-keyword">CREATE INDEX</span> idx_order_status_date 
+<span class="sql-keyword">ON</span> Orders(OrderStatus, OrderDate) 
+<span class="sql-keyword">WHERE</span> OrderStatus <span class="sql-keyword">IN</span> (<span class="sql-string">'Pending'</span>, <span class="sql-string">'Processing'</span>);
     </pre>
 
     <h2 class="page-break"><span class="topic-icon">🔧</span>PHYSICAL DATABASE DESIGN</h2>
 
-    <h3>Storage Structures and Index Design</h3>
+    <h3>Advanced Storage Structures and Optimization</h3>
 
     <div class="key-points">
-        <h4>Storage Structures:</h4>
-        <ul>
-            <li><strong>Heap Files:</strong> Unordered collection of records</li>
-            <li><strong>Sorted Files:</strong> Records sorted by key attribute</li>
-            <li><strong>Hash Files:</strong> Records distributed using hash function</li>
-        </ul>
+        <h4>Storage Structure Types and Applications:</h4>
+        <ol>
+            <li><strong>Heap Files (Unordered Files):</strong>
+                <ul>
+                    <li><strong>Best for:</strong> Small tables, frequent inserts, no specific query patterns</li>
+                    <li><strong>Performance:</strong> O(n) for searches, O(1) for inserts</li>
+                    <li><strong>Use cases:</strong> Log files, temporary data, small lookup tables</li>
+                </ul>
+            </li>
+            <li><strong>Sorted Files (Sequential Files):</strong>
+                <ul>
+                    <li><strong>Best for:</strong> Range queries, ordered data access</li>
+                    <li><strong>Performance:</strong> O(log n) for searches, O(n) for inserts</li>
+                    <li><strong>Use cases:</strong> Time-series data, read-heavy applications</li>
+                </ul>
+            </li>
+            <li><strong>Hash Files:</strong>
+                <ul>
+                    <li><strong>Best for:</strong> Exact match queries, key-value lookups</li>
+                    <li><strong>Performance:</strong> O(1) average for searches and inserts</li>
+                    <li><strong>Use cases:</strong> Cache systems, dictionary lookups</li>
+                </ul>
+            </li>
+            <li><strong>B+ Tree Indexes:</strong>
+                <ul>
+                    <li><strong>Best for:</strong> Range queries, ordered access, primary keys</li>
+                    <li><strong>Performance:</strong> O(log n) for all operations</li>
+                    <li><strong>Use cases:</strong> Primary indexes, foreign key indexes</li>
+                </ul>
+            </li>
+        </ol>
     </div>
 
-    <h4>Index Design Examples:</h4>
-    <pre>
--- Primary Index (automatically created with PRIMARY KEY)
--- Secondary Index for frequent queries
-CREATE INDEX idx_books_author ON Books(Author);
-CREATE INDEX idx_books_genre ON Books(Genre);
-CREATE INDEX idx_borrowings_date ON Borrowings(BorrowDate);
+    <div class="example-box">
+        <div class="example-title">Comprehensive Index Design Strategy</div>
+        <pre>
+<span class="sql-comment">-- Primary and Unique Indexes (automatically created)</span>
+<span class="sql-keyword">CREATE TABLE</span> Products (
+    ProductID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,  <span class="sql-comment">-- Clustered index</span>
+    SKU <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">UNIQUE</span>,                      <span class="sql-comment">-- Unique index</span>
+    ProductName <span class="sql-keyword">VARCHAR</span>(200),
+    CategoryID <span class="sql-keyword">INT</span>,
+    UnitPrice <span class="sql-keyword">DECIMAL</span>(10,2),
+    CreatedDate <span class="sql-keyword">TIMESTAMP</span>
+);
 
--- Composite Index for multi-attribute queries
-CREATE INDEX idx_member_type_date ON Members(MembershipType, MembershipDate);
+<span class="sql-comment">-- Secondary Indexes for Query Optimization</span>
+
+<span class="sql-comment">-- 1. Single Column Index (most common queries)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_category 
+<span class="sql-keyword">ON</span> Products(CategoryID);
+
+<span class="sql-comment">-- 2. Composite Index (multiple column queries)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_category_price 
+<span class="sql-keyword">ON</span> Products(CategoryID, UnitPrice);
+
+<span class="sql-comment">-- 3. Covering Index (includes all needed columns)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_category_covering 
+<span class="sql-keyword">ON</span> Products(CategoryID, UnitPrice, ProductName, SKU);
+
+<span class="sql-comment">-- 4. Partial Index (filtered index for specific conditions)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_expensive 
+<span class="sql-keyword">ON</span> Products(UnitPrice) 
+<span class="sql-keyword">WHERE</span> UnitPrice > 100;
+
+<span class="sql-comment">-- 5. Descending Index (for ORDER BY DESC queries)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_date_desc 
+<span class="sql-keyword">ON</span> Products(CreatedDate <span class="sql-keyword">DESC</span>);
+
+<span class="sql-comment">-- 6. Full-Text Index (for text search)</span>
+<span class="sql-keyword">CREATE FULLTEXT INDEX</span> idx_products_search 
+<span class="sql-keyword">ON</span> Products(ProductName, Description);
+
+<span class="sql-comment">-- 7. Function-Based Index (computed values)</span>
+<span class="sql-keyword">CREATE INDEX</span> idx_products_year 
+<span class="sql-keyword">ON</span> Products((<span class="sql-keyword">YEAR</span>(CreatedDate)));
+
+<span class="sql-comment">-- Advanced Indexing Examples</span>
+
+<span class="sql-comment">-- Hash Index (for exact matches only - MySQL MEMORY engine)</span>
+<span class="sql-keyword">CREATE TABLE</span> ProductCache (
+    ProductID <span class="sql-keyword">INT</span>,
+    CachedData <span class="sql-keyword">TEXT</span>,
+    <span class="sql-keyword">INDEX</span> <span class="sql-keyword">USING</span> <span class="sql-keyword">HASH</span> (ProductID)
+) <span class="sql-keyword">ENGINE</span>=<span class="sql-keyword">MEMORY</span>;
+
+<span class="sql-comment">-- Spatial Index (for geographic data)</span>
+<span class="sql-keyword">CREATE TABLE</span> Stores (
+    StoreID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    StoreName <span class="sql-keyword">VARCHAR</span>(100),
+    Location <span class="sql-keyword">GEOMETRY NOT NULL</span>,
+    <span class="sql-keyword">SPATIAL INDEX</span> idx_store_location (Location)
+);
+
+<span class="sql-comment">-- Index Usage Analysis Queries</span>
+<span class="sql-keyword">SHOW INDEX FROM</span> Products;
+<span class="sql-keyword">SHOW INDEX FROM</span> Orders <span class="sql-keyword">WHERE</span> Key_name != <span class="sql-string">'PRIMARY'</span>;
+
+<span class="sql-comment">-- Check index cardinality and selectivity</span>
+<span class="sql-keyword">SELECT</span> 
+    INDEX_NAME,
+    CARDINALITY,
+    SUB_PART,
+    INDEX_TYPE
+<span class="sql-keyword">FROM</span> INFORMATION_SCHEMA.STATISTICS 
+<span class="sql-keyword">WHERE</span> TABLE_SCHEMA = <span class="sql-string">'your_database'</span> 
+    <span class="sql-keyword">AND</span> TABLE_NAME = <span class="sql-string">'Products'</span>
+<span class="sql-keyword">ORDER BY</span> INDEX_NAME, SEQ_IN_INDEX;
+        </pre>
+    </div>
+
+    <h4>Advanced Partitioning Strategies</h4>
+    <pre>
+<span class="sql-comment">-- Range Partitioning (by date/numeric ranges)</span>
+<span class="sql-keyword">CREATE TABLE</span> SalesTransactions (
+    TransactionID <span class="sql-keyword">BIGINT AUTO_INCREMENT</span>,
+    TransactionDate <span class="sql-keyword">DATE NOT NULL</span>,
+    CustomerID <span class="sql-keyword">INT</span>,
+    Amount <span class="sql-keyword">DECIMAL</span>(12,2),
+    <span class="sql-keyword">PRIMARY KEY</span> (TransactionID, TransactionDate)
+) 
+<span class="sql-keyword">PARTITION BY RANGE</span> (<span class="sql-keyword">YEAR</span>(TransactionDate)) (
+    <span class="sql-keyword">PARTITION</span> p2022 <span class="sql-keyword">VALUES LESS THAN</span> (2023),
+    <span class="sql-keyword">PARTITION</span> p2023 <span class="sql-keyword">VALUES LESS THAN</span> (2024),
+    <span class="sql-keyword">PARTITION</span> p2024 <span class="sql-keyword">VALUES LESS THAN</span> (2025),
+    <span class="sql-keyword">PARTITION</span> pFuture <span class="sql-keyword">VALUES LESS THAN MAXVALUE</span>
+);
+
+<span class="sql-comment">-- Hash Partitioning (for even distribution)</span>
+<span class="sql-keyword">CREATE TABLE</span> CustomerData (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    CustomerData <span class="sql-keyword">JSON</span>,
+    LastUpdated <span class="sql-keyword">TIMESTAMP</span>
+) 
+<span class="sql-keyword">PARTITION BY HASH</span>(CustomerID)
+<span class="sql-keyword">PARTITIONS</span> 8;
+
+<span class="sql-comment">-- List Partitioning (by specific values)</span>
+<span class="sql-keyword">CREATE TABLE</span> RegionalSales (
+    SaleID <span class="sql-keyword">INT AUTO_INCREMENT</span>,
+    Region <span class="sql-keyword">VARCHAR</span>(20),
+    SaleAmount <span class="sql-keyword">DECIMAL</span>(10,2),
+    SaleDate <span class="sql-keyword">DATE</span>,
+    <span class="sql-keyword">PRIMARY KEY</span> (SaleID, Region)
+)
+<span class="sql-keyword">PARTITION BY LIST COLUMNS</span>(Region) (
+    <span class="sql-keyword">PARTITION</span> pNorth <span class="sql-keyword">VALUES IN</span> (<span class="sql-string">'North'</span>, <span class="sql-string">'Northeast'</span>, <span class="sql-string">'Northwest'</span>),
+    <span class="sql-keyword">PARTITION</span> pSouth <span class="sql-keyword">VALUES IN</span> (<span class="sql-string">'South'</span>, <span class="sql-string">'Southeast'</span>, <span class="sql-string">'Southwest'</span>),
+    <span class="sql-keyword">PARTITION</span> pCentral <span class="sql-keyword">VALUES IN</span> (<span class="sql-string">'Central'</span>, <span class="sql-string">'Midwest'</span>)
+);
+
+<span class="sql-comment">-- Subpartitioning (combination of strategies)</span>
+<span class="sql-keyword">CREATE TABLE</span> DetailedTransactions (
+    TransactionID <span class="sql-keyword">BIGINT AUTO_INCREMENT</span>,
+    TransactionDate <span class="sql-keyword">DATE NOT NULL</span>,
+    CustomerID <span class="sql-keyword">INT NOT NULL</span>,
+    Amount <span class="sql-keyword">DECIMAL</span>(12,2),
+    <span class="sql-keyword">PRIMARY KEY</span> (TransactionID, TransactionDate, CustomerID)
+)
+<span class="sql-keyword">PARTITION BY RANGE</span> (<span class="sql-keyword">YEAR</span>(TransactionDate))
+<span class="sql-keyword">SUBPARTITION BY HASH</span>(CustomerID)
+<span class="sql-keyword">SUBPARTITIONS</span> 4 (
+    <span class="sql-keyword">PARTITION</span> p2023 <span class="sql-keyword">VALUES LESS THAN</span> (2024),
+    <span class="sql-keyword">PARTITION</span> p2024 <span class="sql-keyword">VALUES LESS THAN</span> (2025)
+);
+
+<span class="sql-comment">-- Partition Management Commands</span>
+<span class="sql-keyword">ALTER TABLE</span> SalesTransactions 
+<span class="sql-keyword">ADD PARTITION</span> (<span class="sql-keyword">PARTITION</span> p2025 <span class="sql-keyword">VALUES LESS THAN</span> (2026));
+
+<span class="sql-keyword">ALTER TABLE</span> SalesTransactions 
+<span class="sql-keyword">DROP PARTITION</span> p2022;
+
+<span class="sql-keyword">ALTER TABLE</span> SalesTransactions 
+<span class="sql-keyword">REORGANIZE PARTITION</span> pFuture <span class="sql-keyword">INTO</span> (
+    <span class="sql-keyword">PARTITION</span> p2025 <span class="sql-keyword">VALUES LESS THAN</span> (2026),
+    <span class="sql-keyword">PARTITION</span> pFuture <span class="sql-keyword">VALUES LESS THAN MAXVALUE</span>
+);
     </pre>
 
-    <h4>Partitioning Example:</h4>
-    <pre>
--- Horizontal Partitioning by year
-CREATE TABLE Borrowings_2023 (
-    CHECK (YEAR(BorrowDate) = 2023)
-) INHERITS (Borrowings);
-
-CREATE TABLE Borrowings_2024 (
-    CHECK (YEAR(BorrowDate) = 2024)
-) INHERITS (Borrowings);
-    </pre>
+    <div class="important-note">
+        <h4>Storage Engine Selection Guidelines</h4>
+        <table>
+            <tr>
+                <th>Engine</th>
+                <th>Best For</th>
+                <th>Key Features</th>
+                <th>Limitations</th>
+            </tr>
+            <tr>
+                <td><strong>InnoDB</strong></td>
+                <td>OLTP, transactions</td>
+                <td>ACID compliance, foreign keys, row-level locking</td>
+                <td>Higher memory usage</td>
+            </tr>
+            <tr>
+                <td><strong>MyISAM</strong></td>
+                <td>Read-heavy, data warehousing</td>
+                <td>Fast SELECT, full-text indexing</td>
+                <td>No transactions, table-level locking</td>
+            </tr>
+            <tr>
+                <td><strong>Memory</strong></td>
+                <td>Temporary data, caching</td>
+                <td>Fastest access, hash indexes</td>
+                <td>Data lost on restart</td>
+            </tr>
+            <tr>
+                <td><strong>Archive</strong></td>
+                <td>Log data, historical records</td>
+                <td>High compression, INSERT only</td>
+                <td>No UPDATE/DELETE</td>
+            </tr>
+        </table>
+    </div>
 
     <h2 class="page-break"><span class="topic-icon">📊</span>MONITORING AND TUNING</h2>
 
-    <h3>Performance Monitoring</h3>
+    <h3>Advanced Performance Monitoring and Optimization</h3>
 
-    <h4>1. Query Performance Analysis</h4>
-    <pre>
--- Enable query profiling
-SET profiling = 1;
+    <div class="example-box">
+        <div class="example-title">Comprehensive Performance Analysis Toolkit</div>
+        <pre>
+<span class="sql-comment">-- 1. Enable Performance Schema and Profiling</span>
+<span class="sql-keyword">SET</span> profiling = 1;
+<span class="sql-keyword">SET</span> profiling_history_size = 50;
 
--- Sample query
-SELECT b.Title, m.FirstName, m.LastName, br.BorrowDate
-FROM Books b
-JOIN Borrowings br ON b.ISBN = br.ISBN
-JOIN Members m ON br.MemberID = m.MemberID
-WHERE br.BorrowDate >= '2024-01-01';
+<span class="sql-comment">-- 2. Query Performance Analysis</span>
+<span class="sql-keyword">SELECT</span> 
+    query_id,
+    duration,
+    cpu_user,
+    cpu_system,
+    block_ops_in,
+    block_ops_out
+<span class="sql-keyword">FROM</span> INFORMATION_SCHEMA.PROFILING
+<span class="sql-keyword">ORDER BY</span> duration <span class="sql-keyword">DESC</span>
+<span class="sql-keyword">LIMIT</span> 10;
 
--- View query profile
-SHOW PROFILES;
-SHOW PROFILE FOR QUERY 1;
-    </pre>
+<span class="sql-comment">-- 3. Detailed Query Execution Breakdown</span>
+<span class="sql-keyword">SHOW PROFILE</span> <span class="sql-keyword">FOR QUERY</span> 2;
+<span class="sql-keyword">SHOW PROFILE</span> CPU, BLOCK IO <span class="sql-keyword">FOR QUERY</span> 2;
 
-    <h4>2. Index Usage Analysis</h4>
-    <pre>
--- Check if indexes are being used
-EXPLAIN SELECT * FROM Books WHERE Author = 'Stephen King';
+<span class="sql-comment">-- 4. Analyze Slow Queries</span>
+<span class="sql-keyword">SELECT</span> 
+    sql_text,
+    exec_count,
+    avg_timer_wait/1000000000 <span class="sql-keyword">AS</span> avg_exec_time_sec,
+    sum_timer_wait/1000000000 <span class="sql-keyword">AS</span> total_exec_time_sec,
+    avg_rows_examined,
+    avg_rows_sent
+<span class="sql-keyword">FROM</span> performance_schema.events_statements_summary_by_digest
+<span class="sql-keyword">WHERE</span> avg_timer_wait/1000000000 > 1.0  <span class="sql-comment">-- queries taking more than 1 second</span>
+<span class="sql-keyword">ORDER BY</span> avg_timer_wait <span class="sql-keyword">DESC</span>
+<span class="sql-keyword">LIMIT</span> 20;
 
--- Sample output interpretation:
--- type: ref (good - using index)
--- possible_keys: idx_books_author
--- key: idx_books_author
--- rows: 5 (estimated rows to examine)
-    </pre>
+<span class="sql-comment">-- 5. Index Usage Analysis</span>
+<span class="sql-keyword">SELECT</span> 
+    OBJECT_SCHEMA,
+    OBJECT_NAME,
+    INDEX_NAME,
+    COUNT_FETCH,
+    COUNT_INSERT,
+    COUNT_UPDATE,
+    COUNT_DELETE
+<span class="sql-keyword">FROM</span> performance_schema.table_io_waits_summary_by_index_usage
+<span class="sql-keyword">WHERE</span> OBJECT_SCHEMA = <span class="sql-string">'your_database'</span>
+<span class="sql-keyword">ORDER BY</span> COUNT_FETCH <span class="sql-keyword">DESC</span>;
 
-    <h3>Tuning Strategies</h3>
+<span class="sql-comment">-- 6. Find Unused Indexes</span>
+<span class="sql-keyword">SELECT</span> 
+    s.TABLE_SCHEMA,
+    s.TABLE_NAME,
+    s.INDEX_NAME
+<span class="sql-keyword">FROM</span> INFORMATION_SCHEMA.STATISTICS s
+<span class="sql-keyword">LEFT JOIN</span> performance_schema.table_io_waits_summary_by_index_usage t
+    <span class="sql-keyword">ON</span> s.TABLE_SCHEMA = t.OBJECT_SCHEMA 
+    <span class="sql-keyword">AND</span> s.TABLE_NAME = t.OBJECT_NAME 
+    <span class="sql-keyword">AND</span> s.INDEX_NAME = t.INDEX_NAME
+<span class="sql-keyword">WHERE</span> s.INDEX_NAME != <span class="sql-string">'PRIMARY'</span>
+    <span class="sql-keyword">AND</span> t.INDEX_NAME <span class="sql-keyword">IS NULL</span>
+<span class="sql-keyword">ORDER BY</span> s.TABLE_SCHEMA, s.TABLE_NAME;
 
-    <h4>Query Optimization Examples:</h4>
-    <pre>
--- Bad query (avoid SELECT *)
-SELECT * FROM Books WHERE Author LIKE '%King%';
+<span class="sql-comment">-- 7. Table and Database Size Analysis</span>
+<span class="sql-keyword">SELECT</span> 
+    TABLE_SCHEMA <span class="sql-keyword">AS</span> <span class="sql-string">'Database'</span>,
+    TABLE_NAME <span class="sql-keyword">AS</span> <span class="sql-string">'Table'</span>,
+    <span class="sql-keyword">ROUND</span>((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024, 2) <span class="sql-keyword">AS</span> <span class="sql-string">'Size (MB)'</span>,
+    <span class="sql-keyword">ROUND</span>(DATA_LENGTH / 1024 / 1024, 2) <span class="sql-keyword">AS</span> <span class="sql-string">'Data (MB)'</span>,
+    <span class="sql-keyword">ROUND</span>(INDEX_LENGTH / 1024 / 1024, 2) <span class="sql-keyword">AS</span> <span class="sql-string">'Index (MB)'</span>,
+    TABLE_ROWS <span class="sql-keyword">AS</span> <span class="sql-string">'Rows'</span>,
+    AVG_ROW_LENGTH <span class="sql-keyword">AS</span> <span class="sql-string">'Avg Row Length'</span>
+<span class="sql-keyword">FROM</span> INFORMATION_SCHEMA.TABLES
+<span class="sql-keyword">WHERE</span> TABLE_SCHEMA = <span class="sql-string">'your_database'</span>
+<span class="sql-keyword">ORDER BY</span> (DATA_LENGTH + INDEX_LENGTH) <span class="sql-keyword">DESC</span>;
 
--- Optimized query
-SELECT ISBN, Title, Author FROM Books 
-WHERE Author = 'Stephen King';
+<span class="sql-comment">-- 8. Connection and Thread Analysis</span>
+<span class="sql-keyword">SHOW PROCESSLIST</span>;
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Threads%'</span>;
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Connection%'</span>;
 
--- Using indexes effectively
-SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
-FROM Books b
-LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
-WHERE b.Genre = 'Fiction'
-GROUP BY b.ISBN, b.Title
-HAVING COUNT(br.BorrowingID) > 5;
-    </pre>
+<span class="sql-comment">-- 9. Buffer Pool and Cache Analysis</span>
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Innodb_buffer_pool%'</span>;
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Query_cache%'</span>;
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Key%'</span>;
+
+<span class="sql-comment">-- 10. Lock Analysis</span>
+<span class="sql-keyword">SELECT</span> 
+    r.trx_id waiting_trx_id,
+    r.trx_mysql_thread_id waiting_thread,
+    r.trx_query waiting_query,
+    b.trx_id blocking_trx_id,
+    b.trx_mysql_thread_id blocking_thread,
+    b.trx_query blocking_query
+<span class="sql-keyword">FROM</span> information_schema.innodb_lock_waits w
+<span class="sql-keyword">INNER JOIN</span> information_schema.innodb_trx b
+    <span class="sql-keyword">ON</span> b.trx_id = w.blocking_trx_id
+<span class="sql-keyword">INNER JOIN</span> information_schema.innodb_trx r
+    <span class="sql-keyword">ON</span> r.trx_id = w.requesting_trx_id;
+        </pre>
+    </div>
+
+    <h4>Query Optimization Techniques</h4>
+    <div class="example-box">
+        <div class="example-title">Advanced Query Optimization Examples</div>
+        <pre>
+<span class="sql-comment">-- BEFORE: Inefficient query with correlated subquery</span>
+<span class="sql-keyword">SELECT</span> 
+    c.CustomerID,
+    c.FirstName,
+    c.LastName,
+    (   <span class="sql-keyword">SELECT COUNT</span>(*)
+        <span class="sql-keyword">FROM</span> Orders o 
+        <span class="sql-keyword">WHERE</span> o.CustomerID = c.CustomerID
+    ) <span class="sql-keyword">AS</span> OrderCount
+<span class="sql-keyword">FROM</span> Customers c
+<span class="sql-keyword">WHERE</span> c.IsActive = <span class="sql-keyword">TRUE</span>;
+
+<span class="sql-comment">-- AFTER: Optimized with LEFT JOIN</span>
+<span class="sql-keyword">SELECT</span> 
+    c.CustomerID,
+    c.FirstName,
+    c.LastName,
+    <span class="sql-keyword">COALESCE</span>(order_counts.OrderCount, 0) <span class="sql-keyword">AS</span> OrderCount
+<span class="sql-keyword">FROM</span> Customers c
+<span class="sql-keyword">LEFT JOIN</span> (
+    <span class="sql-keyword">SELECT</span> 
+        CustomerID, 
+        <span class="sql-keyword">COUNT</span>(*) <span class="sql-keyword">AS</span> OrderCount
+    <span class="sql-keyword">FROM</span> Orders 
+    <span class="sql-keyword">GROUP BY</span> CustomerID
+) order_counts <span class="sql-keyword">ON</span> c.CustomerID = order_counts.CustomerID
+<span class="sql-keyword">WHERE</span> c.IsActive = <span class="sql-keyword">TRUE</span>;
+
+<span class="sql-comment">-- BEFORE: Inefficient OR condition</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Products 
+<span class="sql-keyword">WHERE</span> CategoryID = 1 <span class="sql-keyword">OR</span> CategoryID = 2 <span class="sql-keyword">OR</span> CategoryID = 3;
+
+<span class="sql-comment">-- AFTER: Using IN clause</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Products 
+<span class="sql-keyword">WHERE</span> CategoryID <span class="sql-keyword">IN</span> (1, 2, 3);
+
+<span class="sql-comment">-- BEFORE: Function in WHERE clause prevents index usage</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Orders 
+<span class="sql-keyword">WHERE</span> <span class="sql-keyword">YEAR</span>(OrderDate) = 2024;
+
+<span class="sql-comment">-- AFTER: Range condition allows index usage</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Orders 
+<span class="sql-keyword">WHERE</span> OrderDate >= <span class="sql-string">'2024-01-01'</span> 
+    <span class="sql-keyword">AND</span> OrderDate < <span class="sql-string">'2025-01-01'</span>;
+
+<span class="sql-comment">-- BEFORE: SELECT * wastes resources</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Orders o
+<span class="sql-keyword">JOIN</span> Customers c <span class="sql-keyword">ON</span> o.CustomerID = c.CustomerID
+<span class="sql-keyword">WHERE</span> o.OrderDate > <span class="sql-string">'2024-01-01'</span>;
+
+<span class="sql-comment">-- AFTER: Select only needed columns</span>
+<span class="sql-keyword">SELECT</span> 
+    o.OrderNumber,
+    o.OrderDate,
+    o.TotalAmount,
+    c.FirstName,
+    c.LastName
+<span class="sql-keyword">FROM</span> Orders o
+<span class="sql-keyword">JOIN</span> Customers c <span class="sql-keyword">ON</span> o.CustomerID = c.CustomerID
+<span class="sql-keyword">WHERE</span> o.OrderDate > <span class="sql-string">'2024-01-01'</span>;
+
+<span class="sql-comment">-- Advanced Window Functions for Analytics</span>
+<span class="sql-keyword">SELECT</span> 
+    CustomerID,
+    OrderDate,
+    TotalAmount,
+    <span class="sql-comment">-- Running total</span>
+    <span class="sql-keyword">SUM</span>(TotalAmount) <span class="sql-keyword">OVER</span> (
+        <span class="sql-keyword">PARTITION BY</span> CustomerID 
+        <span class="sql-keyword">ORDER BY</span> OrderDate 
+        <span class="sql-keyword">ROWS UNBOUNDED PRECEDING</span>
+    ) <span class="sql-keyword">AS</span> RunningTotal,
+    <span class="sql-comment">-- Rank orders by amount</span>
+    <span class="sql-keyword">RANK</span>() <span class="sql-keyword">OVER</span> (
+        <span class="sql-keyword">PARTITION BY</span> CustomerID 
+        <span class="sql-keyword">ORDER BY</span> TotalAmount <span class="sql-keyword">DESC</span>
+    ) <span class="sql-keyword">AS</span> OrderRank,
+    <span class="sql-comment">-- Moving average</span>
+    <span class="sql-keyword">AVG</span>(TotalAmount) <span class="sql-keyword">OVER</span> (
+        <span class="sql-keyword">PARTITION BY</span> CustomerID 
+        <span class="sql-keyword">ORDER BY</span> OrderDate 
+        <span class="sql-keyword">ROWS BETWEEN</span> 2 <span class="sql-keyword">PRECEDING AND CURRENT ROW</span>
+    ) <span class="sql-keyword">AS</span> MovingAvg3Orders
+<span class="sql-keyword">FROM</span> Orders
+<span class="sql-keyword">ORDER BY</span> CustomerID, OrderDate;
+
+<span class="sql-comment">-- Common Table Expressions (CTEs) for readability</span>
+<span class="sql-keyword">WITH</span> MonthlyOrderSummary <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> 
+        <span class="sql-keyword">YEAR</span>(OrderDate) <span class="sql-keyword">AS</span> OrderYear,
+        <span class="sql-keyword">MONTH</span>(OrderDate) <span class="sql-keyword">AS</span> OrderMonth,
+        <span class="sql-keyword">COUNT</span>(*) <span class="sql-keyword">AS</span> OrderCount,
+        <span class="sql-keyword">SUM</span>(TotalAmount) <span class="sql-keyword">AS</span> Revenue
+    <span class="sql-keyword">FROM</span> Orders
+    <span class="sql-keyword">WHERE</span> OrderStatus = <span class="sql-string">'Completed'</span>
+    <span class="sql-keyword">GROUP BY</span> <span class="sql-keyword">YEAR</span>(OrderDate), <span class="sql-keyword">MONTH</span>(OrderDate)
+),
+RevenueGrowth <span class="sql-keyword">AS</span> (
+    <span class="sql-keyword">SELECT</span> *,
+        <span class="sql-keyword">LAG</span>(Revenue, 1) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">ORDER BY</span> OrderYear, OrderMonth) <span class="sql-keyword">AS</span> PrevRevenue,
+        (Revenue - <span class="sql-keyword">LAG</span>(Revenue, 1) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">ORDER BY</span> OrderYear, OrderMonth)) / 
+        <span class="sql-keyword">LAG</span>(Revenue, 1) <span class="sql-keyword">OVER</span> (<span class="sql-keyword">ORDER BY</span> OrderYear, OrderMonth) * 100 <span class="sql-keyword">AS</span> GrowthRate
+    <span class="sql-keyword">FROM</span> MonthlyOrderSummary
+)
+<span class="sql-keyword">SELECT</span> 
+    <span class="sql-keyword">CONCAT</span>(OrderYear, <span class="sql-string">'-'</span>, <span class="sql-keyword">LPAD</span>(OrderMonth, 2, <span class="sql-string">'0'</span>)) <span class="sql-keyword">AS</span> YearMonth,
+    OrderCount,
+    <span class="sql-keyword">FORMAT</span>(Revenue, 2) <span class="sql-keyword">AS</span> FormattedRevenue,
+    <span class="sql-keyword">ROUND</span>(GrowthRate, 2) <span class="sql-keyword">AS</span> <span class="sql-string">'Growth %'</span>
+<span class="sql-keyword">FROM</span> RevenueGrowth
+<span class="sql-keyword">ORDER BY</span> OrderYear, OrderMonth;
+        </pre>
+    </div>
 
     <h2 class="page-break"><span class="topic-icon">🔒</span>SECURITY AND ADMINISTRATION</h2>
 
-    <h3>User Management</h3>
-    <pre>
--- Create database users
-CREATE USER 'librarian'@'localhost' IDENTIFIED BY 'secure_password';
-CREATE USER 'member'@'%' IDENTIFIED BY 'member_password';
-
--- Grant specific privileges
-GRANT SELECT, INSERT, UPDATE ON library.Books TO 'librarian'@'localhost';
-GRANT SELECT ON library.Books TO 'member'@'%';
-GRANT INSERT ON library.Borrowings TO 'member'@'%';
-
--- Revoke privileges
-REVOKE INSERT ON library.Borrowings FROM 'member'@'%';
-    </pre>
-
-    <h3>Data Encryption</h3>
-    <pre>
--- Encrypt sensitive data
-CREATE TABLE Members_Secure (
-    MemberID VARCHAR(10) PRIMARY KEY,
-    FirstName VARCHAR(50),
-    LastName VARCHAR(50),
-    Email VARBINARY(255), -- Encrypted email
-    Phone VARBINARY(255), -- Encrypted phone
-    SSN VARBINARY(255)     -- Encrypted SSN
-);
-
--- Insert encrypted data
-INSERT INTO Members_Secure VALUES (
-    'M001',
-    'John',
-    'Doe',
-    AES_ENCRYPT('john.doe@email.com', 'encryption_key'),
-    AES_ENCRYPT('123-456-7890', 'encryption_key'),
-    AES_ENCRYPT('123-45-6789', 'encryption_key')
-);
-    </pre>
-
-    <h3>Backup and Recovery</h3>
-    <pre>
-# Full database backup
-mysqldump -u root -p --single-transaction library > library_backup.sql
-
-# Restore database
-mysql -u root -p library < library_backup.sql
-
-# Point-in-time recovery using binary logs
-mysqlbinlog --start-datetime="2024-01-01 12:00:00" \
-           --stop-datetime="2024-01-01 15:30:00" \
-           mysql-bin.000001 | mysql -u root -p
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">📈</span>TRANSACTION MANAGEMENT</h2>
-
-    <h3>ACID Properties</h3>
-
-    <h4>1. Atomicity Example</h4>
-    <pre>
-START TRANSACTION;
-
--- Transfer a book from one member to another
-UPDATE Borrowings 
-SET MemberID = 'M002', BorrowDate = CURDATE()
-WHERE BorrowingID = 123;
-
-UPDATE Books 
-SET AvailableCopies = AvailableCopies - 1
-WHERE ISBN = '978-0123456789';
-
--- If any error occurs, rollback entire transaction
--- ROLLBACK;
-
--- If everything succeeds, commit
-COMMIT;
-    </pre>
-
-    <h4>2. Consistency Example</h4>
-    <pre>
--- Ensure data consistency with constraints
-ALTER TABLE Borrowings ADD CONSTRAINT chk_return_date
-CHECK (ReturnDate IS NULL OR ReturnDate >= BorrowDate);
-
-ALTER TABLE Books ADD CONSTRAINT chk_available_copies
-CHECK (AvailableCopies >= 0);
-    </pre>
-
-    <h4>3. Isolation Levels</h4>
-    <pre>
--- Set transaction isolation level
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-
--- Example of isolation in action
--- Session 1:
-START TRANSACTION;
-SELECT AvailableCopies FROM Books WHERE ISBN = '978-0123456789';
--- Shows 5 copies
-
--- Session 2 (concurrent):
-START TRANSACTION;
-UPDATE Books SET AvailableCopies = 3 WHERE ISBN = '978-0123456789';
-COMMIT;
-
--- Session 1 continues:
-SELECT AvailableCopies FROM Books WHERE ISBN = '978-0123456789';
--- Result depends on isolation level
-COMMIT;
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">🔍</span>QUERY PROCESSING</h2>
-
-    <h3>Query Execution Process</h3>
-
-    <h4>Query Parsing and Optimization</h4>
-    <pre>
--- Original query
-SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
-FROM Books b
-LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
-WHERE b.Genre = 'Fiction'
-  AND b.PublicationYear >= 2020
-GROUP BY b.ISBN, b.Title
-HAVING COUNT(br.BorrowingID) > 3
-ORDER BY BorrowCount DESC;
-
--- Query execution plan
-EXPLAIN FORMAT=JSON 
-SELECT b.Title, COUNT(br.BorrowingID) as BorrowCount
-FROM Books b
-LEFT JOIN Borrowings br ON b.ISBN = br.ISBN
-WHERE b.Genre = 'Fiction'
-  AND b.PublicationYear >= 2020
-GROUP BY b.ISBN, b.Title
-HAVING COUNT(br.BorrowingID) > 3
-ORDER BY BorrowCount DESC;
-    </pre>
-
-    <h4>Join Optimization</h4>
-    <pre>
--- Nested Loop Join (small tables)
-SELECT b.Title, br.BorrowDate
-FROM Books b
-JOIN Borrowings br ON b.ISBN = br.ISBN
-WHERE b.Genre = 'Fiction';
-
--- Hash Join (large tables)
-SELECT b.Title, br.BorrowDate
-FROM Books b
-JOIN Borrowings br ON b.ISBN = br.ISBN;
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">🎯</span>MIDTERM FOCUS AREAS</h2>
-
-    <h3>Object DBMS</h3>
-
-    <h4>Object-Oriented Concepts in Databases</h4>
-    <pre>
--- User-Defined Types (PostgreSQL example)
-CREATE TYPE Address AS (
-    street VARCHAR(100),
-    city VARCHAR(50),
-    state VARCHAR(20),
-    zip_code VARCHAR(10)
-);
-
-CREATE TYPE Person AS (
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    birth_date DATE,
-    address Address
-);
-
--- Table using object types
-CREATE TABLE Employees (
-    emp_id SERIAL PRIMARY KEY,
-    person_info Person,
-    hire_date DATE,
-    salary DECIMAL(10,2)
-);
-    </pre>
-
-    <div class="important-note">
-        <h4>Object-Oriented DBMS Standards:</h4>
-        <ul>
-            <li><strong>ODMG (Object Data Management Group):</strong> Standard for object databases</li>
-            <li><strong>OQL (Object Query Language):</strong> SQL-like language for object databases</li>
-            <li><strong>ODL (Object Definition Language):</strong> For defining object schemas</li>
-        </ul>
-    </div>
-
-    <h3>The Web and DBMS</h3>
-
-    <h4>Web Technology Integration</h4>
-    <pre>
-// Node.js example connecting to database
-const mysql = require('mysql2');
-
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'webapp',
-    password: 'webapp_password',
-    database: 'library'
-});
-
-// API endpoint for book search
-app.get('/api/books/search', (req, res) => {
-    const { author, genre } = req.query;
-    
-    let query = 'SELECT * FROM Books WHERE 1=1';
-    let params = [];
-    
-    if (author) {
-        query += ' AND Author LIKE ?';
-        params.push(`%${author}%`);
-    }
-    
-    if (genre) {
-        query += ' AND Genre = ?';
-        params.push(genre);
-    }
-    
-    connection.execute(query, params, (err, results) => {
-        if (err) {
-            res.status(500).json({ error: err.message });
-        } else {
-            res.json(results);
-        }
-    });
-});
-    </pre>
-
-    <h4>Semi-structured Data (XML)</h4>
-    <pre>
-&lt;!-- books.xml --&gt;
-&lt;library&gt;
-    &lt;book isbn="978-0123456789"&gt;
-        &lt;title&gt;Database Systems Concepts&lt;/title&gt;
-        &lt;authors&gt;
-            &lt;author&gt;Abraham Silberschatz&lt;/author&gt;
-            &lt;author&gt;Henry F. Korth&lt;/author&gt;
-        &lt;/authors&gt;
-        &lt;publisher&gt;McGraw-Hill&lt;/publisher&gt;
-        &lt;year&gt;2020&lt;/year&gt;
-        &lt;genre&gt;Computer Science&lt;/genre&gt;
-    &lt;/book&gt;
-&lt;/library&gt;
-    </pre>
-
-    <pre>
--- Store XML in database (MySQL example)
-CREATE TABLE BookXML (
-    id INT PRIMARY KEY,
-    book_data XML
-);
-
--- Query XML data
-SELECT 
-    ExtractValue(book_data, '//book/@isbn') as ISBN,
-    ExtractValue(book_data, '//title') as Title
-FROM BookXML
-WHERE ExtractValue(book_data, '//genre') = 'Computer Science';
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">📊</span>BUSINESS INTELLIGENCE</h2>
-
-    <h3>Data Warehousing Concepts</h3>
-
-    <h4>Fact and Dimension Tables</h4>
-    <pre>
--- Fact table (measures/metrics)
-CREATE TABLE BorrowingFacts (
-    fact_id INT PRIMARY KEY,
-    book_key INT,
-    member_key INT,
-    date_key INT,
-    borrow_count INT,
-    return_days INT,
-    fine_amount DECIMAL(10,2),
-    FOREIGN KEY (book_key) REFERENCES BookDimension(book_key),
-    FOREIGN KEY (member_key) REFERENCES MemberDimension(member_key),
-    FOREIGN KEY (date_key) REFERENCES DateDimension(date_key)
-);
-
--- Dimension tables (attributes for analysis)
-CREATE TABLE BookDimension (
-    book_key INT PRIMARY KEY,
-    isbn VARCHAR(13),
-    title VARCHAR(200),
-    author VARCHAR(100),
-    genre VARCHAR(50),
-    publication_year INT
-);
-
-CREATE TABLE DateDimension (
-    date_key INT PRIMARY KEY,
-    full_date DATE,
-    year INT,
-    quarter INT,
-    month INT,
-    day_of_week VARCHAR(10)
-);
-    </pre>
-
-    <h3>OLAP Operations</h3>
-
-    <h4>Roll-up, Drill-down, and Slice Operations</h4>
-    <pre>
--- Roll-up (summarize by higher level)
-SELECT d.year, b.genre, COUNT(*) as total_borrowings
-FROM BorrowingFacts f
-JOIN DateDimension d ON f.date_key = d.date_key
-JOIN BookDimension b ON f.book_key = b.book_key
-GROUP BY d.year, b.genre;
-
--- Drill-down (detailed breakdown)
-SELECT d.year, d.month, b.author, COUNT(*) as borrowings
-FROM BorrowingFacts f
-JOIN DateDimension d ON f.date_key = d.date_key
-JOIN BookDimension b ON f.book_key = b.book_key
-WHERE d.year = 2024
-GROUP BY d.year, d.month, b.author;
-
--- Slice (filter one dimension)
-SELECT b.title, COUNT(*) as borrowings
-FROM BorrowingFacts f
-JOIN BookDimension b ON f.book_key = b.book_key
-JOIN DateDimension d ON f.date_key = d.date_key
-WHERE d.year = 2024
-GROUP BY b.title;
-    </pre>
-
-    <h3>Data Mining Example</h3>
-    <pre>
--- Association Rules: Books frequently borrowed together
-SELECT 
-    b1.title as Book1,
-    b2.title as Book2,
-    COUNT(*) as frequency
-FROM Borrowings br1
-JOIN Borrowings br2 ON br1.MemberID = br2.MemberID 
-    AND br1.BorrowingID < br2.BorrowingID
-JOIN Books b1 ON br1.ISBN = b1.ISBN
-JOIN Books b2 ON br2.ISBN = b2.ISBN
-WHERE ABS(DATEDIFF(br1.BorrowDate, br2.BorrowDate)) <= 30
-GROUP BY b1.title, b2.title
-HAVING COUNT(*) >= 5
-ORDER BY frequency DESC;
-    </pre>
-
-    <h2 class="page-break"><span class="topic-icon">📝</span>SAMPLE EXAM QUESTIONS</h2>
-
-    <div class="key-points">
-        <h3>Conceptual Questions</h3>
-        <ol>
-            <li>Explain the difference between logical and physical database design.</li>
-            <li>What are the advantages of normalization? Provide an example of 2NF violation.</li>
-            <li>Compare ACID properties with BASE properties in distributed systems.</li>
-            <li>Describe the role of query optimizer in database management systems.</li>
-            <li>Explain the concept of data warehousing and its benefits for business intelligence.</li>
-        </ol>
-    </div>
+    <h3>Comprehensive Database Security Implementation</h3>
 
     <div class="example-box">
-        <h3>Practical Questions</h3>
-        <ol>
-            <li>Design a database schema for an online bookstore with proper normalization.</li>
-            <li>Write SQL queries to demonstrate different isolation levels.</li>
-            <li>Create indexes to optimize a given slow-performing query.</li>
-            <li>Implement security measures for a multi-user database system.</li>
-            <li>Design a star schema for analyzing student performance data.</li>
-        </ol>
-    </div>
-
-    <div class="important-note">
-        <h3>Advanced Topics</h3>
-        <ol>
-            <li>Explain how object-relational mapping (ORM) bridges OOP and relational databases.</li>
-            <li>Design a star schema for analyzing student performance data.</li>
-            <li>Discuss security considerations for web-based database applications.</li>
-            <li>Compare different storage structures and their performance characteristics.</li>
-            <li>Explain the role of metadata in data warehousing systems.</li>
-        </ol>
-    </div>
-
-    <h2 class="page-break"><span class="topic-icon">🚀</span>TIPS FOR SUCCESS</h2>
-
-    <div class="key-points">
-        <h3>Study Strategies</h3>
-        <ol>
-            <li><strong>Practice SQL regularly</strong> - Write queries daily to build muscle memory</li>
-            <li><strong>Understand concepts, don't memorize</strong> - Focus on why, not just what</li>
-            <li><strong>Draw ER diagrams</strong> - Visual representation helps understanding</li>
-            <li><strong>Analyze real-world examples</strong> - Apply concepts to actual scenarios</li>
-            <li><strong>Stay updated</strong> - Database technology evolves rapidly</li>
-        </ol>
-    </div>
-
-    <div class="example-box">
-        <h3>Exam Preparation Checklist</h3>
-        <ul>
-            <li>✓ Understand ER modeling and can draw diagrams</li>
-            <li>✓ Master normalization (1NF, 2NF, 3NF) with examples</li>
-            <li>✓ Know how to write complex SQL queries with joins</li>
-            <li>✓ Understand transaction management and ACID properties</li>
-            <li>✓ Familiar with indexing strategies and performance tuning</li>
-            <li>✓ Know security concepts and user management</li>
-            <li>✓ Understand OLAP operations and data warehousing</li>
-            <li>✓ Familiar with object-oriented database concepts</li>
-        </ul>
-    </div>
-
-    <div class="important-note">
-        <h3>Common Mistakes to Avoid</h3>
-        <ul>
-            <li><strong>Poor normalization:</strong> Don't leave tables in 1NF when they should be in 3NF</li>
-            <li><strong>Missing foreign keys:</strong> Always establish proper relationships between tables</li>
-            <li><strong>Inefficient queries:</strong> Avoid SELECT * and use appropriate WHERE clauses</li>
-            <li><strong>Ignoring indexes:</strong> Create indexes for frequently queried columns</li>
-            <li><strong>Security oversights:</strong> Always implement proper user privileges and data encryption</li>
-        </ul>
-    </div>
-
-    <h2 class="page-break"><span class="topic-icon">📋</span>QUICK REFERENCE GUIDE</h2>
-
-    <h3>SQL Command Summary</h3>
-    
-    <table>
-        <tr>
-            <th>Category</th>
-            <th>Command</th>
-            <th>Purpose</th>
-            <th>Example</th>
-        </tr>
-        <tr>
-            <td rowspan="4">DDL</td>
-            <td>CREATE TABLE</td>
-            <td>Create new table</td>
-            <td>CREATE TABLE Students(...)</td>
-        </tr>
-        <tr>
-            <td>ALTER TABLE</td>
-            <td>Modify table structure</td>
-            <td>ALTER TABLE Students ADD COLUMN...</td>
-        </tr>
-        <tr>
-            <td>DROP TABLE</td>
-            <td>Delete table</td>
-            <td>DROP TABLE Students</td>
-        </tr>
-        <tr>
-            <td>CREATE INDEX</td>
-            <td>Create index</td>
-            <td>CREATE INDEX idx_name ON table(col)</td>
-        </tr>
-        <tr>
-            <td rowspan="4">DML</td>
-            <td>SELECT</td>
-            <td>Query data</td>
-            <td>SELECT * FROM Students WHERE...</td>
-        </tr>
-        <tr>
-            <td>INSERT</td>
-            <td>Add new records</td>
-            <td>INSERT INTO Students VALUES(...)</td>
-        </tr>
-        <tr>
-            <td>UPDATE</td>
-            <td>Modify existing records</td>
-            <td>UPDATE Students SET ... WHERE...</td>
-        </tr>
-        <tr>
-            <td>DELETE</td>
-            <td>Remove records</td>
-            <td>DELETE FROM Students WHERE...</td>
-        </tr>
-        <tr>
-            <td rowspan="3">DCL</td>
-            <td>GRANT</td>
-            <td>Give privileges</td>
-            <td>GRANT SELECT ON table TO user</td>
-        </tr>
-        <tr>
-            <td>REVOKE</td>
-            <td>Remove privileges</td>
-            <td>REVOKE SELECT ON table FROM user</td>
-        </tr>
-        <tr>
-            <td>CREATE USER</td>
-            <td>Create database user</td>
-            <td>CREATE USER 'name'@'host'...</td>
-        </tr>
-    </table>
-
-    <h3>Normalization Quick Reference</h3>
-    
-    <table>
-        <tr>
-            <th>Normal Form</th>
-            <th>Requirements</th>
-            <th>Eliminates</th>
-        </tr>
-        <tr>
-            <td>1NF</td>
-            <td>Atomic values, no repeating groups</td>
-            <td>Multi-valued attributes</td>
-        </tr>
-        <tr>
-            <td>2NF</td>
-            <td>1NF + No partial dependencies</td>
-            <td>Partial functional dependencies</td>
-        </tr>
-        <tr>
-            <td>3NF</td>
-            <td>2NF + No transitive dependencies</td>
-            <td>Transitive functional dependencies</td>
-        </tr>
-        <tr>
-            <td>BCNF</td>
-            <td>3NF + Every determinant is a candidate key</td>
-            <td>Remaining anomalies in 3NF</td>
-        </tr>
-    </table>
-
-    <h3>Transaction Isolation Levels</h3>
-    
-    <table>
-        <tr>
-            <th>Isolation Level</th>
-            <th>Dirty Read</th>
-            <th>Non-repeatable Read</th>
-            <th>Phantom Read</th>
-        </tr>
-        <tr>
-            <td>READ UNCOMMITTED</td>
-            <td>Possible</td>
-            <td>Possible</td>
-            <td>Possible</td>
-        </tr>
-        <tr>
-            <td>READ COMMITTED</td>
-            <td>Prevented</td>
-            <td>Possible</td>
-            <td>Possible</td>
-        </tr>
-        <tr>
-            <td>REPEATABLE READ</td>
-            <td>Prevented</td>
-            <td>Prevented</td>
-            <td>Possible</td>
-        </tr>
-        <tr>
-            <td>SERIALIZABLE</td>
-            <td>Prevented</td>
-            <td>Prevented</td>
-            <td>Prevented</td>
-        </tr>
-    </table>
-
-    <h2 class="page-break"><span class="topic-icon">🎓</span>PRACTICE EXERCISES</h2>
-
-    <div class="example-box">
-        <h3>Exercise 1: Database Design</h3>
-        <p><strong>Scenario:</strong> Design a database for a hospital management system.</p>
-        <p><strong>Requirements:</strong></p>
-        <ul>
-            <li>Track patients, doctors, appointments, and medical records</li>
-            <li>Patients can have multiple appointments with different doctors</li>
-            <li>Each appointment can have multiple medical records</li>
-            <li>Doctors specialize in different departments</li>
-        </ul>
-        <p><strong>Tasks:</strong></p>
-        <ol>
-            <li>Create an ER diagram</li>
-            <li>Convert to relational schema</li>
-            <li>Apply normalization rules</li>
-            <li>Write SQL CREATE statements</li>
-        </ol>
-    </div>
-
-    <div class="example-box">
-        <h3>Exercise 2: Query Optimization</h3>
-        <p><strong>Given this slow query:</strong></p>
+        <div class="example-title">Advanced User Management and Security</div>
         <pre>
-SELECT *
-FROM Orders o, Customers c, Products p, OrderItems oi
-WHERE o.customer_id = c.customer_id
-  AND oi.order_id = o.order_id
-  AND oi.product_id = p.product_id
-  AND o.order_date LIKE '2024%'
-  AND p.category = 'Electronics';
+<span class="sql-comment">-- 1. Role-Based Access Control</span>
+<span class="sql-comment">-- Create roles for different user types</span>
+<span class="sql-keyword">CREATE ROLE</span> <span class="sql-string">'db_admin'</span>;
+<span class="sql-keyword">CREATE ROLE</span> <span class="sql-string">'db_developer'</span>;
+<span class="sql-keyword">CREATE ROLE</span> <span class="sql-string">'db_readonly'</span>;
+<span class="sql-keyword">CREATE ROLE</span> <span class="sql-string">'db_analyst'</span>;
+
+<span class="sql-comment">-- Grant privileges to roles</span>
+<span class="sql-keyword">GRANT ALL PRIVILEGES ON</span> ecommerce.* <span class="sql-keyword">TO</span> <span class="sql-string">'db_admin'</span>;
+
+<span class="sql-keyword">GRANT</span> <span class="sql-keyword">SELECT</span>, <span class="sql-keyword">INSERT</span>, <span class="sql-keyword">UPDATE</span>, <span class="sql-keyword">DELETE</span> <span class="sql-keyword">ON</span> ecommerce.Products <span class="sql-keyword">TO</span> <span class="sql-string">'db_developer'</span>;
+<span class="sql-keyword">GRANT</span> <span class="sql-keyword">SELECT</span>, <span class="sql-keyword">INSERT</span>, <span class="sql-keyword">UPDATE</span>, <span class="sql-keyword">DELETE</span> <span class="sql-keyword">ON</span> ecommerce.Orders <span class="sql-keyword">TO</span> <span class="sql-string">'db_developer'</span>;
+<span class="sql-keyword">GRANT</span> <span class="sql-keyword">SELECT</span>, <span class="sql-keyword">INSERT</span>, <span class="sql-keyword">UPDATE</span>, <span class="sql-keyword">DELETE</span> <span class="sql-keyword">ON</span> ecommerce.Customers <span class="sql-keyword">TO</span> <span class="sql-string">'db_developer'</span>;
+
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.* <span class="sql-keyword">TO</span> <span class="sql-string">'db_readonly'</span>;
+
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.Orders <span class="sql-keyword">TO</span> <span class="sql-string">'db_analyst'</span>;
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.OrderItems <span class="sql-keyword">TO</span> <span class="sql-string">'db_analyst'</span>;
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.Products <span class="sql-keyword">TO</span> <span class="sql-string">'db_analyst'</span>;
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.Customers <span class="sql-keyword">TO</span> <span class="sql-string">'db_analyst'</span>;
+
+<span class="sql-comment">-- Create users and assign roles</span>
+<span class="sql-keyword">CREATE USER</span> <span class="sql-string">'admin_user'</span>@<span class="sql-string">'localhost'</span> <span class="sql-keyword">IDENTIFIED BY</span> <span class="sql-string">'StrongAdminPass123!'</span>;
+<span class="sql-keyword">CREATE USER</span> <span class="sql-string">'dev_user'</span>@<span class="sql-string">'%'</span> <span class="sql-keyword">IDENTIFIED BY</span> <span class="sql-string">'DevPassword456!'</span>;
+<span class="sql-keyword">CREATE USER</span> <span class="sql-string">'report_user'</span>@<span class="sql-string">'%'</span> <span class="sql-keyword">IDENTIFIED BY</span> <span class="sql-string">'ReportPass789!'</span>;
+
+<span class="sql-keyword">GRANT</span> <span class="sql-string">'db_admin'</span> <span class="sql-keyword">TO</span> <span class="sql-string">'admin_user'</span>@<span class="sql-string">'localhost'</span>;
+<span class="sql-keyword">GRANT</span> <span class="sql-string">'db_developer'</span> <span class="sql-keyword">TO</span> <span class="sql-string">'dev_user'</span>@<span class="sql-string">'%'</span>;
+<span class="sql-keyword">GRANT</span> <span class="sql-string">'db_analyst'</span> <span class="sql-keyword">TO</span> <span class="sql-string">'report_user'</span>@<span class="sql-string">'%'</span>;
+
+<span class="sql-comment">-- Set default roles</span>
+<span class="sql-keyword">SET DEFAULT ROLE</span> <span class="sql-string">'db_admin'</span> <span class="sql-keyword">TO</span> <span class="sql-string">'admin_user'</span>@<span class="sql-string">'localhost'</span>;
+<span class="sql-keyword">SET DEFAULT ROLE</span> <span class="sql-string">'db_developer'</span> <span class="sql-keyword">TO</span> <span class="sql-string">'dev_user'</span>@<span class="sql-string">'%'</span>;
+
+<span class="sql-comment">-- 2. Column-Level Security</span>
+<span class="sql-comment">-- Restrict access to sensitive customer data</span>
+<span class="sql-keyword">REVOKE SELECT</span> (Email, Phone) <span class="sql-keyword">ON</span> ecommerce.Customers <span class="sql-keyword">FROM</span> <span class="sql-string">'db_analyst'</span>;
+
+<span class="sql-comment">-- Create views for restricted data access</span>
+<span class="sql-keyword">CREATE VIEW</span> CustomerSummary <span class="sql-keyword">AS</span>
+<span class="sql-keyword">SELECT</span> 
+    CustomerID,
+    FirstName,
+    LastName,
+    CustomerType,
+    RegistrationDate,
+    IsActive
+<span class="sql-keyword">FROM</span> Customers;
+
+<span class="sql-keyword">GRANT SELECT ON</span> ecommerce.CustomerSummary <span class="sql-keyword">TO</span> <span class="sql-string">'db_analyst'</span>;
+
+<span class="sql-comment">-- 3. Data Encryption Implementation</span>
+<span class="sql-keyword">CREATE TABLE</span> SecureCustomerData (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    EncryptedSSN <span class="sql-keyword">VARBINARY</span>(255),
+    EncryptedCreditCard <span class="sql-keyword">VARBINARY</span>(255),
+    EncryptedEmail <span class="sql-keyword">VARBINARY</span>(255),
+    CreatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);
+
+<span class="sql-comment">-- Insert encrypted data</span>
+<span class="sql-keyword">INSERT INTO</span> SecureCustomerData 
+(CustomerID, EncryptedSSN, EncryptedCreditCard, EncryptedEmail)
+<span class="sql-keyword">VALUES</span> (
+    1,
+    <span class="sql-keyword">AES_ENCRYPT</span>(<span class="sql-string">'123-45-6789'</span>, <span class="sql-keyword">SHA2</span>(<span class="sql-string">'encryption_key_2024'</span>, 256)),
+    <span class="sql-keyword">AES_ENCRYPT</span>(<span class="sql-string">'4532-1234-5678-9012'</span>, <span class="sql-keyword">SHA2</span>(<span class="sql-string">'encryption_key_2024'</span>, 256)),
+    <span class="sql-keyword">AES_ENCRYPT</span>(<span class="sql-string">'john.doe@email.com'</span>, <span class="sql-keyword">SHA2</span>(<span class="sql-string">'encryption_key_2024'</span>, 256))
+);
+
+<span class="sql-comment">-- Decrypt data (only for authorized users)</span>
+<span class="sql-keyword">SELECT</span> 
+    CustomerID,
+    <span class="sql-keyword">AES_DECRYPT</span>(EncryptedSSN, <span class="sql-keyword">SHA2</span>(<span class="sql-string">'encryption_key_2024'</span>, 256)) <span class="sql-keyword">AS</span> SSN,
+    <span class="sql-keyword">AES_DECRYPT</span>(EncryptedEmail, <span class="sql-keyword">SHA2</span>(<span class="sql-string">'encryption_key_2024'</span>, 256)) <span class="sql-keyword">AS</span> Email
+<span class="sql-keyword">FROM</span> SecureCustomerData
+<span class="sql-keyword">WHERE</span> CustomerID = 1;
+
+<span class="sql-comment">-- 4. Audit Trail Implementation</span>
+<span class="sql-keyword">CREATE TABLE</span> AuditLog (
+    AuditID <span class="sql-keyword">BIGINT AUTO_INCREMENT PRIMARY KEY</span>,
+    TableName <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    Operation <span class="sql-keyword">ENUM</span>(<span class="sql-string">'INSERT'</span>, <span class="sql-string">'UPDATE'</span>, <span class="sql-string">'DELETE'</span>) <span class="sql-keyword">NOT NULL</span>,
+    RecordID <span class="sql-keyword">VARCHAR</span>(50),
+    OldValues <span class="sql-keyword">JSON</span>,
+    NewValues <span class="sql-keyword">JSON</span>,
+    ChangedBy <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    ChangeDateTime <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    IPAddress <span class="sql-keyword">VARCHAR</span>(45),
+    UserAgent <span class="sql-keyword">TEXT</span>,
+    <span class="sql-keyword">INDEX</span> idx_audit_table (TableName),
+    <span class="sql-keyword">INDEX</span> idx_audit_user (ChangedBy),
+    <span class="sql-keyword">INDEX</span> idx_audit_datetime (ChangeDateTime)
+);
+
+<span class="sql-comment">-- Audit trigger for Products table</span>
+<span class="sql-keyword">DELIMITER</span> $
+
+<span class="sql-keyword">CREATE TRIGGER</span> trg_products_audit_update
+<span class="sql-keyword">AFTER UPDATE ON</span> Products
+<span class="sql-keyword">FOR EACH ROW</span>
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">INSERT INTO</span> AuditLog (
+        TableName, Operation, RecordID, 
+        OldValues, NewValues, ChangedBy
+    ) <span class="sql-keyword">VALUES</span> (
+        <span class="sql-string">'Products'</span>, 
+        <span class="sql-string">'UPDATE'</span>, 
+        <span class="sql-keyword">NEW</span>.ProductID,
+        <span class="sql-keyword">JSON_OBJECT</span>(
+            <span class="sql-string">'ProductName'</span>, <span class="sql-keyword">OLD</span>.ProductName,
+            <span class="sql-string">'UnitPrice'</span>, <span class="sql-keyword">OLD</span>.UnitPrice,
+            <span class="sql-string">'UnitsInStock'</span>, <span class="sql-keyword">OLD</span>.UnitsInStock
+        ),
+        <span class="sql-keyword">JSON_OBJECT</span>(
+            <span class="sql-string">'ProductName'</span>, <span class="sql-keyword">NEW</span>.ProductName,
+            <span class="sql-string">'UnitPrice'</span>, <span class="sql-keyword">NEW</span>.UnitPrice,
+            <span class="sql-string">'UnitsInStock'</span>, <span class="sql-keyword">NEW</span>.UnitsInStock
+        ),
+        <span class="sql-keyword">USER</span>()
+    );
+<span class="sql-keyword">END</span>$
+
+<span class="sql-keyword">DELIMITER</span> ;
+
+<span class="sql-comment">-- 5. Advanced Password Policies</span>
+<span class="sql-keyword">ALTER USER</span> <span class="sql-string">'dev_user'</span>@<span class="sql-string">'%'</span> 
+<span class="sql-keyword">PASSWORD EXPIRE INTERVAL</span> 90 <span class="sql-keyword">DAY</span>
+<span class="sql-keyword">PASSWORD HISTORY</span> 5
+<span class="sql-keyword">PASSWORD REUSE INTERVAL</span> 365 <span class="sql-keyword">DAY</span>
+<span class="sql-keyword">FAILED_LOGIN_ATTEMPTS</span> 3
+<span class="sql-keyword">PASSWORD_LOCK_TIME</span> 1800;
+
+<span class="sql-comment">-- 6. SSL/TLS Configuration Verification</span>
+<span class="sql-keyword">SHOW STATUS LIKE</span> <span class="sql-string">'Ssl%'</span>;
+<span class="sql-keyword">SHOW VARIABLES LIKE</span> <span class="sql-string">'%ssl%'</span>;
+
+<span class="sql-comment">-- Force SSL for specific users</span>
+<span class="sql-keyword">ALTER USER</span> <span class="sql-string">'report_user'</span>@<span class="sql-string">'%'</span> <span class="sql-keyword">REQUIRE SSL</span>;
+
+<span class="sql-comment">-- 7. Security Monitoring Queries</span>
+<span class="sql-comment">-- Check for failed login attempts</span>
+<span class="sql-keyword">SELECT</span> 
+    <span class="sql-keyword">USER</span>,
+    <span class="sql-keyword">HOST</span>,
+    FAILED_CONNECTS,
+    PASSWORD_EXPIRED,
+    ACCOUNT_LOCKED
+<span class="sql-keyword">FROM</span> performance_schema.accounts
+<span class="sql-keyword">WHERE</span> FAILED_CONNECTS > 0;
+
+<span class="sql-comment">-- Monitor privilege escalations</span>
+<span class="sql-keyword">SELECT</span> 
+    user,
+    host,
+    authentication_string,
+    password_expired,
+    password_lifetime,
+    account_locked
+<span class="sql-keyword">FROM</span> mysql.user
+<span class="sql-keyword">WHERE</span> user <span class="sql-keyword">NOT IN</span> (<span class="sql-string">'mysql.sys'</span>, <span class="sql-string">'mysql.session'</span>, <span class="sql-string">'mysql.infoschema'</span>)
+<span class="sql-keyword">ORDER BY</span> user;
         </pre>
-        <p><strong>Tasks:</strong></p>
-        <ol>
-            <li>Rewrite using proper JOIN syntax</li>
-            <li>Optimize the WHERE clause</li>
-            <li>Suggest appropriate indexes</li>
-            <li>Eliminate unnecessary columns from SELECT</li>
-        </ol>
     </div>
+
+    <h4>Comprehensive Backup and Recovery Strategies</h4>
+    <pre>
+<span class="sql-comment">-- 1. Full Database Backup</span>
+<span class="sql-comment">-- Command line backup with compression</span>
+mysqldump --single-transaction --routines --triggers --events \
+         --all-databases --compress \
+         -u root -p > full_backup_$(date +%Y%m%d_%H%M%S).sql.gz
+
+<span class="sql-comment">-- 2. Incremental Backup using Binary Logs</span>
+<span class="sql-keyword">FLUSH LOGS</span>; <span class="sql-comment">-- Forces new binary log file</span>
+<span class="sql-keyword">SHOW MASTER STATUS</span>; <span class="sql-comment">-- Note current log position</span>
+
+<span class="sql-comment">-- 3. Point-in-Time Recovery Example</span>
+<span class="sql-comment">-- Step 1: Restore from full backup</span>
+mysql -u root -p ecommerce < full_backup_20241215_120000.sql
+
+<span class="sql-comment">-- Step 2: Apply binary logs up to specific point</span>
+mysqlbinlog --start-datetime="2024-12-15 12:00:00" \
+           --stop-datetime="2024-12-15 14:30:00" \
+           mysql-bin.000045 mysql-bin.000046 | mysql -u root -p
+
+<span class="sql-comment">-- 4. Automated Backup Script (saves to rotate backups)</span>
+<span class="sql-comment">-- This would be in a shell script or scheduled task</span>
+<span class="sql-comment">-- #!/bin/bash</span>
+<span class="sql-comment">-- BACKUP_DIR="/var/backups/mysql"</span>
+<span class="sql-comment">-- DATE=$(date +%Y%m%d_%H%M%S)</span>
+<span class="sql-comment">-- mysqldump --single-transaction --all-databases \</span>
+<span class="sql-comment">--          -u backup_user -pbackup_password \</span>
+<span class="sql-comment">--          | gzip > "$BACKUP_DIR/full_backup_$DATE.sql.gz"</span>
+
+<span class="sql-comment">-- 5. Backup Verification</span>
+<span class="sql-keyword">CREATE DATABASE</span> backup_test;
+<span class="sql-comment">-- Test restore process</span>
+mysql -u root -p backup_test < full_backup_20241215_120000.sql
+<span class="sql-keyword">USE</span> backup_test;
+<span class="sql-keyword">SHOW TABLES</span>;
+<span class="sql-keyword">SELECT COUNT</span>(*) <span class="sql-keyword">FROM</span> Products;
+<span class="sql-keyword">DROP DATABASE</span> backup_test;
+
+<span class="sql-comment">-- 6. Replication Setup for High Availability</span>
+<span class="sql-comment">-- Master configuration (in my.cnf)</span>
+<span class="sql-comment">-- server-id = 1</span>
+<span class="sql-comment">-- log-bin = mysql-bin</span>
+<span class="sql-comment">-- binlog-format = ROW</span>
+
+<span class="sql-comment">-- Create replication user on master</span>
+<span class="sql-keyword">CREATE USER</span> <span class="sql-string">'replication_user'</span>@<span class="sql-string">'%'</span> 
+<span class="sql-keyword">IDENTIFIED BY</span> <span class="sql-string">'ReplicationPass123!'</span>;
+<span class="sql-keyword">GRANT REPLICATION SLAVE ON</span> *.* 
+<span class="sql-keyword">TO</span> <span class="sql-string">'replication_user'</span>@<span class="sql-string">'%'</span>;
+
+<span class="sql-comment">-- Configure slave</span>
+<span class="sql-keyword">CHANGE MASTER TO</span>
+    MASTER_HOST = <span class="sql-string">'master_server_ip'</span>,
+    MASTER_USER = <span class="sql-string">'replication_user'</span>,
+    MASTER_PASSWORD = <span class="sql-string">'ReplicationPass123!'</span>,
+    MASTER_LOG_FILE = <span class="sql-string">'mysql-bin.000001'</span>,
+    MASTER_LOG_POS = 154;
+
+<span class="sql-keyword">START SLAVE</span>;
+<span class="sql-keyword">SHOW SLAVE STATUS</span>\G
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">📈</span>ADVANCED TRANSACTION MANAGEMENT</h2>
+
+    <h3>Comprehensive Transaction Control and Concurrency</h3>
 
     <div class="example-box">
-        <h3>Exercise 3: Transaction Management</h3>
-        <p><strong>Scenario:</strong> Implement a money transfer between bank accounts.</p>
+        <div class="example-title">Advanced Transaction Scenarios and Solutions</div>
         <pre>
--- Account table
-CREATE TABLE Accounts (
-    account_id VARCHAR(10) PRIMARY KEY,
-    account_holder VARCHAR(100),
-    balance DECIMAL(10,2)
+<span class="sql-comment">-- 1. Complex Business Transaction Example</span>
+<span class="sql-comment">-- E-commerce Order Processing with Multiple Steps</span>
+
+<span class="sql-keyword">DELIMITER</span> $
+
+<span class="sql-keyword">CREATE PROCEDURE</span> ProcessComplexOrder(
+    <span class="sql-keyword">IN</span> p_customer_id <span class="sql-keyword">INT</span>,
+    <span class="sql-keyword">IN</span> p_product_data <span class="sql-keyword">JSON</span>, <span class="sql-comment">-- Array of {product_id, quantity, price}</span>
+    <span class="sql-keyword">IN</span> p_shipping_address_id <span class="sql-keyword">INT</span>,
+    <span class="sql-keyword">IN</span> p_payment_method <span class="sql-keyword">VARCHAR</span>(50),
+    <span class="sql-keyword">OUT</span> p_order_id <span class="sql-keyword">INT</span>,
+    <span class="sql-keyword">OUT</span> p_status <span class="sql-keyword">VARCHAR</span>(50)
+)
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">DECLARE</span> v_product_count <span class="sql-keyword">INT</span>;
+    <span class="sql-keyword">DECLARE</span> v_i <span class="sql-keyword">INT</span> <span class="sql-keyword">DEFAULT</span> 0;
+    <span class="sql-keyword">DECLARE</span> v_product_id <span class="sql-keyword">INT</span>;
+    <span class="sql-keyword">DECLARE</span> v_quantity <span class="sql-keyword">INT</span>;
+    <span class="sql-keyword">DECLARE</span> v_unit_price <span class="sql-keyword">DECIMAL</span>(10,2);
+    <span class="sql-keyword">DECLARE</span> v_available_stock <span class="sql-keyword">INT</span>;
+    <span class="sql-keyword">DECLARE</span> v_total_amount <span class="sql-keyword">DECIMAL</span>(12,2) <span class="sql-keyword">DEFAULT</span> 0;
+    <span class="sql-keyword">DECLARE</span> v_customer_credit <span class="sql-keyword">DECIMAL</span>(12,2);
+    <span class="sql-keyword">DECLARE</span> v_error_msg <span class="sql-keyword">VARCHAR</span>(255);
+    
+    <span class="sql-comment">-- Error handlers</span>
+    <span class="sql-keyword">DECLARE CONTINUE HANDLER FOR SQLEXCEPTION</span>
+    <span class="sql-keyword">BEGIN</span>
+        <span class="sql-keyword">GET DIAGNOSTICS CONDITION</span> 1
+            v_error_msg = MESSAGE_TEXT;
+        <span class="sql-keyword">ROLLBACK</span>;
+        <span class="sql-keyword">SET</span> p_status = <span class="sql-keyword">CONCAT</span>(<span class="sql-string">'ERROR: '</span>, v_error_msg);
+    <span class="sql-keyword">END</span>;
+    
+    <span class="sql-comment">-- Start transaction</span>
+    <span class="sql-keyword">START TRANSACTION</span>;
+    
+    <span class="sql-comment">-- Validate customer and get credit limit</span>
+    <span class="sql-keyword">SELECT</span> CurrentCredit <span class="sql-keyword">INTO</span> v_customer_credit
+    <span class="sql-keyword">FROM</span> Customers
+    <span class="sql-keyword">WHERE</span> CustomerID = p_customer_id 
+        <span class="sql-keyword">AND</span> IsActive = <span class="sql-keyword">TRUE</span>
+    <span class="sql-keyword">FOR UPDATE</span>; <span class="sql-comment">-- Lock customer record</span>
+    
+    <span class="sql-keyword">IF</span> v_customer_credit <span class="sql-keyword">IS NULL THEN</span>
+        <span class="sql-keyword">ROLLBACK</span>;
+        <span class="sql-keyword">SET</span> p_status = <span class="sql-string">'ERROR: Invalid or inactive customer'</span>;
+        <span class="sql-keyword">LEAVE</span> proc_label;
+    <span class="sql-keyword">END IF</span>;
+    
+    <span class="sql-comment">-- Create order header</span>
+    <span class="sql-keyword">INSERT INTO</span> Orders (
+        CustomerID, OrderDate, OrderStatus, 
+        PaymentStatus, ShippingAddressID
+    ) <span class="sql-keyword">VALUES</span> (
+        p_customer_id, <span class="sql-keyword">NOW</span>(), <span class="sql-string">'Processing'</span>, 
+        <span class="sql-string">'Pending'</span>, p_shipping_address_id
+    );
+    
+    <span class="sql-keyword">SET</span> p_order_id = <span class="sql-keyword">LAST_INSERT_ID</span>();
+    
+    <span class="sql-comment">-- Process each product in the order</span>
+    <span class="sql-keyword">SET</span> v_product_count = <span class="sql-keyword">JSON_LENGTH</span>(p_product_data);
+    
+    <span class="sql-keyword">WHILE</span> v_i < v_product_count <span class="sql-keyword">DO</span>
+        <span class="sql-comment">-- Extract product details from JSON</span>
+        <span class="sql-keyword">SET</span> v_product_id = <span class="sql-keyword">JSON_EXTRACT</span>(p_product_data, <span class="sql-keyword">CONCAT</span>(<span class="sql-string">'$['</span>, v_i, <span class="sql-string">'].product_id'</span>));
+        <span class="sql-keyword">SET</span> v_quantity = <span class="sql-keyword">JSON_EXTRACT</span>(p_product_data, <span class="sql-keyword">CONCAT</span>(<span class="sql-string">'$['</span>, v_i, <span class="sql-string">'].quantity'</span>));
+        <span class="sql-keyword">SET</span> v_unit_price = <span class="sql-keyword">JSON_EXTRACT</span>(p_product_data, <span class="sql-keyword">CONCAT</span>(<span class="sql-string">'$['</span>, v_i, <span class="sql-string">'].unit_price'</span>));
+        
+        <span class="sql-comment">-- Check stock availability with row lock</span>
+        <span class="sql-keyword">SELECT</span> UnitsInStock <span class="sql-keyword">INTO</span> v_available_stock
+        <span class="sql-keyword">FROM</span> Products
+        <span class="sql-keyword">WHERE</span> ProductID = v_product_id
+            <span class="sql-keyword">AND</span> IsDiscontinued = <span class="sql-keyword">FALSE</span>
+        <span class="sql-keyword">FOR UPDATE</span>;
+        
+        <span class="sql-keyword">IF</span> v_available_stock < v_quantity <span class="sql-keyword">THEN</span>
+            <span class="sql-keyword">ROLLBACK</span>;
+            <span class="sql-keyword">SET</span> p_status = <span class="sql-keyword">CONCAT</span>(<span class="sql-string">'ERROR: Insufficient stock for product '</span>, v_product_id);
+            <span class="sql-keyword">LEAVE</span> proc_label;
+        <span class="sql-keyword">END IF</span>;
+        
+        <span class="sql-comment">-- Add order item</span>
+        <span class="sql-keyword">INSERT INTO</span> OrderItems (
+            OrderID, ProductID, Quantity, UnitPrice
+        ) <span class="sql-keyword">VALUES</span> (
+            p_order_id, v_product_id, v_quantity, v_unit_price
+        );
+        
+        <span class="sql-comment">-- Update product stock</span>
+        <span class="sql-keyword">UPDATE</span> Products
+        <span class="sql-keyword">SET</span> UnitsInStock = UnitsInStock - v_quantity,
+            LastUpdated = <span class="sql-keyword">NOW</span>()
+        <span class="sql-keyword">WHERE</span> ProductID = v_product_id;
+        
+        <span class="sql-comment">-- Calculate running total</span>
+        <span class="sql-keyword">SET</span> v_total_amount = v_total_amount + (v_quantity * v_unit_price);
+        <span class="sql-keyword">SET</span> v_i = v_i + 1;
+    <span class="sql-keyword">END WHILE</span>;
+    
+    <span class="sql-comment">-- Check credit limit</span>
+    <span class="sql-keyword">IF</span> v_total_amount > v_customer_credit <span class="sql-keyword">THEN</span>
+        <span class="sql-keyword">ROLLBACK</span>;
+        <span class="sql-keyword">SET</span> p_status = <span class="sql-string">'ERROR: Order exceeds customer credit limit'</span>;
+        <span class="sql-keyword">LEAVE</span> proc_label;
+    <span class="sql-keyword">END IF</span>;
+    
+    <span class="sql-comment">-- Update order totals</span>
+    <span class="sql-keyword">UPDATE</span> Orders
+    <span class="sql-keyword">SET</span> SubTotal = v_total_amount,
+        TaxAmount = v_total_amount * 0.08, <span class="sql-comment">-- 8% tax</span>
+        TotalAmount = v_total_amount * 1.08,
+        OrderStatus = <span class="sql-string">'Confirmed'</span>
+    <span class="sql-keyword">WHERE</span> OrderID = p_order_id;
+    
+    <span class="sql-comment">-- Update customer credit</span>
+    <span class="sql-keyword">UPDATE</span> Customers
+    <span class="sql-keyword">SET</span> CurrentCredit = CurrentCredit - (v_total_amount * 1.08)
+    <span class="sql-keyword">WHERE</span> CustomerID = p_customer_id;
+    
+    <span class="sql-comment">-- Commit transaction</span>
+    <span class="sql-keyword">COMMIT</span>;
+    <span class="sql-keyword">SET</span> p_status = <span class="sql-string">'SUCCESS'</span>;
+    
+<span class="sql-keyword">END</span>$
+
+<span class="sql-keyword">DELIMITER</span> ;
+
+<span class="sql-comment">-- 2. Isolation Level Demonstrations</span>
+
+<span class="sql-comment">-- READ UNCOMMITTED (Dirty Read Example)</span>
+<span class="sql-comment">-- Session 1:</span>
+<span class="sql-keyword">SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED</span>;
+<span class="sql-keyword">START TRANSACTION</span>;
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = 999.99 <span class="sql-keyword">WHERE</span> ProductID = 1;
+<span class="sql-comment">-- Don't commit yet</span>
+
+<span class="sql-comment">-- Session 2 (can see uncommitted changes):</span>
+<span class="sql-keyword">SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED</span>;
+<span class="sql-keyword">SELECT</span> UnitPrice <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> ProductID = 1; <span class="sql-comment">-- Shows 999.99</span>
+
+<span class="sql-comment">-- Session 1 rollback:</span>
+<span class="sql-keyword">ROLLBACK</span>; <span class="sql-comment">-- Session 2 saw dirty data!</span>
+
+<span class="sql-comment">-- READ COMMITTED (Non-repeatable Read Example)</span>
+<span class="sql-comment">-- Session 1:</span>
+<span class="sql-keyword">SET TRANSACTION ISOLATION LEVEL READ COMMITTED</span>;
+<span class="sql-keyword">START TRANSACTION</span>;
+<span class="sql-keyword">SELECT</span> UnitPrice <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> ProductID = 1; <span class="sql-comment">-- Returns 19.99</span>
+
+<span class="sql-comment">-- Session 2:</span>
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = 29.99 <span class="sql-keyword">WHERE</span> ProductID = 1;
+<span class="sql-keyword">COMMIT</span>;
+
+<span class="sql-comment">-- Session 1 (same transaction):</span>
+<span class="sql-keyword">SELECT</span> UnitPrice <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> ProductID = 1; <span class="sql-comment">-- Now returns 29.99 (non-repeatable)</span>
+<span class="sql-keyword">COMMIT</span>;
+
+<span class="sql-comment">-- REPEATABLE READ (Phantom Read Example)</span>
+<span class="sql-comment">-- Session 1:</span>
+<span class="sql-keyword">SET TRANSACTION ISOLATION LEVEL REPEATABLE READ</span>;
+<span class="sql-keyword">START TRANSACTION</span>;
+<span class="sql-keyword">SELECT COUNT</span>(*) <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> CategoryID = 1; <span class="sql-comment">-- Returns 5</span>
+
+<span class="sql-comment">-- Session 2:</span>
+<span class="sql-keyword">INSERT INTO</span> Products (ProductName, CategoryID, UnitPrice) 
+<span class="sql-keyword">VALUES</span> (<span class="sql-string">'New Product'</span>, 1, 15.99);
+<span class="sql-keyword">COMMIT</span>;
+
+<span class="sql-comment">-- Session 1 (same transaction):</span>
+<span class="sql-keyword">SELECT COUNT</span>(*) <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> CategoryID = 1; <span class="sql-comment">-- Still returns 5 (repeatable)</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Products <span class="sql-keyword">WHERE</span> CategoryID = 1; <span class="sql-comment">-- But might show phantom row</span>
+<span class="sql-keyword">COMMIT</span>;
+
+<span class="sql-comment">-- 3. Deadlock Prevention and Detection</span>
+<span class="sql-keyword">CREATE TABLE</span> DeadlockLog (
+    LogID <span class="sql-keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    SessionID <span class="sql-keyword">INT</span>,
+    DeadlockInfo <span class="sql-keyword">TEXT</span>,
+    DetectedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
 );
+
+<span class="sql-comment">-- Deadlock scenario simulation</span>
+<span class="sql-comment">-- Session 1:</span>
+<span class="sql-keyword">START TRANSACTION</span>;
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = UnitPrice * 1.1 <span class="sql-keyword">WHERE</span> ProductID = 1;
+<span class="sql-comment">-- Wait...</span>
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = UnitPrice * 1.1 <span class="sql-keyword">WHERE</span> ProductID = 2;
+
+<span class="sql-comment">-- Session 2 (concurrent):</span>
+<span class="sql-keyword">START TRANSACTION</span>;
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = UnitPrice * 1.1 <span class="sql-keyword">WHERE</span> ProductID = 2;
+<span class="sql-comment">-- Wait...</span>
+<span class="sql-keyword">UPDATE</span> Products <span class="sql-keyword">SET</span> UnitPrice = UnitPrice * 1.1 <span class="sql-keyword">WHERE</span> ProductID = 1; <span class="sql-comment">-- DEADLOCK!</span>
+
+<span class="sql-comment">-- Check deadlock information</span>
+<span class="sql-keyword">SHOW ENGINE INNODB STATUS</span>\G
+
+<span class="sql-comment">-- 4. Advanced Locking Strategies</span>
+<span class="sql-comment">-- Optimistic locking with version control</span>
+<span class="sql-keyword">ALTER TABLE</span> Products 
+<span class="sql-keyword">ADD COLUMN</span> Version <span class="sql-keyword">INT DEFAULT</span> 1;
+
+<span class="sql-comment">-- Update with version check</span>
+<span class="sql-keyword">UPDATE</span> Products 
+<span class="sql-keyword">SET</span> UnitPrice = 25.99, Version = Version + 1
+<span class="sql-keyword">WHERE</span>
+
         </pre>
-        <p><strong>Tasks:</strong></p>
-        <ol>
-            <li>Write a transaction to transfer $500 from Account A to Account B</li>
-            <li>Handle error cases with appropriate rollback</li>
-            <li>Ensure ACID properties are maintained</li>
-            <li>Add appropriate constraints to prevent negative balances</li>
-        </ol>
-    </div>
-
-    <h2 class="page-break"><span class="topic-icon">💡</span>FINAL REMINDERS</h2>
-
-    <div class="key-points">
-        <h3>Day Before Exam</h3>
-        <ul>
-            <li>Review key concepts and definitions</li>
-            <li>Practice drawing ER diagrams quickly</li>
-            <li>Review SQL syntax and common functions</li>
-            <li>Go through normalization examples</li>
-            <li>Review transaction concepts and ACID properties</li>
-            <li>Get adequate rest - your brain needs to be sharp!</li>
-        </ul>
     </div>
 
     <div class="important-note">
-        <h3>During the Exam</h3>
+        <h4>Advanced Transaction Management Techniques</h4>
+        <p><strong>Optimistic Concurrency Control:</strong></p>
         <ul>
-            <li>Read questions carefully - understand what's being asked</li>
-            <li>Plan your ER diagrams before drawing</li>
-            <li>Show your work for normalization problems</li>
-            <li>Write clear, syntactically correct SQL</li>
-            <li>Manage your time - don't spend too long on one question</li>
-            <li>Review your answers if time permits</li>
+            <li><strong>Version Checking:</strong> Add version/timestamp columns to detect concurrent modifications</li>
+            <li><strong>Application-Level Locking:</strong> Implement custom locking logic in application code</li>
+            <li><strong>Retry Mechanisms:</strong> Automatically retry failed transactions with exponential backoff</li>
+        </ul>
+        
+        <p><strong>Pessimistic Concurrency Control:</strong></p>
+        <ul>
+            <li><strong>SELECT FOR UPDATE:</strong> Exclusive locks for critical read-modify-write operations</li>
+            <li><strong>LOCK IN SHARE MODE:</strong> Shared locks for read operations that must remain consistent</li>
+            <li><strong>Deadlock Detection:</strong> Implement timeout mechanisms and deadlock resolution strategies</li>
         </ul>
     </div>
 
+    <h4>Distributed Transactions</h4>
+    <pre>
+<span class="sql-comment">-- Two-Phase Commit (2PC) Example</span>
+<span class="sql-comment">-- Phase 1: Prepare</span>
+<span class="sql-keyword">XA START</span> <span class="sql-string">'order_processing'</span>;
+<span class="sql-keyword">UPDATE</span> Orders <span class="sql-keyword">SET</span> Status = <span class="sql-string">'Processing'</span> <span class="sql-keyword">WHERE</span> OrderID = 1001;
+<span class="sql-keyword">UPDATE</span> Inventory <span class="sql-keyword">SET</span> Quantity = Quantity - 1 <span class="sql-keyword">WHERE</span> ProductID = 5;
+<span class="sql-keyword">XA END</span> <span class="sql-string">'order_processing'</span>;
+<span class="sql-keyword">XA PREPARE</span> <span class="sql-string">'order_processing'</span>;
+
+<span class="sql-comment">-- Phase 2: Commit (after all participants prepare successfully)</span>
+<span class="sql-keyword">XA COMMIT</span> <span class="sql-string">'order_processing'</span>;
+
+<span class="sql-comment">-- Or Rollback (if any participant fails to prepare)</span>
+<span class="sql-keyword">XA ROLLBACK</span> <span class="sql-string">'order_processing'</span>;
+
+<span class="sql-comment">-- Saga Pattern Implementation (Alternative to 2PC)</span>
+<span class="sql-comment">-- 1. Create saga log table</span>
+<span class="sql-keyword">CREATE TABLE</span> SagaLog (
+    SagaID <span class="sql-keyword">VARCHAR</span>(36) <span class="sql-keyword">PRIMARY KEY</span>,
+    SagaType <span class="sql-keyword">VARCHAR</span>(50) <span class="sql-keyword">NOT NULL</span>,
+    CurrentStep <span class="sql-keyword">INT NOT NULL DEFAULT</span> 1,
+    Status <span class="sql-keyword">ENUM</span>(<span class="sql-string">'Pending'</span>, <span class="sql-string">'InProgress'</span>, <span class="sql-string">'Completed'</span>, <span class="sql-string">'Compensating'</span>, <span class="sql-string">'Failed'</span>),
+    Payload <span class="sql-keyword">JSON</span>,
+    CreatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    UpdatedAt <span class="sql-keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</span>
+);
+
+<span class="sql-comment">-- 2. Create compensating transactions</span>
+<span class="sql-keyword">CREATE PROCEDURE</span> CompensateOrderCreation(<span class="sql-keyword">IN</span> p_order_id <span class="sql-keyword">INT</span>)
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">DELETE FROM</span> OrderItems <span class="sql-keyword">WHERE</span> OrderID = p_order_id;
+    <span class="sql-keyword">DELETE FROM</span> Orders <span class="sql-keyword">WHERE</span> OrderID = p_order_id;
+<span class="sql-keyword">END</span>;
+
+<span class="sql-keyword">CREATE PROCEDURE</span> CompensateInventoryUpdate(<span class="sql-keyword">IN</span> p_product_id <span class="sql-keyword">INT</span>, <span class="sql-keyword">IN</span> p_quantity <span class="sql-keyword">INT</span>)
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">UPDATE</span> Inventory <span class="sql-keyword">SET</span> Quantity = Quantity + p_quantity <span class="sql-keyword">WHERE</span> ProductID = p_product_id;
+<span class="sql-keyword">END</span>;
+    </pre>
+
+    <h2 class="page-break"><span class="topic-icon">🌐</span>DISTRIBUTED DATABASES</h2>
+
+    <h3>Advanced Distributed Database Concepts</h3>
+
+    <div class="key-points">
+        <h4>Distributed Database Architectures:</h4>
+        <ol>
+            <li><strong>Shared-Nothing Architecture:</strong>
+                <ul>
+                    <li>Each node has independent storage and processing</li>
+                    <li>Horizontal scaling with data partitioning</li>
+                    <li>Examples: Cassandra, MongoDB sharding, Google Spanner</li>
+                </ul>
+            </li>
+            <li><strong>Shared-Disk Architecture:</strong>
+                <ul>
+                    <li>Multiple nodes access common storage</li>
+                    <li>Simplified data management but potential I/O bottlenecks</li>
+                    <li>Examples: Oracle RAC, IBM DB2 pureScale</li>
+                </ul>
+            </li>
+            <li><strong>Peer-to-Peer Architecture:</strong>
+                <ul>
+                    <li>Decentralized nodes with equal responsibilities</li>
+                    <li>High fault tolerance but complex consistency</li>
+                    <li>Examples: Dynamo, Cassandra</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
     <div class="example-box">
-        <h3>Remember the Fundamentals</h3>
-        <p><strong>Database design is both an art and a science.</strong> The key to success is understanding the underlying principles and being able to apply them to real-world scenarios. Focus on:</p>
-        <ul>
-            <li><strong>Why</strong> we normalize databases</li>
-            <li><strong>How</strong> relationships between entities work</li>
-            <li><strong>When</strong> to use different types of indexes</li>
-            <li><strong>What</strong> makes a good database design</li>
-        </ul>
-        <p>Practice with real projects and scenarios - this will help you understand not just the syntax, but the reasoning behind database design decisions.</p>
+        <div class="example-title">Sharding Implementation Example</div>
+        <pre>
+<span class="sql-comment">-- 1. Range-Based Sharding</span>
+<span class="sql-comment">-- Customers A-M on shard1, N-Z on shard2</span>
+
+<span class="sql-comment">-- Shard1 Schema:</span>
+<span class="sql-keyword">CREATE TABLE</span> Customers (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50),
+    LastName <span class="sql-keyword">VARCHAR</span>(50),
+    Email <span class="sql-keyword">VARCHAR</span>(100),
+    <span class="sql-keyword">CHECK</span> (LastName <span class="sql-keyword">REGEXP</span> <span class="sql-string">'^[A-M]'</span>)
+);
+
+<span class="sql-comment">-- Shard2 Schema:</span>
+<span class="sql-keyword">CREATE TABLE</span> Customers (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50),
+    LastName <span class="sql-keyword">VARCHAR</span>(50),
+    Email <span class="sql-keyword">VARCHAR</span>(100),
+    <span class="sql-keyword">CHECK</span> (LastName <span class="sql-keyword">REGEXP</span> <span class="sql-string">'^[N-Z]'</span>)
+);
+
+<span class="sql-comment">-- 2. Hash-Based Sharding</span>
+<span class="sql-comment">-- Distribute customers across 4 shards using consistent hashing</span>
+
+<span class="sql-keyword">CREATE TABLE</span> Customers (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    FirstName <span class="sql-keyword">VARCHAR</span>(50),
+    LastName <span class="sql-keyword">VARCHAR</span>(50),
+    Email <span class="sql-keyword">VARCHAR</span>(100),
+    ShardID <span class="sql-keyword">AS</span> (CustomerID % 4) <span class="sql-keyword">PERSISTED</span>
+);
+
+<span class="sql-comment">-- 3. Directory-Based Sharding</span>
+<span class="sql-keyword">CREATE TABLE</span> ShardMapping (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    ShardID <span class="sql-keyword">INT NOT NULL</span>,
+    ServerName <span class="sql-keyword">VARCHAR</span>(100) <span class="sql-keyword">NOT NULL</span>
+);
+
+<span class="sql-comment">-- 4. Cross-Shard Queries</span>
+<span class="sql-comment">-- Using federated queries (MySQL FEDERATED engine)</span>
+<span class="sql-keyword">CREATE TABLE</span> Customers_Shard1 (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    <span class="sql-comment">-- other columns</span>
+) <span class="sql-keyword">ENGINE</span>=FEDERATED
+<span class="sql-keyword">CONNECTION</span>=<span class="sql-string">'mysql://user:pass@shard1:3306/ecommerce/Customers'</span>;
+
+<span class="sql-keyword">CREATE TABLE</span> Customers_Shard2 (
+    CustomerID <span class="sql-keyword">INT PRIMARY KEY</span>,
+    <span class="sql-comment">-- other columns</span>
+) <span class="sql-keyword">ENGINE</span>=FEDERATED
+<span class="sql-keyword">CONNECTION</span>=<span class="sql-string">'mysql://user:pass@shard2:3306/ecommerce/Customers'</span>;
+
+<span class="sql-comment">-- Union view for querying all customers</span>
+<span class="sql-keyword">CREATE VIEW</span> AllCustomers <span class="sql-keyword">AS</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Customers_Shard1
+<span class="sql-keyword">UNION ALL</span>
+<span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Customers_Shard2;
+
+<span class="sql-comment">-- 5. Shard Rebalancing</span>
+<span class="sql-keyword">CREATE PROCEDURE</span> RebalanceCustomerShard(
+    <span class="sql-keyword">IN</span> p_customer_id <span class="sql-keyword">INT</span>,
+    <span class="sql-keyword">IN</span> p_new_shard_id <span class="sql-keyword">INT</span>
+)
+<span class="sql-keyword">BEGIN</span>
+    <span class="sql-keyword">DECLARE</span> v_current_shard_id <span class="sql-keyword">INT</span>;
+    <span class="sql-keyword">DECLARE</span> v_customer_data <span class="sql-keyword">JSON</span>;
+    
+    <span class="sql-comment">-- Start transaction</span>
+    <span class="sql-keyword">START TRANSACTION</span>;
+    
+    <span class="sql-comment">-- Get current shard</span>
+    <span class="sql-keyword">SELECT</span> ShardID <span class="sql-keyword">INTO</span> v_current_shard_id
+    <span class="sql-keyword">FROM</span> ShardMapping
+    <span class="sql-keyword">WHERE</span> CustomerID = p_customer_id
+    <span class="sql-keyword">FOR UPDATE</span>;
+    
+    <span class="sql-comment">-- Get customer data from source shard</span>
+    <span class="sql-keyword">SET</span> @sql = <span class="sql-keyword">CONCAT</span>(
+        <span class="sql-string">'SELECT JSON_OBJECT('</span>,
+        <span class="sql-string">''customer_id', CustomerID, '</span>,
+        <span class="sql-string">''first_name', FirstName, '</span>,
+        <span class="sql-string">''last_name', LastName, '</span>,
+        <span class="sql-string">''email', Email) '</span>,
+        <span class="sql-string">'INTO @customer_data '</span>,
+        <span class="sql-string">'FROM Customers_Shard'</span>, v_current_shard_id, <span class="sql-string">' '</span>,
+        <span class="sql-string">'WHERE CustomerID = '</span>, p_customer_id
+    );
+    
+    <span class="sql-keyword">PREPARE</span> stmt <span class="sql-keyword">FROM</span> @sql;
+    <span class="sql-keyword">EXECUTE</span> stmt;
+    <span class="sql-keyword">DEALLOCATE</span> PREPARE stmt;
+    
+    <span class="sql-comment">-- Insert into target shard</span>
+    <span class="sql-keyword">SET</span> @sql = <span class="sql-keyword">CONCAT</span>(
+        <span class="sql-string">'INSERT INTO Customers_Shard'</span>, p_new_shard_id,
+        <span class="sql-string">' (CustomerID, FirstName, LastName, Email) '</span>,
+        <span class="sql-string">'SELECT '</span>,
+        <span class="sql-string">'JSON_EXTRACT(@customer_data, ''$.customer_id''), '</span>,
+        <span class="sql-string">'JSON_EXTRACT(@customer_data, ''$.first_name''), '</span>,
+        <span class="sql-string">'JSON_EXTRACT(@customer_data, ''$.last_name''), '</span>,
+        <span class="sql-string">'JSON_EXTRACT(@customer_data, ''$.email'')'</span>
+    );
+    
+    <span class="sql-keyword">PREPARE</span> stmt <span class="sql-keyword">FROM</span> @sql;
+    <span class="sql-keyword">EXECUTE</span> stmt;
+    <span class="sql-keyword">DEALLOCATE</span> PREPARE stmt;
+    
+    <span class="sql-comment">-- Delete from source shard</span>
+    <span class="sql-keyword">SET</span> @sql = <span class="sql-keyword">CONCAT</span>(
+        <span class="sql-string">'DELETE FROM Customers_Shard'</span>, v_current_shard_id,
+        <span class="sql-string">' WHERE CustomerID = '</span>, p_customer_id
+    );
+    
+    <span class="sql-keyword">PREPARE</span> stmt <span class="sql-keyword">FROM</span> @sql;
+    <span class="sql-keyword">EXECUTE</span> stmt;
+    <span class="sql-keyword">DEALLOCATE</span> PREPARE stmt;
+    
+    <span class="sql-comment">-- Update shard mapping</span>
+    <span class="sql-keyword">UPDATE</span> ShardMapping
+    <span class="sql-keyword">SET</span> ShardID = p_new_shard_id
+    <span class="sql-keyword">WHERE</span> CustomerID = p_customer_id;
+    
+    <span class="sql-comment">-- Commit transaction</span>
+    <span class="sql-keyword">COMMIT</span>;
+<span class="sql-keyword">END</span>;
+        </pre>
+    </div>
+
+    <h4>CAP Theorem and Consistency Models</h4>
+    <div class="diagram-box">
+        <h4>CAP Theorem Trade-offs</h4>
+        <pre style="background: white; color: #2c3e50; font-size: 10pt;">
+   +----------------+----------------+----------------+
+   |     System     |  Consistency   |  Availability  |
+   +----------------+----------------+----------------+
+   | Traditional RDBMS | Strong (CP)    | During partitions |
+   | Cassandra      | Eventual (AP)  | Always         |
+   | MongoDB        | Configurable   | High           |
+   | Redis Cluster  | Strong (CP)    | During partitions |
+   +----------------+----------------+----------------+
+        </pre>
+    </div>
+
+    <div class="important-note">
+        <h4>Consistency Models in Distributed Systems</h4>
+        <ol>
+            <li><strong>Strong Consistency:</strong>
+                <ul>
+                    <li>All nodes see same data at same time</li>
+                    <li>High latency due to synchronization</li>
+                    <li>Examples: Google Spanner, CockroachDB</li>
+                </ul>
+            </li>
+            <li><strong>Eventual Consistency:</strong>
+                <ul>
+                    <li>Nodes may temporarily have different views</li>
+                    <li>Converges to consistency over time</li>
+                    <li>Examples: Dynamo, Cassandra</li>
+                </ul>
+            </li>
+            <li><strong>Read-Your-Writes Consistency:</strong>
+                <ul>
+                    <li>User always sees their own updates</li>
+                    <li>Other users may see stale data</li>
+                </ul>
+            </li>
+            <li><strong>Monotonic Reads:</strong>
+                <ul>
+                    <li>User never sees data revert to older state</li>
+                    <li>Guarantees forward progress in visibility</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="page-break"><span class="topic-icon">🔮</span>EMERGING DATABASE TECHNOLOGIES</h2>
+
+    <h3>Next-Generation Database Systems</h3>
+
+    <div class="key-points">
+        <h4>Modern Database Trends:</h4>
+        <ol>
+            <li><strong>NewSQL Databases:</strong>
+                <ul>
+                    <li>Combine ACID transactions of SQL with NoSQL scalability</li>
+                    <li>Examples: Google Spanner, CockroachDB, YugabyteDB</li>
+                </ul>
+            </li>
+            <li><strong>Time-Series Databases:</strong>
+                <ul>
+                    <li>Optimized for time-stamped data</li>
+                    <li>Efficient compression and time-based queries</li>
+                    <li>Examples: InfluxDB, TimescaleDB, Prometheus</li>
+                </ul>
+            </li>
+            <li><strong>Graph Databases:</strong>
+                <ul>
+                    <li>Store and query relationships efficiently</li>
+                    <li>Examples: Neo4j, Amazon Neptune, ArangoDB</li>
+                </ul>
+            </li>
+            <li><strong>Blockchain Databases:</strong>
+                <ul>
+                    <li>Immutable, decentralized ledger technology</li>
+                    <li>Examples: BigchainDB, Amazon QLDB</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">TimescaleDB (Time-Series) Example</div>
+        <pre>
+<span class="sql-comment">-- 1. Create hypertable for time-series data</span>
+<span class="sql-keyword">CREATE TABLE</span> sensor_readings (
+    time <span class="sql-keyword">TIMESTAMPTZ NOT NULL</span>,
+    sensor_id <span class="sql-keyword">INT NOT NULL</span>,
+    temperature <span class="sql-keyword">DOUBLE PRECISION</span>,
+    humidity <span class="sql-keyword">DOUBLE PRECISION</span>,
+    battery_level <span class="sql-keyword">DOUBLE PRECISION</span>,
+    <span class="sql-keyword">PRIMARY KEY</span> (time, sensor_id)
+);
+
+<span class="sql-comment">-- Convert to hypertable with time partitioning</span>
+<span class="sql-keyword">SELECT</span> create_hypertable(
+    <span class="sql-string">'sensor_readings'</span>, 
+    <span class="sql-string">'time'</span>,
+    chunk_time_interval => <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'7 days'</span>
+);
+
+<span class="sql-comment">-- 2. Time-series specific queries</span>
+<span class="sql-comment">-- Downsampling with time_bucket</span>
+<span class="sql-keyword">SELECT</span> 
+    time_bucket(<span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 hour'</span>, time) <span class="sql-keyword">AS</span> bucket,
+    sensor_id,
+    <span class="sql-keyword">AVG</span>(temperature) <span class="sql-keyword">AS</span> avg_temp,
+    <span class="sql-keyword">MAX</span>(humidity) <span class="sql-keyword">AS</span> max_humidity
+<span class="sql-keyword">FROM</span> sensor_readings
+<span class="sql-keyword">WHERE</span> time > <span class="sql-keyword">NOW</span>() - <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 week'</span>
+<span class="sql-keyword">GROUP BY</span> bucket, sensor_id
+<span class="sql-keyword">ORDER BY</span> bucket, sensor_id;
+
+<span class="sql-comment">-- Gap filling with time_bucket_gapfill</span>
+<span class="sql-keyword">SELECT</span> 
+    time_bucket_gapfill(<span class="sql-keyword">INTERVAL</span> <span class="sql-string">'15 minutes'</span>, time) <span class="sql-keyword">AS</span> bucket,
+    sensor_id,
+    <span class="sql-keyword">AVG</span>(temperature) <span class="sql-keyword">AS</span> avg_temp,
+    <span class="sql-keyword">LOCF</span>(<span class="sql-keyword">LAST</span>(temperature, time)) <span class="sql-keyword">AS</span> filled_temp
+<span class="sql-keyword">FROM</span> sensor_readings
+<span class="sql-keyword">WHERE</span> time > <span class="sql-keyword">NOW</span>() - <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 day'</span>
+    <span class="sql-keyword">AND</span> sensor_id = 5
+<span class="sql-keyword">GROUP BY</span> bucket, sensor_id
+<span class="sql-keyword">ORDER BY</span> bucket;
+
+<span class="sql-comment">-- 3. Continuous aggregates (materialized views)</span>
+<span class="sql-keyword">CREATE MATERIALIZED VIEW</span> sensor_daily
+<span class="sql-keyword">WITH</span> (timescaledb.continuous) <span class="sql-keyword">AS</span>
+<span class="sql-keyword">SELECT</span> 
+    time_bucket(<span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 day'</span>, time) <span class="sql-keyword">AS</span> day,
+    sensor_id,
+    <span class="sql-keyword">AVG</span>(temperature) <span class="sql-keyword">AS</span> avg_temp,
+    <span class="sql-keyword">MAX</span>(humidity) <span class="sql-keyword">AS</span> max_humidity,
+    <span class="sql-keyword">MIN</span>(battery_level) <span class="sql-keyword">AS</span> min_battery
+<span class="sql-keyword">FROM</span> sensor_readings
+<span class="sql-keyword">GROUP BY</span> day, sensor_id;
+
+<span class="sql-comment">-- Add automatic refresh policy</span>
+<span class="sql-keyword">SELECT</span> add_continuous_aggregate_policy(
+    <span class="sql-string">'sensor_daily'</span>,
+    start_offset => <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 week'</span>,
+    end_offset => <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 hour'</span>,
+    schedule_interval => <span class="sql-keyword">INTERVAL</span> <span class="sql-string">'1 hour'</span>
+);
+        </pre>
+    </div>
+
+    <div class="example-box">
+        <div class="example-title">Neo4j (Graph Database) Example</div>
+        <pre>
+<span class="sql-comment">-- 1. Create nodes (vertices)</span>
+<span class="sql-keyword">CREATE</span> (alice:Person {name: <span class="sql-string">'Alice'</span>, age: 32})
+<span class="sql-keyword">CREATE</span> (bob:Person {name: <span class="sql-string">'Bob'</span>, age: 28})
+<span class="sql-keyword">CREATE</span> (charlie:Person {name: <span class="sql-string">'Charlie'</span>, age: 45})
+<span class="sql-keyword">CREATE</span> (acme:Company {name: <span class="sql-string">'Acme Inc'</span>, industry: <span class="sql-string">'Technology'</span>})
+
+<span class="sql-comment">-- 2. Create relationships (edges)</span>
+<span class="sql-keyword">MATCH</span> (a:Person {name: <span class="sql-string">'Alice'</span>}), (b:Person {name: <span class="sql-string">'Bob'</span>})
+<span class="sql-keyword">CREATE</span> (a)-[r:KNOWS {since: 2018}]->(b)
+
+<span class="sql-keyword">MATCH</span> (a:Person {name: <span class="sql-string">'Alice'</span>}), (c:Company {name: <span class="sql-string">'Acme Inc'</span>})
+<span class="sql-keyword">CREATE</span> (a)-[r:WORKS_AT {role: <span class="sql-string">'Engineer'</span>, since: 2020}]->(c)
+
+<span class="sql-comment">-- 3. Graph traversal queries</span>
+<span class="sql-comment">-- Find Alice's friends who work at Acme</span>
+<span class="sql-keyword">MATCH</span> (alice:Person {name: <span class="sql-string">'Alice'</span>})-[:KNOWS]->(friend)-[:WORKS_AT]->(acme:Company {name: <span class="sql-string">'Acme Inc'</span>})
+<span class="sql-keyword">RETURN</span> friend.name, friend.age
+
+<span class="sql-comment">-- Shortest path between two people</span>
+<span class="sql-keyword">MATCH</span> (a:Person {name: <span class="sql-string">'Alice'</span>}), (c:Person {name: <span class="sql-string">'Charlie'</span>}),
+path = shortestPath((a)-[:KNOWS*]-(c))
+<span class="sql-keyword">RETURN</span> path
+
+<span class="sql-comment">-- Recommendation query</span>
+<span class="sql-keyword">MATCH</span> (me:Person {name: <span class="sql-string">'Alice'</span>})-[:KNOWS]->(friend)-[:KNOWS]->(friendOfFriend)
+<span class="sql-keyword">WHERE NOT</span> (me)-[:KNOWS]->(friendOfFriend)
+<span class="sql-keyword">RETURN</span> friendOfFriend.name, <span class="sql-keyword">COUNT</span>(*) <span class="sql-keyword">AS</span> commonFriends
+<span class="sql-keyword">ORDER BY</span> commonFriends <span class="sql-keyword">DESC</span>
+<span class="sql-keyword">LIMIT</span> 5
+        </pre>
     </div>
 
     <div class="footer">
-        <p><strong>Good luck with your Advanced Database Systems midterm examination!</strong></p>
-        <p><em>Remember: Understanding concepts is more important than memorizing syntax.</em></p>
-        <p>© 2024 Advanced Database Systems Comprehensive Reviewer</p>
+        <p>Advanced Database Systems - Midterm Examination Reviewer</p>
+        <p>© 2024 Database Systems Education. All rights reserved.</p>
     </div>
-
-    <script>
-        // Add print functionality
-        window.onload = function() {
-            // Auto-expand all sections for PDF generation
-            console.log('Advanced Database Systems Reviewer loaded successfully');
-        }
-        
-        // Print-specific styling
-        window.print = function() {
-            window.print();
-        }
-    </script>
+</body>
+</html>
